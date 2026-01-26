@@ -1,0 +1,1626 @@
+-- -gh 4623059912,4932541287,5316479641,3662265036,3409612660,4315489767,4794315940,4506945409,4458601937
+
+-- ;hat 4623059912 6904794619 5268602207 3662265036 3409612660 
+
+-- ;hat 4315489767 4794315940 4506945409 4458601937
+
+--------------------------------------------------------------------------------------------------------
+game.Players.LocalPlayer.Character["InternationalFedora"].Handle.SpecialMesh:Remove()
+game.Players.LocalPlayer.Character["International Fedora"].Handle.SpecialMesh:Remove()
+--------------------------------------------------------------------------------------------------------
+HumanDied = false
+local reanim
+function noplsmesh(hat)
+_G.OldCF=workspace.Camera.CFrame
+oldchar=game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Character=workspace[game.Players.LocalPlayer.Name]
+for i,v in next, workspace[game.Players.LocalPlayer.Name][hat]:GetDescendants() do
+if v:IsA('Mesh') or v:IsA('SpecialMesh') then
+v:Remove()
+end
+end
+game.Players.LocalPlayer.Character=oldchar
+wait()
+workspace.Camera.CFrame=_G.OldCF
+game.Players.LocalPlayer.Character=oldchar
+end
+_G.ClickFling=false -- Set this to true if u want.
+loadstring(game:HttpGet(('https://pastebin.com/raw/J5djnDsy'),true))()
+
+
+IT = Instance.new
+CF = CFrame.new
+VT = Vector3.new
+RAD = math.rad
+C3 = Color3.new
+UD2 = UDim2.new
+BRICKC = BrickColor.new
+ANGLES = CFrame.Angles
+EULER = CFrame.fromEulerAnglesXYZ
+COS = math.cos
+ACOS = math.acos
+SIN = math.sin
+ASIN = math.asin
+ABS = math.abs
+MRANDOM = math.random
+FLOOR = math.floor
+
+speed = 1
+sine = 1
+srv = game:GetService('RunService')
+
+function hatset(yes,part,c1,c0,nm)
+reanim[yes].Handle.AccessoryWeld.Part1=reanim[part]
+reanim[yes].Handle.AccessoryWeld.C1=c1 or CFrame.new()
+reanim[yes].Handle.AccessoryWeld.C0=c0 or CFrame.new()--3bbb322dad5929d0d4f25adcebf30aa5
+if nm==true then
+noplsmesh(yes)
+end
+end
+
+--put the hat script converted below
+
+reanim = game.Players.LocalPlayer.Character.CWExtra.NexoPD
+RJ = reanim.HumanoidRootPart.RootJoint
+RS = reanim.Torso['Right Shoulder']
+LS = reanim.Torso['Left Shoulder']
+RH = reanim.Torso['Right Hip']
+LH = reanim.Torso['Left Hip']
+Root = reanim.HumanoidRootPart
+NECK = reanim.Torso.Neck
+NECK.C0 = CF(0,1,0)*ANGLES(RAD(0),RAD(0),RAD(0))
+NECK.C1 = CF(0,-0.5,0)*ANGLES(RAD(0),RAD(0),RAD(0))
+RJ.C1 = CF(0,0,0)*ANGLES(RAD(0),RAD(0),RAD(0))
+RJ.C0 = CF(0,0,0)*ANGLES(RAD(0),RAD(0),RAD(0))
+RS.C1 = CF(-0.5,0.5,0)*ANGLES(RAD(0),RAD(0),RAD(0))
+LS.C1 = CF(0.5,0.5,0)*ANGLES(RAD(0),RAD(0),RAD(0))
+RH.C1 = CF(0,1,0)*ANGLES(RAD(0),RAD(0),RAD(0))
+LH.C1 = CF(0,1,0)*ANGLES(RAD(0),RAD(0),RAD(0))
+RH.C0 = CF(0,0,0)*ANGLES(RAD(0),RAD(0),RAD(0))
+LH.C0 = CF(0,0,0)*ANGLES(RAD(0),RAD(0),RAD(0))
+RS.C0 = CF(0,0,0)*ANGLES(RAD(0),RAD(0),RAD(0))
+LS.C0 = CF(0,0,0)*ANGLES(RAD(0),RAD(0),RAD(0))
+
+
+local bruh = reanim.Humanoid
+bruh.WalkSpeed = 90
+
+Mode='1'
+mousechanger=game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(k)
+if k == 'g' then-- first mode
+Mode='UpStomp'
+        wait(0.5)
+                Mode='DownStomp'
+    Instance.new("Sound" ,game.Workspace)
+    game.Workspace.Sound.SoundId = "rbxassetid://824687369"
+    Workspace.Sound:Stop()
+    Workspace.Sound.Volume = 10
+    Workspace.Sound.Playing = true
+wait(0.2)
+                Mode='neckR'
+    Instance.new("Sound" ,game.Workspace)
+    game.Workspace.Sound.SoundId = "rbxassetid://363808674"
+    Workspace.Sound:Stop()
+    Workspace.Sound.Volume = 10
+    Workspace.Sound.Playing = true
+        wait(0.4)
+                Mode='neckL'
+    Instance.new("Sound" ,game.Workspace)
+    game.Workspace.Sound.SoundId = "rbxassetid://363808674"
+    Workspace.Sound:Stop()
+    Workspace.Sound.Volume = 10
+    Workspace.Sound.Playing = true
+        wait(0.4)
+            Mode='1'
+    Instance.new("Sound" ,game.Workspace)
+    game.Workspace.Sound.SoundId = "rbxassetid://743521450"
+    Workspace.Sound:Stop()
+    Workspace.Sound.Volume = 10
+    Workspace.Sound.Playing = true
+--gh http://www.roblox.com/asset/?id=3080683313 :troll:
+    Instance.new("Sound" ,game.Workspace)
+    game.Workspace.Sound.SoundId = "rbxassetid://8556106118"
+    Workspace.Sound:Stop()
+    Workspace.Sound.Volume = 10
+    Workspace.Sound.Playing = true
+    Workspace.Sound.Looped = true
+bruh.WalkSpeed = 90
+elseif k == 'h' then-- second mode
+    Instance.new("Sound" ,game.Workspace)
+    game.Workspace.Sound.SoundId = "rbxassetid://3080683313"
+    Workspace.Sound:Stop()
+    Workspace.Sound.Volume = 10
+    Workspace.Sound.Playing = true
+    Workspace.Sound.Looped = true
+bruh.WalkSpeed = 90
+Mode='2'
+elseif k == 'j' then-- third mode
+Mode='UpStomp'
+        wait(0.5)
+                Mode='DownStomp'
+    Instance.new("Sound" ,game.Workspace)
+    game.Workspace.Sound.SoundId = "rbxassetid://824687369"
+    Workspace.Sound:Stop()
+    Workspace.Sound.Volume = 10
+    Workspace.Sound.Playing = true
+
+wait(0.2)
+    Instance.new("Sound" ,game.Workspace)
+    game.Workspace.Sound.SoundId = "rbxassetid://4921647660"
+    Workspace.Sound:Stop()
+    Workspace.Sound.Volume = 10
+    Workspace.Sound.Playing = true
+    Workspace.Sound.Looped = true
+bruh.WalkSpeed = 90
+Mode='3'
+elseif k == 'k' then-- third mode
+    Instance.new("Sound" ,game.Workspace)
+    game.Workspace.Sound.SoundId = "rbxassetid://1591072638"
+    Workspace.Sound:Stop()
+    Workspace.Sound.Volume = 10
+    Workspace.Sound.Playing = true
+    Workspace.Sound.Looped = true
+bruh.WalkSpeed = 90
+Mode='4'
+elseif k == 'l' then-- third mode
+    Instance.new("Sound" ,game.Workspace)
+    game.Workspace.Sound.SoundId = "rbxassetid://6556569538"
+    Workspace.Sound:Stop()
+    Workspace.Sound.Volume = 10
+    Workspace.Sound.Playing = true
+    Workspace.Sound.Looped = true
+bruh.WalkSpeed = 50
+Mode='5'
+elseif k == 'm' then-- music destroy3 mode
+    Workspace.Sound:Destroy()
+    Workspace.Sound:Destroy()
+    Workspace.Sound:Destroy()
+    Workspace.Sound:Destroy()
+    Workspace.Sound:Destroy()
+    Workspace.Sound:Destroy()
+Mode='m'
+elseif k == 'r' then-- il destroy3 mode
+                Mode='neckR'
+    Instance.new("Sound" ,game.Workspace)
+    game.Workspace.Sound.SoundId = "rbxassetid://363808674"
+    Workspace.Sound:Stop()
+    Workspace.Sound.Volume = 10
+    Workspace.Sound.Playing = true
+        wait(0.5)
+                Mode='neckL'
+    Instance.new("Sound" ,game.Workspace)
+    game.Workspace.Sound.SoundId = "rbxassetid://363808674"
+    Workspace.Sound:Stop()
+    Workspace.Sound.Volume = 10
+    Workspace.Sound.Playing = true
+        wait(0.5)
+                Mode='neckR'
+    Instance.new("Sound" ,game.Workspace)
+    game.Workspace.Sound.SoundId = "rbxassetid://363808674"
+    Workspace.Sound:Stop()
+    Workspace.Sound.Volume = 10
+    Workspace.Sound.Playing = true
+        wait(0.5)
+                Mode='neckL'
+    Instance.new("Sound" ,game.Workspace)
+    game.Workspace.Sound.SoundId = "rbxassetid://363808674"
+    Workspace.Sound:Stop()
+    Workspace.Sound.Volume = 10
+    Workspace.Sound.Playing = true
+        wait(0.5)
+                Mode='neckR'
+    Instance.new("Sound" ,game.Workspace)
+    game.Workspace.Sound.SoundId = "rbxassetid://363808674"
+    Workspace.Sound:Stop()
+    Workspace.Sound.Volume = 10
+    Workspace.Sound.Playing = true
+        wait(0.5)
+                Mode='neckL'
+    Instance.new("Sound" ,game.Workspace)
+    game.Workspace.Sound.SoundId = "rbxassetid://363808674"
+    Workspace.Sound:Stop()
+    Workspace.Sound.Volume = 10
+    Workspace.Sound.Playing = true
+        wait(0.5)
+    Instance.new("Sound",game.Workspace)
+    game.Workspace.Sound.SoundId = "rbxassetid://6049110238"
+    Workspace.Sound:Stop()
+    Workspace.Sound.Volume = 10
+    Workspace.Sound.Playing = true
+    Workspace.Sound.Looped = true
+bruh.WalkSpeed = 30
+Mode='6'
+elseif k == 'v' then-- 
+Mode='UpStomp'
+        wait(0.5)
+                Mode='DownStomp'
+    Instance.new("Sound" ,game.Workspace)
+    game.Workspace.Sound.SoundId = "rbxassetid://824687369"
+    Workspace.Sound:Stop()
+    Workspace.Sound.Volume = 10
+    Workspace.Sound.Playing = true
+wait(0.3)
+    Instance.new("Sound",game.Workspace)
+    game.Workspace.Sound.SoundId = "rbxassetid://6753293750"
+    Workspace.Sound:Stop()
+    Workspace.Sound.Volume = 10
+    Workspace.Sound.Playing = true
+    Workspace.Sound.Looped = true
+
+
+Mode='7'
+elseif k == 't' then-- il destroy3 mode
+    Instance.new("Sound",game.Workspace)
+    game.Workspace.Sound.SoundId = "rbxassetid://6049110238"
+    Workspace.Sound:Stop()
+    Workspace.Sound.Volume = 10
+    Workspace.Sound.Playing = true
+    Workspace.Sound.Looped = true
+bruh.WalkSpeed = 25
+Mode='8'
+elseif k == 'u' then-- il destroy3 mode
+Mode='UpStomp'
+        wait(0.5)
+                Mode='DownStomp'
+    Instance.new("Sound" ,game.Workspace)
+    game.Workspace.Sound.SoundId = "rbxassetid://824687369"
+    Workspace.Sound:Stop()
+    Workspace.Sound.Volume = 10
+    Workspace.Sound.Playing = true
+wait(0.2)
+Mode='9'
+    Instance.new("Sound",game.Workspace)
+    game.Workspace.Sound.SoundId = "rbxassetid://2007066385"
+    Workspace.Sound:Stop()
+    Workspace.Sound.Volume = 10
+    Workspace.Sound.Playing = true
+    Workspace.Sound.Looped = true
+
+elseif k == 'n' then-- il destroy3 mode
+    Instance.new("Sound",game.Workspace)
+    game.Workspace.Sound.SoundId = "rbxassetid://5189320769"
+    Workspace.Sound:Stop()
+    Workspace.Sound.Volume = 10
+    Workspace.Sound.Playing = true
+    Workspace.Sound.Looped = true
+Mode='0'
+elseif k == '-' then-- il destroy3 mode
+    Instance.new("Sound",game.Workspace)
+    game.Workspace.Sound.SoundId = "rbxassetid://7171244184"
+    Workspace.Sound:Stop()
+    Workspace.Sound.Volume = 10
+    Workspace.Sound.Playing = true
+    Workspace.Sound.Looped = true
+bruh.WalkSpeed = 30
+Mode='-'
+elseif k == '=' then-- il destroy3 mode
+    Instance.new("Sound",game.Workspace)
+    game.Workspace.Sound.SoundId = "rbxassetid://5189320769"
+    Workspace.Sound:Stop()
+    Workspace.Sound.Volume = 10
+    Workspace.Sound.Playing = true
+    Workspace.Sound.Looped = true
+Mode='='
+elseif k == 'p' then-- il destroy3 mode
+    Instance.new("Sound",game.Workspace)
+    game.Workspace.Sound.SoundId = "rbxassetid://5189320769"
+    Workspace.Sound:Stop()
+    Workspace.Sound.Volume = 10
+    Workspace.Sound.Playing = true
+    Workspace.Sound.Looped = true
+Mode='p'
+end
+end)
+
+ILattack=game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+if key == 'z' then
+Mode='imorattack'
+wait(0.3)
+Mode='z'
+wait(0.2)
+Mode='6'
+end
+end)
+
+attacklol=game.Players.LocalPlayer:GetMouse().Button1Down:Connect(function()
+Mode='Attack0'
+wait(0.2) -- time of attack u can edit this
+Mode='Attack1'
+wait(0.4)
+Mode='1'
+end)
+
+
+coroutine.wrap(function()
+while true do -- anim changer
+if HumanDied then mousechanger:Disconnect() attacklol:Disconnect() ILattack:Disconnect()break end
+sine = sine + speed
+local rlegray = Ray.new(reanim["Right Leg"].Position + Vector3.new(0, 0.5, 0), Vector3.new(0, -2, 0))
+local rlegpart, rlegendPoint = workspace:FindPartOnRay(rlegray, char)
+local llegray = Ray.new(reanim["Left Leg"].Position + Vector3.new(0, 0.5, 0), Vector3.new(0, -2, 0))
+local llegpart, llegendPoint = workspace:FindPartOnRay(llegray, char)
+local rightvector = (Root.Velocity * Root.CFrame.rightVector).X + (Root.Velocity * Root.CFrame.rightVector).Z
+local lookvector = (Root.Velocity * Root.CFrame.lookVector).X + (Root.Velocity * Root.CFrame.lookVector).Z
+if lookvector > reanim.Humanoid.WalkSpeed then
+lookvector = reanim.Humanoid.WalkSpeed
+end
+if lookvector < -reanim.Humanoid.WalkSpeed then
+lookvector = -reanim.Humanoid.WalkSpeed
+end
+if rightvector > reanim.Humanoid.WalkSpeed then
+rightvector = reanim.Humanoid.WalkSpeed
+end
+if rightvector < -reanim.Humanoid.WalkSpeed then
+rightvector = -reanim.Humanoid.WalkSpeed
+end
+local lookvel = lookvector / reanim.Humanoid.WalkSpeed
+local rightvel = rightvector / reanim.Humanoid.WalkSpeed
+if Mode == '1' then
+if Root.Velocity.y > 1 then -- jump
+--jump clerp here
+elseif Root.Velocity.y < -1 then -- fall
+--fall clerp here
+elseif Root.Velocity.Magnitude < 2 then -- idle
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(-13+0*math.cos(sine/13)),RAD(-8+1*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/20),6+0.5*math.cos(sine/20),0+0*math.cos(sine/20))*ANGLES(RAD(0+0*math.cos(sine/20)),RAD(0+0*math.cos(sine/20)),RAD(0+0*math.cos(sine/20))),.3)
+RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(166+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+LS.C0 = LS.C0:Lerp(CF(-1+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(81+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(-6+0*math.cos(sine/13))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/20),-1+0*math.cos(sine/20),0+0*math.cos(sine/20))*ANGLES(RAD(0+20*math.cos(sine/20)),RAD(-17+0*math.cos(sine/20)),RAD(0+0*math.cos(sine/20))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/20),-0.3+0*math.cos(sine/20),-0.8+0*math.cos(sine/20))*ANGLES(RAD(-8+-13*math.cos(sine/20)),RAD(12+0*math.cos(sine/20)),RAD(0+0*math.cos(sine/20))),.3)
+
+hatset('Starslayer Railgun','Right Arm',CFrame.new(),reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(-2+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(90+0*math.cos(sine/13)),RAD(-45+0*math.cos(sine/13)),RAD(90+0*math.cos(sine/13))),1),false)
+reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0 = reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(-2+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(90+0*math.cos(sine/13)),RAD(-45+0*math.cos(sine/13)),RAD(90+0*math.cos(sine/13))),.3)
+
+hatset('swordhalo','Torso',CFrame.new(),reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/900),0+0*math.cos(sine/900),-1.7+0*math.cos(sine/900))*ANGLES(RAD(0+0*math.cos(sine/900)),RAD(0+0*math.cos(sine/900)),RAD(0+10360*math.cos(sine/900))),1),false)
+reanim['swordhalo'].Handle.AccessoryWeld.C0 = reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/900),0+0*math.cos(sine/900),-1.7+0*math.cos(sine/900))*ANGLES(RAD(0+0*math.cos(sine/900)),RAD(0+0*math.cos(sine/900)),RAD(0+10360*math.cos(sine/900))),.3)
+
+hatset('DemonGodSword','Torso',CFrame.new(),reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(-4+0*math.cos(sine/1000),0+8*math.cos(sine/1000),-0+0*math.cos(sine/1000))*ANGLES(RAD(130+0*math.cos(sine/1000)),RAD(90+0*math.cos(sine/1000)),RAD(0+10360*math.cos(sine/1000))),1),false)
+reanim['DemonGodSword'].Handle.AccessoryWeld.C0 = reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(-4+0*math.cos(sine/1000),0+8*math.cos(sine/1000),-0+0*math.cos(sine/1000))*ANGLES(RAD(130+0*math.cos(sine/1000)),RAD(90+0*math.cos(sine/1000)),RAD(0+10360*math.cos(sine/1000))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(5+5*math.cos(sine/5),5+5*math.cos(sine/5),5+0*math.cos(sine/5))*ANGLES(RAD(90+0*math.cos(sine/490)),RAD(135+1000*math.cos(sine/490)),RAD(0+0*math.cos(sine/490))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(5+5*math.cos(sine/5),5+5*math.cos(sine/5),5+0*math.cos(sine/5))*ANGLES(RAD(90+0*math.cos(sine/490)),RAD(135+1000*math.cos(sine/490)),RAD(0+0*math.cos(sine/490))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(5+5*math.cos(sine/5),5+5*math.cos(sine/5),5+0*math.cos(sine/5))*ANGLES(RAD(90+0*math.cos(sine/490)),RAD(45+1000*math.cos(sine/490)),RAD(0+0*math.cos(sine/490))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(5+5*math.cos(sine/5),5+5*math.cos(sine/5),5+0*math.cos(sine/5))*ANGLES(RAD(90+0*math.cos(sine/490)),RAD(45+1000*math.cos(sine/490)),RAD(0+0*math.cos(sine/490))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(5+5*math.cos(sine/5),5+5*math.cos(sine/5),5+0*math.cos(sine/5))*ANGLES(RAD(90+0*math.cos(sine/490)),RAD(-45+1000*math.cos(sine/490)),RAD(0+0*math.cos(sine/490))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(5+5*math.cos(sine/5),5+5*math.cos(sine/5),5+0*math.cos(sine/5))*ANGLES(RAD(90+0*math.cos(sine/490)),RAD(-45+1000*math.cos(sine/490)),RAD(0+0*math.cos(sine/490))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(5+5*math.cos(sine/5),5+5*math.cos(sine/5),5+0*math.cos(sine/5))*ANGLES(RAD(90+0*math.cos(sine/490)),RAD(-135+1000*math.cos(sine/490)),RAD(0+0*math.cos(sine/490))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(5+5*math.cos(sine/5),5+5*math.cos(sine/5),5+0*math.cos(sine/5))*ANGLES(RAD(90+0*math.cos(sine/490)),RAD(-135+1000*math.cos(sine/490)),RAD(0+0*math.cos(sine/490))),.3)
+
+hatset('InternationalFedora','Torso',CFrame.new(),reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),1),false)
+reanim['InternationalFedora'].Handle.AccessoryWeld.C0 = reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),.3)
+
+hatset('International Fedora','Torso',CFrame.new(),reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(-10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),1),false)
+reanim['International Fedora'].Handle.AccessoryWeld.C0 = reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(-10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),.3)
+elseif Root.Velocity.Magnitude < 20 then -- walk
+--walk clerp here
+elseif Root.Velocity.Magnitude > 20 then -- run
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/20),1+0*math.cos(sine/20),0+0*math.cos(sine/20))*ANGLES(RAD(34+0*math.cos(sine/20)),RAD(0+0*math.cos(sine/20)),RAD(0+0*math.cos(sine/20))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/20),6+0.5*math.sin(sine/20),0+0.5*math.cos(sine/20))*ANGLES(RAD(-66+0*math.cos(sine/20)),RAD(0+0*math.cos(sine/20)),RAD(0+0*math.cos(sine/20))),.3)
+RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/20),0.5+0*math.cos(sine/20),0.4+0*math.cos(sine/20))*ANGLES(RAD(-19+5*math.cos(sine/20)),RAD(0+0*math.cos(sine/20)),RAD(21+0*math.cos(sine/20))),.3)
+LS.C0 = LS.C0:Lerp(CF(-0.8+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0.5+0*math.cos(sine/13))*ANGLES(RAD(-19+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(-19+0*math.cos(sine/13))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/50),-0.3+0*math.cos(sine/50),-1+0*math.cos(sine/50))*ANGLES(RAD(-15+0*math.cos(sine/50)),RAD(-11+0*math.cos(sine/50)),RAD(0+0*math.cos(sine/50))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/50),-1+0*math.cos(sine/50),0+0*math.cos(sine/50))*ANGLES(RAD(-8+0*math.cos(sine/50)),RAD(16+0*math.cos(sine/50)),RAD(0+0*math.cos(sine/50))),.3)
+--MEGA GUNN--
+hatset('Starslayer Railgun','Right Arm',CFrame.new(),reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(-2+0*math.cos(sine/0.1),1+0*math.cos(sine/0.1),0+0*math.cos(sine/0.1))*ANGLES(RAD(90+0*math.cos(sine/0.1)),RAD(-45+0*math.cos(sine/0.1)),RAD(90+0*math.cos(sine/0.1))),1),false)
+reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0 = reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(-2+0*math.cos(sine/0.1),1+0*math.cos(sine/0.1),0+0*math.cos(sine/0.1))*ANGLES(RAD(90+0*math.cos(sine/0.1)),RAD(-45+0*math.cos(sine/0.1)),RAD(90+0*math.cos(sine/0.1))),.3)
+
+hatset('DemonGodSword','Torso',CFrame.new(),reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(-4+0*math.cos(sine/1000),0+8*math.cos(sine/1000),-0+0*math.cos(sine/1000))*ANGLES(RAD(130+0*math.cos(sine/1000)),RAD(90+0*math.cos(sine/1000)),RAD(0+10360*math.cos(sine/1000))),1),false)
+reanim['DemonGodSword'].Handle.AccessoryWeld.C0 = reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(-4+0*math.cos(sine/1000),0+8*math.cos(sine/1000),-0+0*math.cos(sine/1000))*ANGLES(RAD(130+0*math.cos(sine/1000)),RAD(90+0*math.cos(sine/1000)),RAD(0+10360*math.cos(sine/1000))),.3)
+
+hatset('swordhalo','Torso',CFrame.new(),reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/900),0+0*math.cos(sine/900),-1.7+0*math.cos(sine/900))*ANGLES(RAD(0+0*math.cos(sine/900)),RAD(0+0*math.cos(sine/900)),RAD(0+10360*math.cos(sine/900))),1),false)
+reanim['swordhalo'].Handle.AccessoryWeld.C0 = reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/900),0+0*math.cos(sine/900),-1.7+0*math.cos(sine/900))*ANGLES(RAD(0+0*math.cos(sine/900)),RAD(0+0*math.cos(sine/900)),RAD(0+10360*math.cos(sine/900))),.3)
+
+--DEMONIC GREATSWORD--SECTION
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+3*math.cos(sine/2),3+3*math.cos(sine/2),3+0*math.cos(sine/2))*ANGLES(RAD(90+0*math.cos(sine/2)),RAD(135+0*math.cos(sine/2)),RAD(0+0*math.cos(sine/2))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+3*math.cos(sine/2),3+3*math.cos(sine/2),3+0*math.cos(sine/2))*ANGLES(RAD(90+0*math.cos(sine/2)),RAD(135+0*math.cos(sine/2)),RAD(0+0*math.cos(sine/2))),.3)
+--1 ^^^^
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+3*math.cos(sine/2),3+3*math.cos(sine/2),3+0*math.cos(sine/2))*ANGLES(RAD(90+0*math.cos(sine/2)),RAD(45+0*math.cos(sine/2)),RAD(0+0*math.cos(sine/2))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+3*math.cos(sine/2),3+3*math.cos(sine/2),3+0*math.cos(sine/2))*ANGLES(RAD(90+0*math.cos(sine/2)),RAD(45+0*math.cos(sine/2)),RAD(0+0*math.cos(sine/2))),.3)
+--2 ^^^^
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+3*math.cos(sine/2),3+3*math.cos(sine/2),3+0*math.cos(sine/2))*ANGLES(RAD(90+0*math.cos(sine/2)),RAD(-45+0*math.cos(sine/2)),RAD(0+0*math.cos(sine/2))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+3*math.cos(sine/2),3+3*math.cos(sine/2),3+0*math.cos(sine/2))*ANGLES(RAD(90+0*math.cos(sine/2)),RAD(-45+0*math.cos(sine/2)),RAD(0+0*math.cos(sine/2))),.3)
+--3 ^^^^
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+3*math.cos(sine/2),3+3*math.cos(sine/2),3+0*math.cos(sine/2))*ANGLES(RAD(90+0*math.cos(sine/2)),RAD(-135+0*math.cos(sine/2)),RAD(0+0*math.cos(sine/2))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+3*math.cos(sine/2),3+3*math.cos(sine/2),3+0*math.cos(sine/2))*ANGLES(RAD(90+0*math.cos(sine/2)),RAD(-135+0*math.cos(sine/2)),RAD(0+0*math.cos(sine/2))),.3)
+--4 ^^^^
+hatset('InternationalFedora','Torso',CFrame.new(),reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),1),false)
+reanim['InternationalFedora'].Handle.AccessoryWeld.C0 = reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),.3)
+
+hatset('International Fedora','Torso',CFrame.new(),reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(-10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),1),false)
+reanim['International Fedora'].Handle.AccessoryWeld.C0 = reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(-10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),.3)
+end
+elseif Mode == '2' then
+if Root.Velocity.y > 1 then -- jump
+--jump clerp here
+elseif Root.Velocity.y < -1 then -- fall
+--fall clerp here
+elseif Root.Velocity.Magnitude < 2 then -- idle
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/20),1+0*math.cos(sine/20),0+0*math.cos(sine/20))*ANGLES(RAD(-19+0*math.cos(sine/20)),RAD(0+-19*math.sin(sine/20)),RAD(0+0*math.cos(sine/20))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/30),6+0.3*math.cos(sine/30),0+0*math.cos(sine/30))*ANGLES(RAD(0+0*math.cos(sine/30)),RAD(0+0*math.cos(sine/30)),RAD(0+0*math.cos(sine/30))),.3)
+RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(174+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(3+0*math.cos(sine/13))),.3)
+LS.C0 = LS.C0:Lerp(CF(-1.2+0*math.cos(sine/13),0.7+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(-31+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(45+0*math.cos(sine/13))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/13),-0.3+0*math.cos(sine/13),-0.6+0*math.cos(sine/13))*ANGLES(RAD(-11+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.4+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(-11+0*math.cos(sine/13)),RAD(14+0*math.cos(sine/13)),RAD(-6+0*math.cos(sine/13))),.3)
+
+--MEGA GUNN--
+hatset('Starslayer Railgun','Right Arm',CFrame.new(),reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(-2+0*math.cos(sine/0.1),1+0*math.cos(sine/0.1),0+0*math.cos(sine/0.1))*ANGLES(RAD(90+0*math.cos(sine/0.1)),RAD(-45+0*math.cos(sine/0.1)),RAD(90+0*math.cos(sine/0.1))),1),false)
+reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0 = reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(-2+0*math.cos(sine/0.1),1+0*math.cos(sine/0.1),0+0*math.cos(sine/0.1))*ANGLES(RAD(90+0*math.cos(sine/0.1)),RAD(-45+0*math.cos(sine/0.1)),RAD(90+0*math.cos(sine/0.1))),.3)
+
+hatset('DemonGodSword','Torso',CFrame.new(),reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(-4+0*math.cos(sine/7000),0+9*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+0*math.cos(sine/7000)),RAD(90+0*math.cos(sine/7000)),RAD(0+-90360*math.cos(sine/7000))),1),false)
+reanim['DemonGodSword'].Handle.AccessoryWeld.C0 = reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(-4+0*math.cos(sine/7000),0+9*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+0*math.cos(sine/7000)),RAD(90+0*math.cos(sine/7000)),RAD(0+-90360*math.cos(sine/7000))),.3)
+
+hatset('swordhalo','Torso',CFrame.new(),reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/900),0+0*math.cos(sine/900),-1.7+0*math.cos(sine/900))*ANGLES(RAD(0+0*math.cos(sine/900)),RAD(0+0*math.cos(sine/900)),RAD(0+10360*math.cos(sine/900))),1),false)
+reanim['swordhalo'].Handle.AccessoryWeld.C0 = reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/900),0+0*math.cos(sine/900),-1.7+0*math.cos(sine/900))*ANGLES(RAD(0+0*math.cos(sine/900)),RAD(0+0*math.cos(sine/900)),RAD(0+10360*math.cos(sine/900))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(1+0.5*math.cos(sine/13),-3+0.5*math.cos(sine/13),-1+0*math.cos(sine/13))*ANGLES(RAD(0+20*math.cos(sine/13)),RAD(0+20*math.cos(sine/13)),RAD(-45+0*math.cos(sine/13))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(1+0.5*math.cos(sine/13),-3+0.5*math.cos(sine/13),-1+0*math.cos(sine/13))*ANGLES(RAD(0+20*math.cos(sine/13)),RAD(0+20*math.sin(sine/13)),RAD(-45+0*math.cos(sine/13))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(2+0.5*math.cos(sine/13),-4+0.5*math.cos(sine/13),-1+0*math.cos(sine/13))*ANGLES(RAD(0+20*math.cos(sine/13)),RAD(0+20*math.cos(sine/13)),RAD(-45+0*math.cos(sine/13))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(2+0.5*math.cos(sine/13),-4+0.5*math.cos(sine/13),-1+0*math.cos(sine/13))*ANGLES(RAD(0+20*math.cos(sine/13)),RAD(0+20*math.sin(sine/13)),RAD(-45+0*math.cos(sine/13))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(-3+0.5*math.cos(sine/13),1+0.5*math.cos(sine/13),-1+0*math.cos(sine/13))*ANGLES(RAD(0+-20*math.cos(sine/13)),RAD(0+-20*math.cos(sine/13)),RAD(-45+0*math.cos(sine/13))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(-3+0.5*math.cos(sine/13),1+0.5*math.cos(sine/13),-1+0*math.cos(sine/13))*ANGLES(RAD(0+-20*math.cos(sine/13)),RAD(0+-20*math.sin(sine/13)),RAD(-45+0*math.cos(sine/13))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(-4+0.5*math.cos(sine/13),2+0.5*math.cos(sine/13),-1+0*math.cos(sine/13))*ANGLES(RAD(0+-20*math.cos(sine/13)),RAD(0+-20*math.cos(sine/13)),RAD(-45+0*math.cos(sine/13))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(-4+0.5*math.cos(sine/13),2+0.5*math.cos(sine/13),-1+0*math.cos(sine/13))*ANGLES(RAD(0+-20*math.cos(sine/13)),RAD(0+-20*math.sin(sine/13)),RAD(-45+0*math.cos(sine/13))),.3)
+
+hatset('InternationalFedora','Torso',CFrame.new(),reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),1),false)
+reanim['InternationalFedora'].Handle.AccessoryWeld.C0 = reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),.3)
+
+hatset('International Fedora','Torso',CFrame.new(),reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(-10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),1),false)
+reanim['International Fedora'].Handle.AccessoryWeld.C0 = reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(-10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),.3)
+
+elseif Root.Velocity.Magnitude < 20 then -- walk
+--walk clerp here
+elseif Root.Velocity.Magnitude > 20 then -- run
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/20),1+0*math.cos(sine/20),0+0*math.cos(sine/20))*ANGLES(RAD(34+0*math.cos(sine/20)),RAD(0+0*math.cos(sine/20)),RAD(0+0*math.cos(sine/20))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/20),6+0.5*math.sin(sine/20),0+0.5*math.cos(sine/20))*ANGLES(RAD(-66+0*math.cos(sine/20)),RAD(0+0*math.cos(sine/20)),RAD(0+0*math.cos(sine/20))),.3)
+RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/20),0.5+0*math.cos(sine/20),0.4+0*math.cos(sine/20))*ANGLES(RAD(-19+5*math.cos(sine/20)),RAD(0+0*math.cos(sine/20)),RAD(21+0*math.cos(sine/20))),.3)
+LS.C0 = LS.C0:Lerp(CF(-0.8+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0.5+0*math.cos(sine/13))*ANGLES(RAD(-19+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(-19+0*math.cos(sine/13))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/50),-0.3+0*math.cos(sine/50),-1+0*math.cos(sine/50))*ANGLES(RAD(-15+0*math.cos(sine/50)),RAD(-11+0*math.cos(sine/50)),RAD(0+0*math.cos(sine/50))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/50),-1+0*math.cos(sine/50),0+0*math.cos(sine/50))*ANGLES(RAD(-8+0*math.cos(sine/50)),RAD(16+0*math.cos(sine/50)),RAD(0+0*math.cos(sine/50))),.3)
+--MEGA GUNN--
+hatset('Starslayer Railgun','Right Arm',CFrame.new(),reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(-2+0*math.cos(sine/0.1),1+0*math.cos(sine/0.1),0+0*math.cos(sine/0.1))*ANGLES(RAD(90+0*math.cos(sine/0.1)),RAD(-45+0*math.cos(sine/0.1)),RAD(90+0*math.cos(sine/0.1))),1),false)
+reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0 = reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(-2+0*math.cos(sine/0.1),1+0*math.cos(sine/0.1),0+0*math.cos(sine/0.1))*ANGLES(RAD(90+0*math.cos(sine/0.1)),RAD(-45+0*math.cos(sine/0.1)),RAD(90+0*math.cos(sine/0.1))),.3)
+
+hatset('DemonGodSword','Torso',CFrame.new(),reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(-4+0*math.cos(sine/7000),0+9*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+0*math.cos(sine/7000)),RAD(90+0*math.cos(sine/7000)),RAD(0+-90360*math.cos(sine/7000))),1),false)
+reanim['DemonGodSword'].Handle.AccessoryWeld.C0 = reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(-4+0*math.cos(sine/7000),0+9*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+0*math.cos(sine/7000)),RAD(90+0*math.cos(sine/7000)),RAD(0+-90360*math.cos(sine/7000))),.3)
+
+hatset('swordhalo','Torso',CFrame.new(),reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/900),0+0*math.cos(sine/900),-1.7+0*math.cos(sine/900))*ANGLES(RAD(0+0*math.cos(sine/900)),RAD(0+0*math.cos(sine/900)),RAD(0+10360*math.cos(sine/900))),1),false)
+reanim['swordhalo'].Handle.AccessoryWeld.C0 = reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/900),0+0*math.cos(sine/900),-1.7+0*math.cos(sine/900))*ANGLES(RAD(0+0*math.cos(sine/900)),RAD(0+0*math.cos(sine/900)),RAD(0+10360*math.cos(sine/900))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(1+0.5*math.cos(sine/13),-3+0.5*math.cos(sine/13),-1+0*math.cos(sine/13))*ANGLES(RAD(0+20*math.cos(sine/13)),RAD(0+20*math.cos(sine/13)),RAD(-45+0*math.cos(sine/13))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(1+0.5*math.cos(sine/13),-3+0.5*math.cos(sine/13),-1+0*math.cos(sine/13))*ANGLES(RAD(0+20*math.cos(sine/13)),RAD(0+20*math.sin(sine/13)),RAD(-45+0*math.cos(sine/13))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(2+0.5*math.cos(sine/13),-4+0.5*math.cos(sine/13),-1+0*math.cos(sine/13))*ANGLES(RAD(0+20*math.cos(sine/13)),RAD(0+20*math.cos(sine/13)),RAD(-45+0*math.cos(sine/13))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(2+0.5*math.cos(sine/13),-4+0.5*math.cos(sine/13),-1+0*math.cos(sine/13))*ANGLES(RAD(0+20*math.cos(sine/13)),RAD(0+20*math.sin(sine/13)),RAD(-45+0*math.cos(sine/13))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(-3+0.5*math.cos(sine/13),1+0.5*math.cos(sine/13),-1+0*math.cos(sine/13))*ANGLES(RAD(0+-20*math.cos(sine/13)),RAD(0+-20*math.cos(sine/13)),RAD(-45+0*math.cos(sine/13))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(-3+0.5*math.cos(sine/13),1+0.5*math.cos(sine/13),-1+0*math.cos(sine/13))*ANGLES(RAD(0+-20*math.cos(sine/13)),RAD(0+-20*math.sin(sine/13)),RAD(-45+0*math.cos(sine/13))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(-4+0.5*math.cos(sine/13),2+0.5*math.cos(sine/13),-1+0*math.cos(sine/13))*ANGLES(RAD(0+-20*math.cos(sine/13)),RAD(0+-20*math.cos(sine/13)),RAD(-45+0*math.cos(sine/13))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(-4+0.5*math.cos(sine/13),2+0.5*math.cos(sine/13),-1+0*math.cos(sine/13))*ANGLES(RAD(0+-20*math.cos(sine/13)),RAD(0+-20*math.sin(sine/13)),RAD(-45+0*math.cos(sine/13))),.3)
+
+hatset('InternationalFedora','Torso',CFrame.new(),reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),1),false)
+reanim['InternationalFedora'].Handle.AccessoryWeld.C0 = reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),.3)
+
+hatset('International Fedora','Torso',CFrame.new(),reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(-10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),1),false)
+reanim['International Fedora'].Handle.AccessoryWeld.C0 = reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(-10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),.3)
+
+end
+elseif Mode == '3' then
+if Root.Velocity.y > 1 then -- jump
+--jump clerp here
+elseif Root.Velocity.y < -1 then -- fall
+--fall clerp here
+elseif Root.Velocity.Magnitude < 2 then -- idle
+
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(-15+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/16),5+1*math.cos(sine/16),0+1*math.sin(sine/16))*ANGLES(RAD(0+0*math.cos(sine/16)),RAD(0+0*math.cos(sine/16)),RAD(0+0*math.cos(sine/16))),.3)
+RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/13),0+0*math.cos(sine/13),-0.5+0*math.cos(sine/13))*ANGLES(RAD(108+10*math.cos(sine/13)),RAD(12+0*math.cos(sine/13)),RAD(14+0*math.cos(sine/13))),.3)
+LS.C0 = LS.C0:Lerp(CF(-0.7+0*math.cos(sine/0.1),0.5+0.1*math.cos(sine/0.1),0+0*math.cos(sine/0.1))*ANGLES(RAD(130+1*math.cos(sine/0.1)),RAD(-2+1*math.cos(sine/0.1)),RAD(47+1*math.cos(sine/0.1))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/13),-0.8+0*math.cos(sine/13),-0.3+0*math.cos(sine/13))*ANGLES(RAD(-15+0*math.cos(sine/13)),RAD(-17+0*math.cos(sine/13)),RAD(12+7*math.cos(sine/13))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/13),-0.1+0*math.cos(sine/13),-0.8+0*math.cos(sine/13))*ANGLES(RAD(-11+5*math.cos(sine/13)),RAD(16+0*math.cos(sine/13)),RAD(-11+-2*math.cos(sine/13))),.3)
+
+--NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(-31+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+--RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/30),6+0.5*math.cos(sine/30),0+0*math.cos(sine/30))*ANGLES(RAD(90+4*math.sin(sine/30)),RAD(0+0*math.cos(sine/30)),RAD(0+0*math.cos(sine/30))),.3)
+--RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(210+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(-50+0*math.cos(sine/13))),.3)
+--LS.C0 = LS.C0:Lerp(CF(-1+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(210+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(50+0*math.cos(sine/13))),.3)
+--RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/30),-0.9+0*math.cos(sine/30),0+0*math.cos(sine/30))*ANGLES(RAD(0+-5*math.cos(sine/30)),RAD(0+0*math.cos(sine/30)),RAD(-8+0*math.cos(sine/30))),.3)
+--LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/30),-0.9+0*math.cos(sine/30),0+0*math.cos(sine/30))*ANGLES(RAD(21+-5*math.cos(sine/30)),RAD(0+0*math.cos(sine/30)),RAD(10+0*math.cos(sine/30))),.3)
+hatset('Starslayer Railgun','Right Arm',CFrame.new(),reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(-2+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(90+0*math.cos(sine/13)),RAD(-45+0*math.cos(sine/13)),RAD(90+0*math.cos(sine/13))),1),false)
+reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0 = reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(-2+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(90+0*math.cos(sine/13)),RAD(-45+0*math.cos(sine/13)),RAD(90+0*math.cos(sine/13))),.3)
+
+hatset('DemonGodSword','Torso',CFrame.new(),reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(-4+0*math.cos(sine/1000),0+8*math.cos(sine/1000),-0+0*math.cos(sine/1000))*ANGLES(RAD(130+0*math.cos(sine/1000)),RAD(90+0*math.cos(sine/1000)),RAD(0+10360*math.cos(sine/1000))),1),false)
+reanim['DemonGodSword'].Handle.AccessoryWeld.C0 = reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(-4+0*math.cos(sine/1000),0+8*math.cos(sine/1000),-0+0*math.cos(sine/1000))*ANGLES(RAD(130+0*math.cos(sine/1000)),RAD(90+0*math.cos(sine/1000)),RAD(0+10360*math.cos(sine/1000))),.3)
+
+hatset('swordhalo','Torso',CFrame.new(),reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/900),0+0*math.cos(sine/900),-1.7+0*math.cos(sine/900))*ANGLES(RAD(0+0*math.cos(sine/900)),RAD(0+0*math.cos(sine/900)),RAD(0+10360*math.cos(sine/900))),1),false)
+reanim['swordhalo'].Handle.AccessoryWeld.C0 = reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/900),0+0*math.cos(sine/900),-1.7+0*math.cos(sine/900))*ANGLES(RAD(0+0*math.cos(sine/900)),RAD(0+0*math.cos(sine/900)),RAD(0+10360*math.cos(sine/900))),.3)
+---
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+3*math.cos(sine/5),3+3*math.cos(sine/5),5+0*math.cos(sine/5))*ANGLES(RAD(90+0*math.cos(sine/2000)),RAD(135+10360*math.cos(sine/2000)),RAD(0+0*math.cos(sine/2000))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+3*math.cos(sine/5),3+3*math.cos(sine/5),5+0*math.cos(sine/5))*ANGLES(RAD(90+0*math.cos(sine/2000)),RAD(135+10360*math.cos(sine/2000)),RAD(0+0*math.cos(sine/2000))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+3*math.cos(sine/5),3+3*math.cos(sine/5),5+0*math.cos(sine/5))*ANGLES(RAD(90+0*math.cos(sine/2000)),RAD(45+10360*math.cos(sine/2000)),RAD(0+0*math.cos(sine/2000))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+3*math.cos(sine/5),3+3*math.cos(sine/5),5+0*math.cos(sine/2000))*ANGLES(RAD(90+0*math.cos(sine/2000)),RAD(45+10360*math.cos(sine/2000)),RAD(0+0*math.cos(sine/2000))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+3*math.cos(sine/5),3+3*math.cos(sine/5),5+0*math.cos(sine/5))*ANGLES(RAD(90+0*math.cos(sine/2000)),RAD(-45+10360*math.cos(sine/2000)),RAD(0+0*math.cos(sine/2000))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+3*math.cos(sine/5),3+3*math.cos(sine/5),5+0*math.cos(sine/2000))*ANGLES(RAD(90+0*math.cos(sine/2000)),RAD(-45+10360*math.cos(sine/2000)),RAD(0+0*math.cos(sine/2000))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+3*math.cos(sine/5),3+3*math.cos(sine/5),5+0*math.cos(sine/5))*ANGLES(RAD(90+0*math.cos(sine/2000)),RAD(-135+10360*math.cos(sine/2000)),RAD(0+0*math.cos(sine/2000))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+3*math.cos(sine/5),3+3*math.cos(sine/5),5+0*math.cos(sine/2000))*ANGLES(RAD(90+0*math.cos(sine/2000)),RAD(-135+10360*math.cos(sine/2000)),RAD(0+0*math.cos(sine/2000))),.3)
+
+hatset('InternationalFedora','Torso',CFrame.new(),reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),1),false)
+reanim['InternationalFedora'].Handle.AccessoryWeld.C0 = reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),.3)
+
+hatset('International Fedora','Torso',CFrame.new(),reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(-10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),1),false)
+reanim['International Fedora'].Handle.AccessoryWeld.C0 = reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(-10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),.3)
+
+elseif Root.Velocity.Magnitude < 20 then -- walk
+--walk clerp here
+elseif Root.Velocity.Magnitude > 20 then -- run
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(1+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/13),6+0.2*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(-28+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/13),0.5+0*math.sin(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(-73+0*math.cos(sine/13)),RAD(30+0*math.cos(sine/13)),RAD(10+12*math.cos(sine/13))),.3)
+LS.C0 = LS.C0:Lerp(CF(-1+0*math.cos(sine/13),0.5+0*math.sin(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(-77+0*math.cos(sine/13)),RAD(-31+-0.1*math.cos(sine/13)),RAD(-8+-6*math.cos(sine/13))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/9),-0.5+-0.2*math.sin(sine/9),-1+0.2*math.cos(sine/9))*ANGLES(RAD(-35+20*math.cos(sine/9)),RAD(-26+0*math.cos(sine/9)),RAD(1+0*math.cos(sine/9))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/9),-0.5+0.2*math.sin(sine/9),-1+-0.2*math.cos(sine/9))*ANGLES(RAD(-44+-30*math.cos(sine/9)),RAD(39+0*math.cos(sine/9)),RAD(-8+0*math.cos(sine/9))),.3)
+
+hatset('DemonGodSword','Torso',CFrame.new(),reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(-4+0*math.cos(sine/7000),0+9*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+0*math.cos(sine/7000)),RAD(90+0*math.cos(sine/7000)),RAD(0+-90360*math.cos(sine/7000))),1),false)
+reanim['DemonGodSword'].Handle.AccessoryWeld.C0 = reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(-4+0*math.cos(sine/7000),0+9*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+0*math.cos(sine/7000)),RAD(90+0*math.cos(sine/7000)),RAD(0+-90360*math.cos(sine/7000))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+3*math.cos(sine/5),3+3*math.cos(sine/5),5+0*math.cos(sine/5))*ANGLES(RAD(90+0*math.cos(sine/2000)),RAD(135+10360*math.cos(sine/2000)),RAD(0+0*math.cos(sine/2000))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+3*math.cos(sine/5),3+3*math.cos(sine/5),5+0*math.cos(sine/5))*ANGLES(RAD(90+0*math.cos(sine/2000)),RAD(135+10360*math.cos(sine/2000)),RAD(0+0*math.cos(sine/2000))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+3*math.cos(sine/5),3+3*math.cos(sine/5),5+0*math.cos(sine/5))*ANGLES(RAD(90+0*math.cos(sine/2000)),RAD(45+10360*math.cos(sine/2000)),RAD(0+0*math.cos(sine/2000))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+3*math.cos(sine/5),3+3*math.cos(sine/5),5+0*math.cos(sine/2000))*ANGLES(RAD(90+0*math.cos(sine/2000)),RAD(45+10360*math.cos(sine/2000)),RAD(0+0*math.cos(sine/2000))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+3*math.cos(sine/5),3+3*math.cos(sine/5),5+0*math.cos(sine/5))*ANGLES(RAD(90+0*math.cos(sine/2000)),RAD(-45+10360*math.cos(sine/2000)),RAD(0+0*math.cos(sine/2000))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+3*math.cos(sine/5),3+3*math.cos(sine/5),5+0*math.cos(sine/2000))*ANGLES(RAD(90+0*math.cos(sine/2000)),RAD(-45+10360*math.cos(sine/2000)),RAD(0+0*math.cos(sine/2000))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+3*math.cos(sine/5),3+3*math.cos(sine/5),5+0*math.cos(sine/5))*ANGLES(RAD(90+0*math.cos(sine/2000)),RAD(-135+10360*math.cos(sine/2000)),RAD(0+0*math.cos(sine/2000))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+3*math.cos(sine/5),3+3*math.cos(sine/5),5+0*math.cos(sine/2000))*ANGLES(RAD(90+0*math.cos(sine/2000)),RAD(-135+10360*math.cos(sine/2000)),RAD(0+0*math.cos(sine/2000))),.3)
+
+hatset('InternationalFedora','Torso',CFrame.new(),reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),1),false)
+reanim['InternationalFedora'].Handle.AccessoryWeld.C0 = reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),.3)
+
+hatset('International Fedora','Torso',CFrame.new(),reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(-10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),1),false)
+reanim['International Fedora'].Handle.AccessoryWeld.C0 = reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(-10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),.3)
+
+end
+elseif Mode == '4' then
+if Root.Velocity.y > 1 then -- jump
+--jump clerp here
+elseif Root.Velocity.y < -1 then -- fall
+--fall clerp here
+elseif Root.Velocity.Magnitude < 2 then -- idle
+
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(-13+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/13),6+0.2*math.sin(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(-55+0*math.cos(sine/13)),RAD(-20+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+RS.C0 = RS.C0:Lerp(CF(1.+0*math.cos(sine/13),0.+0*math.cos(sine/13),0.7+0*math.cos(sine/13))*ANGLES(RAD(-44+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(54+0*math.cos(sine/13))),.3)
+LS.C0 = LS.C0:Lerp(CF(-0.8+0*math.cos(sine/13),0.5+0*math.cos(sine/13),-0.7+0*math.cos(sine/13))*ANGLES(RAD(174+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(27+0*math.cos(sine/13))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/13),0.5+0*math.cos(sine/13),-0.5+0*math.cos(sine/13))*ANGLES(RAD(45+0*math.cos(sine/13)),RAD(12+0*math.cos(sine/13)),RAD(-6+0*math.cos(sine/13))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(-15+0*math.cos(sine/13)),RAD(23+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+
+hatset('Starslayer Railgun','Right Arm',CFrame.new(),reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(-1.5+0*math.cos(sine/13),-0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(90+0*math.cos(sine/13)),RAD(50+0*math.cos(sine/13)),RAD(90+0*math.cos(sine/13))),1),false)
+reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0 = reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(-1.5+0*math.cos(sine/13),-0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(90+0*math.cos(sine/13)),RAD(50+0*math.cos(sine/13)),RAD(90+0*math.cos(sine/13))),.3)
+
+hatset('DemonGodSword','Torso',CFrame.new(),reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(-4+0*math.cos(sine/1000),0+8*math.cos(sine/1000),-0+0*math.cos(sine/1000))*ANGLES(RAD(130+0*math.cos(sine/1000)),RAD(90+0*math.cos(sine/1000)),RAD(0+10360*math.cos(sine/1000))),1),false)
+reanim['DemonGodSword'].Handle.AccessoryWeld.C0 = reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(-4+0*math.cos(sine/1000),0+8*math.cos(sine/1000),-0+0*math.cos(sine/1000))*ANGLES(RAD(130+0*math.cos(sine/1000)),RAD(90+0*math.cos(sine/1000)),RAD(0+10360*math.cos(sine/1000))),.3)
+
+hatset('swordhalo','Torso',CFrame.new(),reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/900),0+0*math.cos(sine/900),-1.7+0*math.cos(sine/900))*ANGLES(RAD(0+0*math.cos(sine/900)),RAD(0+0*math.cos(sine/900)),RAD(0+10360*math.cos(sine/900))),1),false)
+reanim['swordhalo'].Handle.AccessoryWeld.C0 = reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/900),0+0*math.cos(sine/900),-1.7+0*math.cos(sine/900))*ANGLES(RAD(0+0*math.cos(sine/900)),RAD(0+0*math.cos(sine/900)),RAD(0+10360*math.cos(sine/900))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(-4+2*math.cos(sine/13),-4+2*math.cos(sine/13),-2+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/600)),RAD(0+0*math.cos(sine/600)),RAD(0+1000*math.cos(sine/600))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(-4+2*math.cos(sine/13),-4+2*math.cos(sine/13),-2+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/600)),RAD(0+0*math.cos(sine/600)),RAD(0+1000*math.cos(sine/600))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(-4+2*math.cos(sine/13),-4+2*math.cos(sine/13),-2+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/600)),RAD(0+0*math.cos(sine/600)),RAD(90+1000*math.cos(sine/600))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(-4+2*math.cos(sine/13),-4+2*math.cos(sine/13),-2+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/600)),RAD(0+0*math.cos(sine/600)),RAD(90+1000*math.cos(sine/600))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(-4+2*math.cos(sine/13),-4+2*math.cos(sine/13),-2+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/600)),RAD(0+0*math.cos(sine/600)),RAD(-90+1000*math.cos(sine/600))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(-4+2*math.cos(sine/13),-4+2*math.cos(sine/13),-2+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/600)),RAD(0+0*math.cos(sine/600)),RAD(-90+1000*math.cos(sine/600))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(-4+2*math.cos(sine/13),-4+2*math.cos(sine/13),-2+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/600)),RAD(0+0*math.cos(sine/600)),RAD(190+1000*math.cos(sine/600))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(-4+2*math.cos(sine/13),-4+2*math.cos(sine/13),-2+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/600)),RAD(0+0*math.cos(sine/600)),RAD(190+1000*math.cos(sine/600))),.3)
+
+hatset('InternationalFedora','Torso',CFrame.new(),reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),1),false)
+reanim['InternationalFedora'].Handle.AccessoryWeld.C0 = reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),.3)
+
+hatset('International Fedora','Torso',CFrame.new(),reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(-10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),1),false)
+reanim['International Fedora'].Handle.AccessoryWeld.C0 = reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(-10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),.3)
+
+elseif Root.Velocity.Magnitude < 20 then -- walk
+--walk clerp here
+elseif Root.Velocity.Magnitude > 20 then -- run
+--run clerp here
+end
+elseif Mode == '5' then
+if Root.Velocity.y > 1 then -- jump
+--jump clerp here
+elseif Root.Velocity.y < -1 then -- fall
+--fall clerp here
+elseif Root.Velocity.Magnitude < 2 then -- idle
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(-43+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/13),4+0.2*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(-5+0*math.cos(sine/13)),RAD(0+1*math.cos(sine/13)),RAD(22+0*math.cos(sine/13))),.3)
+RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/13),-0.5+-0.1*math.cos(sine/13),0.5+0*math.cos(sine/13))*ANGLES(RAD(-83+0*math.cos(sine/13)),RAD(-18+0*math.cos(sine/13)),RAD(35+0*math.cos(sine/13))),.3)
+LS.C0 = LS.C0:Lerp(CF(-0.5+0*math.cos(sine/13),0+0*math.cos(sine/13),-1+0*math.cos(sine/13))*ANGLES(RAD(182+0*math.cos(sine/13)),RAD(-23+0*math.cos(sine/13)),RAD(33+0*math.cos(sine/13))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.3+0*math.cos(sine/13),-0.5+0*math.cos(sine/13),-0.9+0*math.cos(sine/13))*ANGLES(RAD(-9+0*math.cos(sine/13)),RAD(28+0*math.cos(sine/13)),RAD(4+0*math.cos(sine/13))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.7+0*math.cos(sine/13),-1+0*math.cos(sine/13),-0.3+0*math.cos(sine/13))*ANGLES(RAD(-72+0*math.cos(sine/13)),RAD(28+0*math.cos(sine/13)),RAD(20+0*math.cos(sine/13))),.3)
+
+hatset('Starslayer Railgun','Right Arm',CFrame.new(),reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(-1.5+0*math.cos(sine/13),-0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(90+0*math.cos(sine/13)),RAD(50+0*math.cos(sine/13)),RAD(90+0*math.cos(sine/13))),1),false)
+reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0 = reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(-1.5+0*math.cos(sine/13),-0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(90+0*math.cos(sine/13)),RAD(50+0*math.cos(sine/13)),RAD(90+0*math.cos(sine/13))),.3)
+
+hatset('DemonGodSword','Torso',CFrame.new(),reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(-4+0*math.cos(sine/1000),0+8*math.cos(sine/1000),-0+0*math.cos(sine/1000))*ANGLES(RAD(130+0*math.cos(sine/1000)),RAD(90+0*math.cos(sine/1000)),RAD(0+10360*math.cos(sine/1000))),1),false)
+reanim['DemonGodSword'].Handle.AccessoryWeld.C0 = reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(-4+0*math.cos(sine/1000),0+8*math.cos(sine/1000),-0+0*math.cos(sine/1000))*ANGLES(RAD(130+0*math.cos(sine/1000)),RAD(90+0*math.cos(sine/1000)),RAD(0+10360*math.cos(sine/1000))),.3)
+
+hatset('swordhalo','Torso',CFrame.new(),reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/5000),0+0*math.cos(sine/5000),-1+0*math.cos(sine/5000))*ANGLES(RAD(0+0*math.cos(sine/5000)),RAD(0+0*math.cos(sine/5000)),RAD(0+90360*math.cos(sine/5000))),1),false)
+reanim['swordhalo'].Handle.AccessoryWeld.C0 = reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/5000),0+0*math.cos(sine/5000),-1+0*math.cos(sine/5000))*ANGLES(RAD(0+0*math.cos(sine/5000)),RAD(0+0*math.cos(sine/5000)),RAD(0+90360*math.cos(sine/5000))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(5+5*math.cos(sine/5),5+5*math.cos(sine/5),5+0*math.cos(sine/5))*ANGLES(RAD(90+0*math.cos(sine/490)),RAD(135+1000*math.cos(sine/490)),RAD(0+0*math.cos(sine/490))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(5+5*math.cos(sine/5),5+5*math.cos(sine/5),5+0*math.cos(sine/5))*ANGLES(RAD(90+0*math.cos(sine/490)),RAD(135+1000*math.cos(sine/490)),RAD(0+0*math.cos(sine/490))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(5+5*math.cos(sine/5),5+5*math.cos(sine/5),5+0*math.cos(sine/5))*ANGLES(RAD(90+0*math.cos(sine/490)),RAD(45+1000*math.cos(sine/490)),RAD(0+0*math.cos(sine/490))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(5+5*math.cos(sine/5),5+5*math.cos(sine/5),5+0*math.cos(sine/5))*ANGLES(RAD(90+0*math.cos(sine/490)),RAD(45+1000*math.cos(sine/490)),RAD(0+0*math.cos(sine/490))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(5+5*math.cos(sine/5),5+5*math.cos(sine/5),5+0*math.cos(sine/5))*ANGLES(RAD(90+0*math.cos(sine/490)),RAD(-45+1000*math.cos(sine/490)),RAD(0+0*math.cos(sine/490))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(5+5*math.cos(sine/5),5+5*math.cos(sine/5),5+0*math.cos(sine/5))*ANGLES(RAD(90+0*math.cos(sine/490)),RAD(-45+1000*math.cos(sine/490)),RAD(0+0*math.cos(sine/490))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(5+5*math.cos(sine/5),5+5*math.cos(sine/5),5+0*math.cos(sine/5))*ANGLES(RAD(90+0*math.cos(sine/490)),RAD(-135+1000*math.cos(sine/490)),RAD(0+0*math.cos(sine/490))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(5+5*math.cos(sine/5),5+5*math.cos(sine/5),5+0*math.cos(sine/5))*ANGLES(RAD(90+0*math.cos(sine/490)),RAD(-135+1000*math.cos(sine/490)),RAD(0+0*math.cos(sine/490))),.3)
+
+hatset('InternationalFedora','Torso',CFrame.new(),reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),1),false)
+reanim['InternationalFedora'].Handle.AccessoryWeld.C0 = reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),.3)
+
+elseif Root.Velocity.Magnitude < 20 then -- walk
+--walk clerp here
+elseif Root.Velocity.Magnitude > 20 then -- run
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(-43+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/13),4+0.2*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(-14+0*math.cos(sine/13)),RAD(0+1*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/10),0.5+-0.2*math.cos(sine/10),0+0*math.cos(sine/10))*ANGLES(RAD(0+30*math.cos(sine/10)),RAD(0+0*math.cos(sine/10)),RAD(17+0*math.cos(sine/10))),.3)
+LS.C0 = LS.C0:Lerp(CF(-1+0*math.cos(sine/13),0.1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(100+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/10),-1+0.1*math.sin(sine/10),0+0.1*math.sin(sine/10))*ANGLES(RAD(4+20*math.cos(sine/10)),RAD(0+0*math.cos(sine/10)),RAD(0+0*math.cos(sine/10))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/10),-1+-0.1*math.sin(sine/10),0+-0.1*math.sin(sine/10))*ANGLES(RAD(4+-20*math.cos(sine/10)),RAD(0+0*math.cos(sine/10)),RAD(0+0*math.cos(sine/10))),.3)
+
+hatset('Starslayer Railgun','Right Arm',CFrame.new(),reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(-1.5+0*math.cos(sine/13),-0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(90+0*math.cos(sine/13)),RAD(50+0*math.cos(sine/13)),RAD(90+0*math.cos(sine/13))),1),false)
+reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0 = reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(-1.5+0*math.cos(sine/13),-0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(90+0*math.cos(sine/13)),RAD(50+0*math.cos(sine/13)),RAD(90+0*math.cos(sine/13))),.3)
+
+hatset('DemonGodSword','Torso',CFrame.new(),reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(-4+0*math.cos(sine/1000),0+8*math.cos(sine/1000),-0+0*math.cos(sine/1000))*ANGLES(RAD(130+0*math.cos(sine/1000)),RAD(90+0*math.cos(sine/1000)),RAD(0+10360*math.cos(sine/1000))),1),false)
+reanim['DemonGodSword'].Handle.AccessoryWeld.C0 = reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(-4+0*math.cos(sine/1000),0+8*math.cos(sine/1000),-0+0*math.cos(sine/1000))*ANGLES(RAD(130+0*math.cos(sine/1000)),RAD(90+0*math.cos(sine/1000)),RAD(0+10360*math.cos(sine/1000))),.3)
+
+hatset('swordhalo','Torso',CFrame.new(),reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/5000),0+0*math.cos(sine/5000),-1+0*math.cos(sine/5000))*ANGLES(RAD(0+0*math.cos(sine/5000)),RAD(0+0*math.cos(sine/5000)),RAD(0+90360*math.cos(sine/5000))),1),false)
+reanim['swordhalo'].Handle.AccessoryWeld.C0 = reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/5000),0+0*math.cos(sine/5000),-1+0*math.cos(sine/5000))*ANGLES(RAD(0+0*math.cos(sine/5000)),RAD(0+0*math.cos(sine/5000)),RAD(0+90360*math.cos(sine/5000))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(5+5*math.cos(sine/5),5+5*math.cos(sine/5),5+0*math.cos(sine/5))*ANGLES(RAD(90+0*math.cos(sine/490)),RAD(135+1000*math.cos(sine/490)),RAD(0+0*math.cos(sine/490))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(5+5*math.cos(sine/5),5+5*math.cos(sine/5),5+0*math.cos(sine/5))*ANGLES(RAD(90+0*math.cos(sine/490)),RAD(135+1000*math.cos(sine/490)),RAD(0+0*math.cos(sine/490))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(5+5*math.cos(sine/5),5+5*math.cos(sine/5),5+0*math.cos(sine/5))*ANGLES(RAD(90+0*math.cos(sine/490)),RAD(45+1000*math.cos(sine/490)),RAD(0+0*math.cos(sine/490))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(5+5*math.cos(sine/5),5+5*math.cos(sine/5),5+0*math.cos(sine/5))*ANGLES(RAD(90+0*math.cos(sine/490)),RAD(45+1000*math.cos(sine/490)),RAD(0+0*math.cos(sine/490))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(5+5*math.cos(sine/5),5+5*math.cos(sine/5),5+0*math.cos(sine/5))*ANGLES(RAD(90+0*math.cos(sine/490)),RAD(-45+1000*math.cos(sine/490)),RAD(0+0*math.cos(sine/490))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(5+5*math.cos(sine/5),5+5*math.cos(sine/5),5+0*math.cos(sine/5))*ANGLES(RAD(90+0*math.cos(sine/490)),RAD(-45+1000*math.cos(sine/490)),RAD(0+0*math.cos(sine/490))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(5+5*math.cos(sine/5),5+5*math.cos(sine/5),5+0*math.cos(sine/5))*ANGLES(RAD(90+0*math.cos(sine/490)),RAD(-135+1000*math.cos(sine/490)),RAD(0+0*math.cos(sine/490))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(5+5*math.cos(sine/5),5+5*math.cos(sine/5),5+0*math.cos(sine/5))*ANGLES(RAD(90+0*math.cos(sine/490)),RAD(-135+1000*math.cos(sine/490)),RAD(0+0*math.cos(sine/490))),.3)
+
+hatset('InternationalFedora','Torso',CFrame.new(),reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),1),false)
+reanim['InternationalFedora'].Handle.AccessoryWeld.C0 = reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),.3)
+
+end
+elseif Mode == '6' then
+if Root.Velocity.y > 1 then -- jump
+--jump clerp here
+elseif Root.Velocity.y < -1 then -- fall
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(-6+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/40),3+0.5*math.sin(sine/40),0+0*math.cos(sine/40))*ANGLES(RAD(-22+0*math.cos(sine/40)),RAD(0+0*math.cos(sine/40)),RAD(0+0*math.cos(sine/40))),.3)
+RS.C0 = RS.C0:Lerp(CF(1.4+0*math.cos(sine/13),0.5+0*math.cos(sine/13),-0.5+0*math.cos(sine/13))*ANGLES(RAD(79+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(74+0*math.cos(sine/13))),.3)
+LS.C0 = LS.C0:Lerp(CF(-1+0*math.cos(sine/40),0.5+0*math.cos(sine/40),0+0*math.cos(sine/40))*ANGLES(RAD(0+-10*math.cos(sine/40)),RAD(0+0*math.cos(sine/40)),RAD(-8+7*math.cos(sine/40))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/40),-1+0*math.cos(sine/40),0+0*math.cos(sine/40))*ANGLES(RAD(21+-20*math.cos(sine/40)),RAD(-13+0*math.cos(sine/40)),RAD(3+-4*math.cos(sine/40))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/40),-1+0*math.cos(sine/40),0+0*math.cos(sine/40))*ANGLES(RAD(21+-20*math.cos(sine/40)),RAD(7+0*math.cos(sine/40)),RAD(-2+3*math.cos(sine/40))),.3)
+
+elseif Root.Velocity.Magnitude < 2 then -- idle
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(-26+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/25),5+0.4*math.cos(sine/25),0+0*math.cos(sine/25))*ANGLES(RAD(-15+0*math.cos(sine/25)),RAD(0+0*math.cos(sine/25)),RAD(0+0*math.cos(sine/25))),.3)
+RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(-28+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+LS.C0 = LS.C0:Lerp(CF(-1+0*math.cos(sine/25),0.5+0*math.cos(sine/25),0+0*math.cos(sine/25))*ANGLES(RAD(0+0*math.cos(sine/25)),RAD(0+0*math.cos(sine/25)),RAD(-24+-10*math.cos(sine/25))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/25),-1+0*math.cos(sine/25),0+0*math.cos(sine/25))*ANGLES(RAD(23+20*math.sin(sine/25)),RAD(-11+0*math.cos(sine/25)),RAD(0+0*math.cos(sine/25))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/25),-1+0*math.cos(sine/25),0+0*math.cos(sine/25))*ANGLES(RAD(32+20*math.sin(sine/25)),RAD(3+0*math.cos(sine/25)),RAD(0+0*math.cos(sine/25))),.3)
+
+hatset('Starslayer Railgun','Torso',CFrame.new(),reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(0.5+0*math.cos(sine/13),-0+0*math.cos(sine/13),-0.7+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(70+0*math.cos(sine/13))),1),false)
+reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0 = reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(0.5+0*math.cos(sine/13),-0+0*math.cos(sine/13),-0.7+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(70+0*math.cos(sine/13))),.3)
+
+hatset('swordhalo','Torso',CFrame.new(),reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/8000),0+0*math.cos(sine/8000),4+0*math.cos(sine/8000))*ANGLES(RAD(90+0*math.cos(sine/8000)),RAD(0-90360*math.cos(sine/8000)),RAD(0+0*math.cos(sine/8000))),1),false)
+reanim['swordhalo'].Handle.AccessoryWeld.C0 = reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/8000),0+0*math.cos(sine/8000),4+0*math.cos(sine/8000))*ANGLES(RAD(90+0*math.cos(sine/8000)),RAD(0-90360*math.cos(sine/8000)),RAD(0+0*math.cos(sine/8000))),.3)
+
+hatset('DemonGodSword','Right Arm',CFrame.new(),reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),3.9+0*math.cos(sine/13),-4+0*math.cos(sine/13))*ANGLES(RAD(-35+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),1),false)
+reanim['DemonGodSword'].Handle.AccessoryWeld.C0 = reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),3.9+0*math.cos(sine/13),-4+0*math.cos(sine/13))*ANGLES(RAD(-35+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+1*math.cos(sine/1.5),3+1*math.cos(sine/1.5),4.5+0*math.cos(sine/1.5))*ANGLES(RAD(90+0*math.cos(sine/2300)),RAD(135+10360*math.cos(sine/2300)),RAD(0+0*math.cos(sine/2300))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+1*math.cos(sine/1.5),3+1*math.cos(sine/1.5),4.5+0*math.cos(sine/1.5))*ANGLES(RAD(90+0*math.cos(sine/2300)),RAD(135+10360*math.cos(sine/2300)),RAD(0+0*math.cos(sine/2300))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+1*math.cos(sine/1.5),3+1*math.cos(sine/1.5),4.5+0*math.cos(sine/1.5))*ANGLES(RAD(90+0*math.cos(sine/2300)),RAD(45+10360*math.cos(sine/2300)),RAD(0+0*math.cos(sine/2300))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+1*math.cos(sine/1.5),3+1*math.cos(sine/1.5),4.5+0*math.cos(sine/1.5))*ANGLES(RAD(90+0*math.cos(sine/2300)),RAD(45+10360*math.cos(sine/2300)),RAD(0+0*math.cos(sine/2300))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+1*math.cos(sine/1.5),3+1*math.cos(sine/1.5),4.5+0*math.cos(sine/1.5))*ANGLES(RAD(90+0*math.cos(sine/2300)),RAD(-45+10360*math.cos(sine/2300)),RAD(0+0*math.cos(sine/2300))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+1*math.cos(sine/1.5),3+1*math.cos(sine/1.5),4.5+0*math.cos(sine/1.5))*ANGLES(RAD(90+0*math.cos(sine/2300)),RAD(-45+10360*math.cos(sine/2300)),RAD(0+0*math.cos(sine/2300))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+1*math.cos(sine/1.5),3+1*math.cos(sine/1.5),4.5+0*math.cos(sine/1.5))*ANGLES(RAD(90+0*math.cos(sine/2300)),RAD(-135+10360*math.cos(sine/2300)),RAD(0+0*math.cos(sine/2300))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+1*math.cos(sine/1.5),3+1*math.cos(sine/1.5),4.5+0*math.cos(sine/1.5))*ANGLES(RAD(90+0*math.cos(sine/2300)),RAD(-135+10360*math.cos(sine/2300)),RAD(0+0*math.cos(sine/2300))),.3)
+
+hatset('InternationalFedora','Torso',CFrame.new(),reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),1),false)
+reanim['InternationalFedora'].Handle.AccessoryWeld.C0 = reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),.3)
+
+hatset('International Fedora','Torso',CFrame.new(),reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(-10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),1),false)
+reanim['International Fedora'].Handle.AccessoryWeld.C0 = reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(-10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),.3)
+
+elseif Root.Velocity.Magnitude < 20 then -- walk
+--walk clerp here
+elseif Root.Velocity.Magnitude > 20 then -- run
+
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(-28+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/25),5+0.4*math.cos(sine/25),0+0*math.cos(sine/25))*ANGLES(RAD(-15+0*math.cos(sine/25)),RAD(0+0*math.cos(sine/25)),RAD(0+0*math.cos(sine/25))),.3)
+RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(-19+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+LS.C0 = LS.C0:Lerp(CF(-1+0*math.cos(sine/40),0.5+0*math.cos(sine/40),0+0*math.cos(sine/40))*ANGLES(RAD(0+-10*math.cos(sine/40)),RAD(0+0*math.cos(sine/40)),RAD(-8+7*math.cos(sine/40))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/40),-1+0*math.cos(sine/40),0+0*math.cos(sine/40))*ANGLES(RAD(4+0*math.cos(sine/40)),RAD(-13+0*math.cos(sine/40)),RAD(3+-4*math.cos(sine/40))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/40),-1+0*math.cos(sine/40),0+0*math.cos(sine/40))*ANGLES(RAD(4+0*math.cos(sine/40)),RAD(7+0*math.cos(sine/40)),RAD(-2+3*math.cos(sine/40))),.3)
+
+hatset('DemonGodSword','Right Arm',CFrame.new(),reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),3.5+0*math.cos(sine/13),-2.9+0*math.cos(sine/13))*ANGLES(RAD(-26+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),1),false)
+reanim['DemonGodSword'].Handle.AccessoryWeld.C0 = reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),3.5+0*math.cos(sine/13),-2.9+0*math.cos(sine/13))*ANGLES(RAD(-26+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+
+hatset('Starslayer Railgun','Torso',CFrame.new(),reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(0.5+0*math.cos(sine/13),-0+0*math.cos(sine/13),-0.7+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(70+0*math.cos(sine/13))),1),false)
+reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0 = reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(0.5+0*math.cos(sine/13),-0+0*math.cos(sine/13),-0.7+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(70+0*math.cos(sine/13))),.3)
+
+hatset('swordhalo','Torso',CFrame.new(),reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/8000),0+0*math.cos(sine/8000),4+0*math.cos(sine/8000))*ANGLES(RAD(90+0*math.cos(sine/8000)),RAD(0-90360*math.cos(sine/8000)),RAD(0+0*math.cos(sine/8000))),1),false)
+reanim['swordhalo'].Handle.AccessoryWeld.C0 = reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/8000),0+0*math.cos(sine/8000),4+0*math.cos(sine/8000))*ANGLES(RAD(90+0*math.cos(sine/8000)),RAD(0-90360*math.cos(sine/8000)),RAD(0+0*math.cos(sine/8000))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+1*math.cos(sine/1.5),3+1*math.cos(sine/1.5),4.5+0*math.cos(sine/1.5))*ANGLES(RAD(90+0*math.cos(sine/2300)),RAD(135+10360*math.cos(sine/2300)),RAD(0+0*math.cos(sine/2300))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+1*math.cos(sine/1.5),3+1*math.cos(sine/1.5),4.5+0*math.cos(sine/1.5))*ANGLES(RAD(90+0*math.cos(sine/2300)),RAD(135+10360*math.cos(sine/2300)),RAD(0+0*math.cos(sine/2300))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+1*math.cos(sine/1.5),3+1*math.cos(sine/1.5),4.5+0*math.cos(sine/1.5))*ANGLES(RAD(90+0*math.cos(sine/2300)),RAD(45+10360*math.cos(sine/2300)),RAD(0+0*math.cos(sine/2300))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+1*math.cos(sine/1.5),3+1*math.cos(sine/1.5),4.5+0*math.cos(sine/1.5))*ANGLES(RAD(90+0*math.cos(sine/2300)),RAD(45+10360*math.cos(sine/2300)),RAD(0+0*math.cos(sine/2300))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+1*math.cos(sine/1.5),3+1*math.cos(sine/1.5),4.5+0*math.cos(sine/1.5))*ANGLES(RAD(90+0*math.cos(sine/2300)),RAD(-45+10360*math.cos(sine/2300)),RAD(0+0*math.cos(sine/2300))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+1*math.cos(sine/1.5),3+1*math.cos(sine/1.5),4.5+0*math.cos(sine/1.5))*ANGLES(RAD(90+0*math.cos(sine/2300)),RAD(-45+10360*math.cos(sine/2300)),RAD(0+0*math.cos(sine/2300))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+1*math.cos(sine/1.5),3+1*math.cos(sine/1.5),4.5+0*math.cos(sine/1.5))*ANGLES(RAD(90+0*math.cos(sine/2300)),RAD(-135+10360*math.cos(sine/2300)),RAD(0+0*math.cos(sine/2300))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+1*math.cos(sine/1.5),3+1*math.cos(sine/1.5),4.5+0*math.cos(sine/1.5))*ANGLES(RAD(90+0*math.cos(sine/2300)),RAD(-135+10360*math.cos(sine/2300)),RAD(0+0*math.cos(sine/2300))),.3)
+
+hatset('InternationalFedora','Torso',CFrame.new(),reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),1),false)
+reanim['InternationalFedora'].Handle.AccessoryWeld.C0 = reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),.3)
+
+hatset('International Fedora','Torso',CFrame.new(),reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(-10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),1),false)
+reanim['International Fedora'].Handle.AccessoryWeld.C0 = reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(-10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),.3)
+
+end
+elseif Mode == '7' then
+if Root.Velocity.y > 1 then -- jump
+--jump clerp here
+elseif Root.Velocity.y < -1 then -- fall
+--fall clerp here
+elseif Root.Velocity.Magnitude < 2 then -- idle
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(-22+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/40),3+2*math.sin(sine/40),0+1*math.cos(sine/40))*ANGLES(RAD(41+0*math.cos(sine/40)),RAD(-26+0*math.cos(sine/40)),RAD(0+0*math.cos(sine/40))),.3)
+RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/50),0.5+0*math.cos(sine/50),0.5+0*math.cos(sine/50))*ANGLES(RAD(-48+0*math.cos(sine/50)),RAD(-44+0*math.cos(sine/50)),RAD(16+-10*math.cos(sine/50))),.3)
+LS.C0 = LS.C0:Lerp(CF(-1+0*math.cos(sine/50),0+0*math.cos(sine/50),0+0*math.cos(sine/50))*ANGLES(RAD(-75+0*math.cos(sine/50)),RAD(-8+0*math.cos(sine/50)),RAD(-22+10*math.cos(sine/50))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.6+0*math.cos(sine/50),-1+0.2*math.cos(sine/50),-0.2+0*math.cos(sine/50))*ANGLES(RAD(-51+-10*math.cos(sine/50)),RAD(-33+0*math.cos(sine/50)),RAD(14+0*math.cos(sine/50))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/50),-0.6+0.1*math.cos(sine/50),-0.8+0*math.cos(sine/50))*ANGLES(RAD(-37+-20*math.cos(sine/50)),RAD(0+0*math.cos(sine/50)),RAD(-13+0*math.cos(sine/50))),.3)
+
+
+hatset('Starslayer Railgun','Right Arm',CFrame.new(),reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(-1.5+0*math.cos(sine/13),-0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(90+0*math.cos(sine/13)),RAD(50+0*math.cos(sine/13)),RAD(90+0*math.cos(sine/13))),1),false)
+reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0 = reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(-1.5+0*math.cos(sine/13),-0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(90+0*math.cos(sine/13)),RAD(50+0*math.cos(sine/13)),RAD(90+0*math.cos(sine/13))),.3)
+
+hatset('swordhalo','Torso',CFrame.new(),reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/900),0+0*math.cos(sine/900),-1.7+0*math.cos(sine/900))*ANGLES(RAD(0+0*math.cos(sine/900)),RAD(0+0*math.cos(sine/900)),RAD(0+10360*math.cos(sine/900))),1),false)
+reanim['swordhalo'].Handle.AccessoryWeld.C0 = reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/900),0+0*math.cos(sine/900),-1.7+0*math.cos(sine/900))*ANGLES(RAD(0+0*math.cos(sine/900)),RAD(0+0*math.cos(sine/900)),RAD(0+10360*math.cos(sine/900))),.3)
+
+hatset('DemonGodSword','Torso',CFrame.new(),reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(-4+0*math.cos(sine/1000),0+8*math.cos(sine/1000),-0+0*math.cos(sine/1000))*ANGLES(RAD(130+0*math.cos(sine/1000)),RAD(90+0*math.cos(sine/1000)),RAD(0+10360*math.cos(sine/1000))),1),false)
+reanim['DemonGodSword'].Handle.AccessoryWeld.C0 = reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(-4+0*math.cos(sine/1000),0+8*math.cos(sine/1000),-0+0*math.cos(sine/1000))*ANGLES(RAD(130+0*math.cos(sine/1000)),RAD(90+0*math.cos(sine/1000)),RAD(0+10360*math.cos(sine/1000))),.3)
+
+hatset('InternationalFedora','Torso',CFrame.new(),reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),1),false)
+reanim['InternationalFedora'].Handle.AccessoryWeld.C0 = reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),.3)
+
+hatset('International Fedora','Torso',CFrame.new(),reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(-10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),1),false)
+reanim['International Fedora'].Handle.AccessoryWeld.C0 = reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(-10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(2+1*math.cos(sine/2),2+1*math.cos(sine/2),-4+0*math.cos(sine/2))*ANGLES(RAD(90+0*math.cos(sine/10000)),RAD(135-90360*math.cos(sine/10000)),RAD(0+0*math.cos(sine/10000))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(2+1*math.cos(sine/2),2+1*math.cos(sine/2),-4+0*math.cos(sine/2))*ANGLES(RAD(90+0*math.cos(sine/10000)),RAD(135-90360*math.cos(sine/10000)),RAD(0+0*math.cos(sine/10000))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(2+1*math.cos(sine/2),2+1*math.cos(sine/2),-4+0*math.cos(sine/2))*ANGLES(RAD(90+0*math.cos(sine/10000)),RAD(45-90360*math.cos(sine/10000)),RAD(0+0*math.cos(sine/10000))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(2+1*math.cos(sine/2),2+1*math.cos(sine/2),-4+0*math.cos(sine/2))*ANGLES(RAD(90+0*math.cos(sine/10000)),RAD(45-90360*math.cos(sine/10000)),RAD(0+0*math.cos(sine/10000))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(2+1*math.cos(sine/2),2+1*math.cos(sine/2),-4+0*math.cos(sine/2))*ANGLES(RAD(90+0*math.cos(sine/10000)),RAD(-45-90360*math.cos(sine/10000)),RAD(0+0*math.cos(sine/10000))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(2+1*math.cos(sine/2),2+1*math.cos(sine/2),-4+0*math.cos(sine/2))*ANGLES(RAD(90+0*math.cos(sine/10000)),RAD(-45-90360*math.cos(sine/10000)),RAD(0+0*math.cos(sine/10000))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(2+1*math.cos(sine/2),2+1*math.cos(sine/2),-4+0*math.cos(sine/2))*ANGLES(RAD(90+0*math.cos(sine/10000)),RAD(-135-90360*math.cos(sine/10000)),RAD(0+0*math.cos(sine/10000))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(2+1*math.cos(sine/2),2+1*math.cos(sine/2),-4+0*math.cos(sine/2))*ANGLES(RAD(90+0*math.cos(sine/10000)),RAD(-135-90360*math.cos(sine/10000)),RAD(0+0*math.cos(sine/10000))),.3)
+
+elseif Root.Velocity.Magnitude < 20 then -- walk
+--walk clerp here
+elseif Root.Velocity.Magnitude > 20 then -- run
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/20),1+0*math.cos(sine/20),0+0*math.cos(sine/20))*ANGLES(RAD(34+0*math.cos(sine/20)),RAD(0+0*math.cos(sine/20)),RAD(0+0*math.cos(sine/20))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/20),6+0.5*math.sin(sine/20),0+0.5*math.cos(sine/20))*ANGLES(RAD(-66+0*math.cos(sine/20)),RAD(0+0*math.cos(sine/20)),RAD(0+0*math.cos(sine/20))),.3)
+RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/20),0.5+0*math.cos(sine/20),0.4+0*math.cos(sine/20))*ANGLES(RAD(-19+5*math.cos(sine/20)),RAD(0+0*math.cos(sine/20)),RAD(21+0*math.cos(sine/20))),.3)
+LS.C0 = LS.C0:Lerp(CF(-0.8+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0.5+0*math.cos(sine/13))*ANGLES(RAD(-19+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(-19+0*math.cos(sine/13))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/50),-0.3+0*math.cos(sine/50),-1+0*math.cos(sine/50))*ANGLES(RAD(-15+0*math.cos(sine/50)),RAD(-11+0*math.cos(sine/50)),RAD(0+0*math.cos(sine/50))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/50),-1+0*math.cos(sine/50),0+0*math.cos(sine/50))*ANGLES(RAD(-8+0*math.cos(sine/50)),RAD(16+0*math.cos(sine/50)),RAD(0+0*math.cos(sine/50))),.3)
+--MEGA GUNN--
+hatset('Starslayer Railgun','Right Arm',CFrame.new(),reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(-2+0*math.cos(sine/0.1),1+0*math.cos(sine/0.1),0+0*math.cos(sine/0.1))*ANGLES(RAD(90+0*math.cos(sine/0.1)),RAD(-45+0*math.cos(sine/0.1)),RAD(90+0*math.cos(sine/0.1))),1),false)
+reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0 = reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(-2+0*math.cos(sine/0.1),1+0*math.cos(sine/0.1),0+0*math.cos(sine/0.1))*ANGLES(RAD(90+0*math.cos(sine/0.1)),RAD(-45+0*math.cos(sine/0.1)),RAD(90+0*math.cos(sine/0.1))),.3)
+
+hatset('swordhalo','Torso',CFrame.new(),reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/900),0+0*math.cos(sine/900),-1.7+0*math.cos(sine/900))*ANGLES(RAD(0+0*math.cos(sine/900)),RAD(0+0*math.cos(sine/900)),RAD(0+10360*math.cos(sine/900))),1),false)
+reanim['swordhalo'].Handle.AccessoryWeld.C0 = reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/900),0+0*math.cos(sine/900),-1.7+0*math.cos(sine/900))*ANGLES(RAD(0+0*math.cos(sine/900)),RAD(0+0*math.cos(sine/900)),RAD(0+10360*math.cos(sine/900))),.3)
+
+hatset('DemonGodSword','Torso',CFrame.new(),reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(-4+0*math.cos(sine/1000),0+8*math.cos(sine/1000),-0+0*math.cos(sine/1000))*ANGLES(RAD(130+0*math.cos(sine/1000)),RAD(90+0*math.cos(sine/1000)),RAD(0+10360*math.cos(sine/1000))),1),false)
+reanim['DemonGodSword'].Handle.AccessoryWeld.C0 = reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(-4+0*math.cos(sine/1000),0+8*math.cos(sine/1000),-0+0*math.cos(sine/1000))*ANGLES(RAD(130+0*math.cos(sine/1000)),RAD(90+0*math.cos(sine/1000)),RAD(0+10360*math.cos(sine/1000))),.3)
+
+hatset('InternationalFedora','Torso',CFrame.new(),reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),1),false)
+reanim['InternationalFedora'].Handle.AccessoryWeld.C0 = reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),.3)
+
+hatset('International Fedora','Torso',CFrame.new(),reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(-10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),1),false)
+reanim['International Fedora'].Handle.AccessoryWeld.C0 = reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(-10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(2+1*math.cos(sine/2),2+1*math.cos(sine/2),-4+0*math.cos(sine/2))*ANGLES(RAD(90+0*math.cos(sine/10000)),RAD(135-90360*math.cos(sine/10000)),RAD(0+0*math.cos(sine/10000))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(2+1*math.cos(sine/2),2+1*math.cos(sine/2),-4+0*math.cos(sine/2))*ANGLES(RAD(90+0*math.cos(sine/10000)),RAD(135-90360*math.cos(sine/10000)),RAD(0+0*math.cos(sine/10000))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(2+1*math.cos(sine/2),2+1*math.cos(sine/2),-4+0*math.cos(sine/2))*ANGLES(RAD(90+0*math.cos(sine/10000)),RAD(45-90360*math.cos(sine/10000)),RAD(0+0*math.cos(sine/10000))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(2+1*math.cos(sine/2),2+1*math.cos(sine/2),-4+0*math.cos(sine/2))*ANGLES(RAD(90+0*math.cos(sine/10000)),RAD(45-90360*math.cos(sine/10000)),RAD(0+0*math.cos(sine/10000))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(2+1*math.cos(sine/2),2+1*math.cos(sine/2),-4+0*math.cos(sine/2))*ANGLES(RAD(90+0*math.cos(sine/10000)),RAD(-45-90360*math.cos(sine/10000)),RAD(0+0*math.cos(sine/10000))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(2+1*math.cos(sine/2),2+1*math.cos(sine/2),-4+0*math.cos(sine/2))*ANGLES(RAD(90+0*math.cos(sine/10000)),RAD(-45-90360*math.cos(sine/10000)),RAD(0+0*math.cos(sine/10000))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(2+1*math.cos(sine/2),2+1*math.cos(sine/2),-4+0*math.cos(sine/2))*ANGLES(RAD(90+0*math.cos(sine/10000)),RAD(-135-90360*math.cos(sine/10000)),RAD(0+0*math.cos(sine/10000))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(2+1*math.cos(sine/2),2+1*math.cos(sine/2),-4+0*math.cos(sine/2))*ANGLES(RAD(90+0*math.cos(sine/10000)),RAD(-135-90360*math.cos(sine/10000)),RAD(0+0*math.cos(sine/10000))),.3)
+end
+elseif Mode == '8' then
+if Root.Velocity.y > 1 then -- jump
+--jump clerp here
+elseif Root.Velocity.y < -1 then -- fall
+--fall clerp here
+elseif Root.Velocity.Magnitude < 2 then -- idle
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(21+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/13),7+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(90+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/20),0.5+0*math.cos(sine/20),0.2+0*math.cos(sine/20))*ANGLES(RAD(-90+10*math.cos(sine/20)),RAD(-4+0*math.cos(sine/20)),RAD(12+0*math.cos(sine/20))),.3)
+LS.C0 = LS.C0:Lerp(CF(-1+0*math.cos(sine/20),0.5+0*math.cos(sine/20),0+0*math.cos(sine/20))*ANGLES(RAD(-90+10*math.cos(sine/20)),RAD(10+0*math.cos(sine/20)),RAD(-15+0*math.cos(sine/20))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/20),-1+0*math.cos(sine/20),0+0*math.cos(sine/20))*ANGLES(RAD(-77+-7*math.cos(sine/20)),RAD(0+0*math.cos(sine/20)),RAD(5+-10*math.cos(sine/20))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/20),-1+0*math.cos(sine/20),-0.5+0*math.cos(sine/20))*ANGLES(RAD(-95+0*math.cos(sine/20)),RAD(0+0*math.cos(sine/20)),RAD(-10+5*math.cos(sine/20))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+0*math.cos(sine/13),2.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(90+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(45+0*math.cos(sine/13))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+0*math.cos(sine/13),2.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(90+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(45+0*math.cos(sine/13))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+0*math.cos(sine/13),2.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(90+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(-45+0*math.cos(sine/13))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+0*math.cos(sine/13),2.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(90+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(-45+0*math.cos(sine/13))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+0*math.cos(sine/13),2.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(90+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(-135+0*math.cos(sine/13))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+0*math.cos(sine/13),2.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(90+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(-135+0*math.cos(sine/13))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+0*math.cos(sine/13),2.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(90+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(135+0*math.cos(sine/13))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+0*math.cos(sine/13),2.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(90+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(135+0*math.cos(sine/13))),.3)
+
+hatset('DemonGodSword','Torso',CFrame.new(),reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),3.5+0*math.cos(sine/13),-3.5+0*math.cos(sine/13))*ANGLES(RAD(40+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),1),false)
+reanim['DemonGodSword'].Handle.AccessoryWeld.C0 = reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),3.5+0*math.cos(sine/13),-3.5+0*math.cos(sine/13))*ANGLES(RAD(40+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+
+hatset('swordhalo','Torso',CFrame.new(),reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/2000),0+0*math.cos(sine/2000),-10+0*math.cos(sine/2000))*ANGLES(RAD(0+0*math.cos(sine/2000)),RAD(0+0*math.cos(sine/2000)),RAD(0+10360*math.cos(sine/2000))),1),false)
+reanim['swordhalo'].Handle.AccessoryWeld.C0 = reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/2000),0+0*math.cos(sine/2000),-10+0*math.cos(sine/2000))*ANGLES(RAD(0+0*math.cos(sine/2000)),RAD(0+0*math.cos(sine/2000)),RAD(0+10360*math.cos(sine/2000))),.3)
+
+hatset('International Fedora','Torso',CFrame.new(),reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(0+5*math.cos(sine/9000),0+5*math.cos(sine/9000),-8+0*math.cos(sine/9000))*ANGLES(RAD(0+0*math.cos(sine/9000)),RAD(0+0*math.cos(sine/9000)),RAD(0+90360*math.cos(sine/9000))),1),false)
+reanim['International Fedora'].Handle.AccessoryWeld.C0 = reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(0+5*math.cos(sine/9000),0+5*math.sin(sine/9000),-8+0*math.cos(sine/9000))*ANGLES(RAD(0+0*math.cos(sine/9000)),RAD(0+0*math.cos(sine/9000)),RAD(0+90360*math.cos(sine/9000))),.3)
+
+hatset('InternationalFedora','Torso',CFrame.new(),reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(0+5*math.cos(sine/9000),0+5*math.cos(sine/9000),-5+2*math.cos(sine/9000))*ANGLES(RAD(0+0*math.cos(sine/9000)),RAD(0+0*math.cos(sine/9000)),RAD(0+90360*math.cos(sine/9000))),1),false)
+reanim['InternationalFedora'].Handle.AccessoryWeld.C0 = reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(0+5*math.cos(sine/9000),0+5*math.sin(sine/9000),-5+2*math.cos(sine/9000))*ANGLES(RAD(0+0*math.cos(sine/9000)),RAD(0+0*math.cos(sine/9000)),RAD(0+90360*math.cos(sine/9000))),.3)
+
+elseif Root.Velocity.Magnitude < 20 then -- walk
+--walk clerp here
+elseif Root.Velocity.Magnitude > 20 then -- run
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/7),1+0*math.cos(sine/7),0+0*math.cos(sine/7))*ANGLES(RAD(0+5*math.sin(sine/7)),RAD(0+0*math.cos(sine/7)),RAD(0+0*math.cos(sine/7))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/7),0+0*math.cos(sine/7),0+0*math.cos(sine/7))*ANGLES(RAD(0+0*math.cos(sine/7)),RAD(00+10*math.cos(sine/7)),RAD(0+0*math.cos(sine/7))),.3)
+RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/7),0.5+0*math.cos(sine/7),0+0*math.cos(sine/7))*ANGLES(RAD(0+-30*math.cos(sine/7)),RAD(0+0*math.cos(sine/7)),RAD(0+0*math.cos(sine/7))),.3)
+LS.C0 = LS.C0:Lerp(CF(-1+0*math.cos(sine/7),0.5+0*math.cos(sine/7),0+0*math.cos(sine/7))*ANGLES(RAD(0+30*math.cos(sine/7)),RAD(0+0*math.cos(sine/7)),RAD(0+0*math.cos(sine/7))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/7),-1+-0.1*math.sin(sine/7),-0+0*math.cos(sine/7))*ANGLES(RAD(-20+30*math.cos(sine/7)),RAD(0+0*math.cos(sine/7)),RAD(0+0*math.cos(sine/7))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/7),-1+-0.2*math.cos(sine/7),0+0*math.cos(sine/7))*ANGLES(RAD(-20+-30*math.cos(sine/7)),RAD(0+0*math.cos(sine/7)),RAD(0+0*math.cos(sine/7))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+0*math.cos(sine/13),2.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(90+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(45+0*math.cos(sine/13))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+0*math.cos(sine/13),2.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(90+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(45+0*math.cos(sine/13))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+0*math.cos(sine/13),2.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(90+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(-45+0*math.cos(sine/13))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+0*math.cos(sine/13),2.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(90+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(-45+0*math.cos(sine/13))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+0*math.cos(sine/13),2.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(90+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(-135+0*math.cos(sine/13))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+0*math.cos(sine/13),2.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(90+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(-135+0*math.cos(sine/13))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+0*math.cos(sine/13),2.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(90+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(135+0*math.cos(sine/13))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+0*math.cos(sine/13),2.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(90+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(135+0*math.cos(sine/13))),.3)
+
+hatset('DemonGodSword','Torso',CFrame.new(),reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),3.5+0*math.cos(sine/13),-3.5+0*math.cos(sine/13))*ANGLES(RAD(40+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),1),false)
+reanim['DemonGodSword'].Handle.AccessoryWeld.C0 = reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),3.5+0*math.cos(sine/13),-3.5+0*math.cos(sine/13))*ANGLES(RAD(40+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+
+hatset('swordhalo','Torso',CFrame.new(),reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/2000),0+0*math.cos(sine/2000),-10+0*math.cos(sine/2000))*ANGLES(RAD(0+0*math.cos(sine/2000)),RAD(0+0*math.cos(sine/2000)),RAD(0+10360*math.cos(sine/2000))),1),false)
+reanim['swordhalo'].Handle.AccessoryWeld.C0 = reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/2000),0+0*math.cos(sine/2000),-10+0*math.cos(sine/2000))*ANGLES(RAD(0+0*math.cos(sine/2000)),RAD(0+0*math.cos(sine/2000)),RAD(0+10360*math.cos(sine/2000))),.3)
+
+hatset('International Fedora','Torso',CFrame.new(),reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(0+5*math.cos(sine/9000),0+5*math.cos(sine/9000),-8+0*math.cos(sine/9000))*ANGLES(RAD(0+0*math.cos(sine/9000)),RAD(0+0*math.cos(sine/9000)),RAD(0+90360*math.cos(sine/9000))),1),false)
+reanim['International Fedora'].Handle.AccessoryWeld.C0 = reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(0+5*math.cos(sine/9000),0+5*math.sin(sine/9000),-8+0*math.cos(sine/9000))*ANGLES(RAD(0+0*math.cos(sine/9000)),RAD(0+0*math.cos(sine/9000)),RAD(0+90360*math.cos(sine/9000))),.3)
+
+hatset('InternationalFedora','Torso',CFrame.new(),reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(0+5*math.cos(sine/9000),0+5*math.cos(sine/9000),-5+2*math.cos(sine/9000))*ANGLES(RAD(0+0*math.cos(sine/9000)),RAD(0+0*math.cos(sine/9000)),RAD(0+90360*math.cos(sine/9000))),1),false)
+reanim['InternationalFedora'].Handle.AccessoryWeld.C0 = reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(0+5*math.cos(sine/9000),0+5*math.sin(sine/9000),-5+2*math.cos(sine/9000))*ANGLES(RAD(0+0*math.cos(sine/9000)),RAD(0+0*math.cos(sine/9000)),RAD(0+90360*math.cos(sine/9000))),.3)
+
+end
+elseif Mode == '9' then
+if Root.Velocity.y > 1 then -- jump
+--jump clerp here
+elseif Root.Velocity.y < -1 then -- fall
+--fall clerp here
+elseif Root.Velocity.Magnitude < 2 then -- idle
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(7+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+-13*math.sin(sine/13))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/20),2+0.5*math.cos(sine/20),0+0.5*math.sin(sine/20))*ANGLES(RAD(0+0*math.cos(sine/20)),RAD(0+0*math.cos(sine/20)),RAD(0+0*math.cos(sine/20))),.3)
+RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/13),0.4+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(10+0*math.cos(sine/13)),RAD(-15+0*math.cos(sine/13)),RAD(27+0*math.cos(sine/13))),.3)
+LS.C0 = LS.C0:Lerp(CF(-1+0*math.cos(sine/13),0.4+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(27+0*math.cos(sine/13)),RAD(7+0*math.cos(sine/13)),RAD(-28+0*math.cos(sine/13))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/20),-0.2+0*math.cos(sine/20),-0.8+0*math.cos(sine/20))*ANGLES(RAD(7+-10*math.cos(sine/20)),RAD(-15+0*math.cos(sine/20)),RAD(7+-5*math.cos(sine/20))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/20),-0.5+0*math.cos(sine/20),-0.7+0*math.cos(sine/20))*ANGLES(RAD(12+-10*math.cos(sine/20)),RAD(12+0*math.cos(sine/20)),RAD(-2+2*math.cos(sine/20))),.3)
+
+hatset('Starslayer Railgun','Torso',CFrame.new(),reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),0+0*math.cos(sine/13),1.2+0*math.cos(sine/13))*ANGLES(RAD(90+0*math.cos(sine/13)),RAD(-45+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),1),false)
+reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0 = reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),0+0*math.cos(sine/13),1.2+0*math.cos(sine/13))*ANGLES(RAD(90+0*math.cos(sine/13)),RAD(-45+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(0+0.1*math.cos(sine/35),0+0.1*math.cos(sine/35),2+0*math.cos(sine/35))*ANGLES(RAD(0+0*math.cos(sine/35)),RAD(0+0*math.cos(sine/35)),RAD(45+0*math.cos(sine/35))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(0+0.1*math.sin(sine/35),0+0.1*math.cos(sine/35),2+0*math.cos(sine/35))*ANGLES(RAD(0+0*math.cos(sine/35)),RAD(0+0*math.cos(sine/35)),RAD(45+0*math.cos(sine/35))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(4+0.1*math.cos(sine/35),0+0.1*math.cos(sine/35),2+0*math.cos(sine/35))*ANGLES(RAD(0+0*math.cos(sine/35)),RAD(0+0*math.cos(sine/35)),RAD(135+0*math.cos(sine/35))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(4+0.1*math.sin(sine/35),0+0.1*math.cos(sine/35),2+0*math.cos(sine/35))*ANGLES(RAD(0+0*math.cos(sine/35)),RAD(0+0*math.cos(sine/35)),RAD(135+0*math.cos(sine/35))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(-4.5+0.1*math.cos(sine/35),4+0.1*math.cos(sine/35),2+0*math.cos(sine/35))*ANGLES(RAD(0+0*math.cos(sine/35)),RAD(0+0*math.cos(sine/35)),RAD(-135+0*math.cos(sine/35))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(-4.5+0.1*math.sin(sine/35),4+0.1*math.cos(sine/35),2+0*math.cos(sine/35))*ANGLES(RAD(0+0*math.cos(sine/35)),RAD(0+0*math.cos(sine/35)),RAD(-135+0*math.cos(sine/35))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(0+0.1*math.cos(sine/35),-4.5+0.1*math.cos(sine/35),2+0*math.cos(sine/35))*ANGLES(RAD(0+0*math.cos(sine/35)),RAD(0+0*math.cos(sine/35)),RAD(-45+0*math.cos(sine/35))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(0+0.1*math.sin(sine/35),-4.5+0.1*math.cos(sine/35),2+0*math.cos(sine/35))*ANGLES(RAD(0+0*math.cos(sine/35)),RAD(0+0*math.cos(sine/35)),RAD(-45+0*math.cos(sine/35))),.3)
+
+hatset('swordhalo','Torso',CFrame.new(),reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0.1*math.cos(sine/35),-3+0.1*math.cos(sine/35),2.5+0*math.cos(sine/35))*ANGLES(RAD(0+0*math.cos(sine/35)),RAD(0+0*math.cos(sine/35)),RAD(0+0*math.cos(sine/35))),1),false)
+reanim['swordhalo'].Handle.AccessoryWeld.C0 = reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0.1*math.sin(sine/35),-3+0.1*math.cos(sine/35),2.5+0*math.cos(sine/35))*ANGLES(RAD(0+0*math.cos(sine/35)),RAD(0+0*math.cos(sine/35)),RAD(0+0*math.cos(sine/35))),.3)
+
+hatset('DemonGodSword','Torso',CFrame.new(),reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(-4+0*math.cos(sine/1000),0+8*math.cos(sine/1000),-0+0*math.cos(sine/1000))*ANGLES(RAD(130+0*math.cos(sine/1000)),RAD(90+0*math.cos(sine/1000)),RAD(0+10360*math.cos(sine/1000))),1),false)
+reanim['DemonGodSword'].Handle.AccessoryWeld.C0 = reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(-4+0*math.cos(sine/1000),0+8*math.cos(sine/1000),-0+0*math.cos(sine/1000))*ANGLES(RAD(130+0*math.cos(sine/1000)),RAD(90+0*math.cos(sine/1000)),RAD(0+10360*math.cos(sine/1000))),.3)
+
+elseif Root.Velocity.Magnitude < 20 then -- walk
+--walk clerp here
+elseif Root.Velocity.Magnitude > 20 then -- run
+--run clerp here
+end
+elseif Mode == '0' then
+if Root.Velocity.y > 1 then -- jump
+--jump clerp here
+elseif Root.Velocity.y < -1 then -- fall
+--fall clerp here
+elseif Root.Velocity.Magnitude < 2 then -- idle
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(-4+0*math.cos(sine/13)),RAD(18+7*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/40),4+0.5*math.cos(sine/40),0+0.5*math.sin(sine/40))*ANGLES(RAD(0+0*math.cos(sine/40)),RAD(-40+0*math.cos(sine/40)),RAD(0+0*math.cos(sine/40))),.3)
+RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/13),0.6+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(154+0*math.cos(sine/13)),RAD(-2+0*math.cos(sine/13)),RAD(21+0*math.cos(sine/13))),.3)
+LS.C0 = LS.C0:Lerp(CF(-1.6+0*math.cos(sine/40),0.+0.1*math.cos(sine/40),-0.1+0*math.cos(sine/40))*ANGLES(RAD(0+0*math.cos(sine/40)),RAD(-17+0*math.cos(sine/40)),RAD(-100+0*math.cos(sine/40))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/40),0+0.1*math.cos(sine/40),-0.8+0*math.cos(sine/40))*ANGLES(RAD(0+0*math.cos(sine/40)),RAD(-8+0*math.cos(sine/40)),RAD(5+3*math.cos(sine/40))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/13),-0.9+0*math.cos(sine/13),-0.7+0*math.cos(sine/13))*ANGLES(RAD(-75+0*math.cos(sine/13)),RAD(10+0*math.cos(sine/13)),RAD(5+0*math.cos(sine/13))),.3)
+
+hatset('Starslayer Railgun','Right Arm',CFrame.new(),reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(-2+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(90+0*math.cos(sine/13)),RAD(-45+0*math.cos(sine/13)),RAD(90+0*math.cos(sine/13))),1),false)
+reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0 = reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(-2+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(90+0*math.cos(sine/13)),RAD(-45+0*math.cos(sine/13)),RAD(90+0*math.cos(sine/13))),.3)
+
+hatset('swordhalo','Left Arm',CFrame.new(),reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/10000),0+0*math.cos(sine/10000),2+0*math.cos(sine/10000))*ANGLES(RAD(90+0*math.cos(sine/10000)),RAD(0+90360*math.cos(sine/10000)),RAD(0+0*math.cos(sine/10000))),1),false)
+reanim['swordhalo'].Handle.AccessoryWeld.C0 = reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/10000),0+0*math.cos(sine/10000),2+0*math.cos(sine/10000))*ANGLES(RAD(90+0*math.cos(sine/10000)),RAD(0+90360*math.cos(sine/10000)),RAD(0+0*math.cos(sine/10000))),.3)
+
+hatset('International Fedora','Left Arm',CFrame.new(),reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(00+0*math.cos(sine/10000),0+0*math.cos(sine/10000),2+0*math.cos(sine/10000))*ANGLES(RAD(90+0*math.cos(sine/10000)),RAD(0+90360*math.cos(sine/10000)),RAD(0+0*math.cos(sine/10000))),1),false)
+reanim['International Fedora'].Handle.AccessoryWeld.C0 = reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(00+0*math.cos(sine/10000),0+0*math.cos(sine/10000),2+0*math.cos(sine/10000))*ANGLES(RAD(90+0*math.cos(sine/10000)),RAD(0+90360*math.cos(sine/10000)),RAD(0+0*math.cos(sine/10000))),.3)
+
+hatset('MeshPartAccessory','Left Arm',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(7+0*math.cos(sine/10000),1+0*math.cos(sine/10000),2+0*math.cos(sine/10000))*ANGLES(RAD(90+0*math.cos(sine/10000)),RAD(-4+90360*math.cos(sine/10000)),RAD(0+0*math.cos(sine/10000))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(7+0*math.cos(sine/10000),1+0*math.cos(sine/10000),2+0*math.cos(sine/10000))*ANGLES(RAD(90+0*math.cos(sine/10000)),RAD(-4+90360*math.cos(sine/10000)),RAD(0+0*math.cos(sine/10000))),.3)
+
+hatset('MeshPartAccessory','Left Arm',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(7+0*math.cos(sine/10000),1+0*math.cos(sine/10000),2+0*math.cos(sine/10000))*ANGLES(RAD(90+0*math.cos(sine/10000)),RAD(266+90360*math.cos(sine/10000)),RAD(0+0*math.cos(sine/10000))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(7+0*math.cos(sine/10000),1+0*math.cos(sine/10000),2+0*math.cos(sine/10000))*ANGLES(RAD(90+0*math.cos(sine/10000)),RAD(266+90360*math.cos(sine/10000)),RAD(0+0*math.cos(sine/10000))),.3)
+
+hatset('MeshPartAccessory','Left Arm',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(7+0*math.cos(sine/10000),1+0*math.cos(sine/10000),2+0*math.cos(sine/10000))*ANGLES(RAD(90+0*math.cos(sine/10000)),RAD(75+90360*math.cos(sine/10000)),RAD(0+0*math.cos(sine/10000))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(7+0*math.cos(sine/10000),1+0*math.cos(sine/10000),2+0*math.cos(sine/10000))*ANGLES(RAD(90+0*math.cos(sine/10000)),RAD(75+90360*math.cos(sine/10000)),RAD(0+0*math.cos(sine/10000))),.3)
+
+hatset('MeshPartAccessory','Left Arm',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(7+0*math.cos(sine/10000),1+0*math.cos(sine/10000),2+0*math.cos(sine/10000))*ANGLES(RAD(90+0*math.cos(sine/10000)),RAD(157+90360*math.cos(sine/10000)),RAD(0+0*math.cos(sine/10000))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(7+0*math.cos(sine/10000),1+0*math.cos(sine/10000),2+0*math.cos(sine/10000))*ANGLES(RAD(90+0*math.cos(sine/10000)),RAD(157+90360*math.cos(sine/10000)),RAD(0+0*math.cos(sine/10000))),.3)
+
+hatset('InternationalFedora','Left Arm',CFrame.new(),reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(4+0*math.cos(sine/10000),1+0*math.cos(sine/10000),2+0*math.cos(sine/10000))*ANGLES(RAD(90+0*math.cos(sine/10000)),RAD(-4+-90360*math.cos(sine/10000)),RAD(0+0*math.cos(sine/10000))),1),false)
+reanim['InternationalFedora'].Handle.AccessoryWeld.C0 = reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(4+0*math.cos(sine/10000),1+0*math.cos(sine/10000),2+0*math.cos(sine/10000))*ANGLES(RAD(90+0*math.cos(sine/10000)),RAD(-4+-90360*math.cos(sine/10000)),RAD(0+0*math.cos(sine/10000))),.3)
+
+hatset('DemonGodSword','Torso',CFrame.new(),reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(-4+0*math.cos(sine/50),0+10*math.cos(sine/50),0+0*math.cos(sine/50))*ANGLES(RAD(0+90360*math.cos(sine/5000)),RAD(0+0*math.cos(sine/5000)),RAD(90+0*math.cos(sine/5000))),1),false)
+reanim['DemonGodSword'].Handle.AccessoryWeld.C0 = reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(-4+0*math.cos(sine/50),0+10*math.cos(sine/50),0+0*math.cos(sine/50))*ANGLES(RAD(0+90360*math.cos(sine/5000)),RAD(0+0*math.cos(sine/5000)),RAD(90+0*math.cos(sine/5000))),.3)
+elseif Root.Velocity.Magnitude < 20 then -- walk
+--walk clerp here
+elseif Root.Velocity.Magnitude > 20 then -- run
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/20),1+0*math.cos(sine/20),0+0*math.cos(sine/20))*ANGLES(RAD(34+0*math.cos(sine/20)),RAD(0+0*math.cos(sine/20)),RAD(0+0*math.cos(sine/20))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/20),6+0.5*math.sin(sine/20),0+0.5*math.cos(sine/20))*ANGLES(RAD(-66+0*math.cos(sine/20)),RAD(0+0*math.cos(sine/20)),RAD(0+0*math.cos(sine/20))),.3)
+RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/20),0.5+0*math.cos(sine/20),0.4+0*math.cos(sine/20))*ANGLES(RAD(-19+5*math.cos(sine/20)),RAD(0+0*math.cos(sine/20)),RAD(21+0*math.cos(sine/20))),.3)
+LS.C0 = LS.C0:Lerp(CF(-1.6+0*math.cos(sine/40),0.+0.1*math.cos(sine/40),-0.1+0*math.cos(sine/40))*ANGLES(RAD(0+0*math.cos(sine/40)),RAD(-17+0*math.cos(sine/40)),RAD(-100+0*math.cos(sine/40))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/50),-0.3+0*math.cos(sine/50),-1+0*math.cos(sine/50))*ANGLES(RAD(-15+0*math.cos(sine/50)),RAD(-11+0*math.cos(sine/50)),RAD(0+0*math.cos(sine/50))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/50),-1+0*math.cos(sine/50),0+0*math.cos(sine/50))*ANGLES(RAD(-8+0*math.cos(sine/50)),RAD(16+0*math.cos(sine/50)),RAD(0+0*math.cos(sine/50))),.3)
+
+hatset('Starslayer Railgun','Right Arm',CFrame.new(),reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(-2+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(90+0*math.cos(sine/13)),RAD(-45+0*math.cos(sine/13)),RAD(90+0*math.cos(sine/13))),1),false)
+reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0 = reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(-2+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(90+0*math.cos(sine/13)),RAD(-45+0*math.cos(sine/13)),RAD(90+0*math.cos(sine/13))),.3)
+
+hatset('swordhalo','Left Arm',CFrame.new(),reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/10000),0+0*math.cos(sine/10000),2+0*math.cos(sine/10000))*ANGLES(RAD(90+0*math.cos(sine/10000)),RAD(0+90360*math.cos(sine/10000)),RAD(0+0*math.cos(sine/10000))),1),false)
+reanim['swordhalo'].Handle.AccessoryWeld.C0 = reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/10000),0+0*math.cos(sine/10000),2+0*math.cos(sine/10000))*ANGLES(RAD(90+0*math.cos(sine/10000)),RAD(0+90360*math.cos(sine/10000)),RAD(0+0*math.cos(sine/10000))),.3)
+
+hatset('International Fedora','Left Arm',CFrame.new(),reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(00+0*math.cos(sine/10000),0+0*math.cos(sine/10000),2+0*math.cos(sine/10000))*ANGLES(RAD(90+0*math.cos(sine/10000)),RAD(0+90360*math.cos(sine/10000)),RAD(0+0*math.cos(sine/10000))),1),false)
+reanim['International Fedora'].Handle.AccessoryWeld.C0 = reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(00+0*math.cos(sine/10000),0+0*math.cos(sine/10000),2+0*math.cos(sine/10000))*ANGLES(RAD(90+0*math.cos(sine/10000)),RAD(0+90360*math.cos(sine/10000)),RAD(0+0*math.cos(sine/10000))),.3)
+
+hatset('MeshPartAccessory','Left Arm',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(7+0*math.cos(sine/10000),1+0*math.cos(sine/10000),2+0*math.cos(sine/10000))*ANGLES(RAD(90+0*math.cos(sine/10000)),RAD(-4+90360*math.cos(sine/10000)),RAD(0+0*math.cos(sine/10000))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(7+0*math.cos(sine/10000),1+0*math.cos(sine/10000),2+0*math.cos(sine/10000))*ANGLES(RAD(90+0*math.cos(sine/10000)),RAD(-4+90360*math.cos(sine/10000)),RAD(0+0*math.cos(sine/10000))),.3)
+
+hatset('MeshPartAccessory','Left Arm',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(7+0*math.cos(sine/10000),1+0*math.cos(sine/10000),2+0*math.cos(sine/10000))*ANGLES(RAD(90+0*math.cos(sine/10000)),RAD(266+90360*math.cos(sine/10000)),RAD(0+0*math.cos(sine/10000))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(7+0*math.cos(sine/10000),1+0*math.cos(sine/10000),2+0*math.cos(sine/10000))*ANGLES(RAD(90+0*math.cos(sine/10000)),RAD(266+90360*math.cos(sine/10000)),RAD(0+0*math.cos(sine/10000))),.3)
+
+hatset('MeshPartAccessory','Left Arm',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(7+0*math.cos(sine/10000),1+0*math.cos(sine/10000),2+0*math.cos(sine/10000))*ANGLES(RAD(90+0*math.cos(sine/10000)),RAD(75+90360*math.cos(sine/10000)),RAD(0+0*math.cos(sine/10000))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(7+0*math.cos(sine/10000),1+0*math.cos(sine/10000),2+0*math.cos(sine/10000))*ANGLES(RAD(90+0*math.cos(sine/10000)),RAD(75+90360*math.cos(sine/10000)),RAD(0+0*math.cos(sine/10000))),.3)
+
+hatset('MeshPartAccessory','Left Arm',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(7+0*math.cos(sine/10000),1+0*math.cos(sine/10000),2+0*math.cos(sine/10000))*ANGLES(RAD(90+0*math.cos(sine/10000)),RAD(157+90360*math.cos(sine/10000)),RAD(0+0*math.cos(sine/10000))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(7+0*math.cos(sine/10000),1+0*math.cos(sine/10000),2+0*math.cos(sine/10000))*ANGLES(RAD(90+0*math.cos(sine/10000)),RAD(157+90360*math.cos(sine/10000)),RAD(0+0*math.cos(sine/10000))),.3)
+
+hatset('InternationalFedora','Left Arm',CFrame.new(),reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(4+0*math.cos(sine/10000),1+0*math.cos(sine/10000),2+0*math.cos(sine/10000))*ANGLES(RAD(90+0*math.cos(sine/10000)),RAD(-4+-90360*math.cos(sine/10000)),RAD(0+0*math.cos(sine/10000))),1),false)
+reanim['InternationalFedora'].Handle.AccessoryWeld.C0 = reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(4+0*math.cos(sine/10000),1+0*math.cos(sine/10000),2+0*math.cos(sine/10000))*ANGLES(RAD(90+0*math.cos(sine/10000)),RAD(-4+-90360*math.cos(sine/10000)),RAD(0+0*math.cos(sine/10000))),.3)
+
+hatset('DemonGodSword','Torso',CFrame.new(),reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(-4+0*math.cos(sine/50),0+10*math.cos(sine/50),0+0*math.cos(sine/50))*ANGLES(RAD(0+90360*math.cos(sine/5000)),RAD(0+0*math.cos(sine/5000)),RAD(90+0*math.cos(sine/5000))),1),false)
+reanim['DemonGodSword'].Handle.AccessoryWeld.C0 = reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(-4+0*math.cos(sine/50),0+10*math.cos(sine/50),0+0*math.cos(sine/50))*ANGLES(RAD(0+90360*math.cos(sine/5000)),RAD(0+0*math.cos(sine/5000)),RAD(90+0*math.cos(sine/5000))),.3)
+
+end
+elseif Mode == '-' then
+if Root.Velocity.y > 1 then -- jump
+--jump clerp here
+elseif Root.Velocity.y < -1 then -- fall
+--fall clerp here
+elseif Root.Velocity.Magnitude < 2 then -- idle
+
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(-31+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/90),3+0.5*math.cos(sine/90),0+0*math.cos(sine/90))*ANGLES(RAD(0+30*math.cos(sine/90)),RAD(0+20*math.cos(sine/90)),RAD(0+50*math.sin(sine/90))),.3)
+RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/30),0.5+0*math.cos(sine/30),0+0*math.cos(sine/30))*ANGLES(RAD(246+16*math.cos(sine/30)),RAD(1+0*math.cos(sine/30)),RAD(-44+0*math.cos(sine/30))),.3)
+LS.C0 = LS.C0:Lerp(CF(-1+0*math.cos(sine/13),0.5+0*math.cos(sine/13),-0.3+0*math.cos(sine/13))*ANGLES(RAD(94+0*math.cos(sine/13)),RAD(-4+0*math.cos(sine/13)),RAD(88+0*math.cos(sine/13))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/30),-0.2+0*math.cos(sine/30),-1+0*math.cos(sine/30))*ANGLES(RAD(-51+-5*math.cos(sine/30)),RAD(-24+0*math.cos(sine/30)),RAD(0+0*math.cos(sine/30))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/30),-1+0*math.cos(sine/30),0+0*math.cos(sine/30))*ANGLES(RAD(63+16*math.cos(sine/30)),RAD(3+0*math.cos(sine/30)),RAD(-6+10*math.cos(sine/30))),.3)
+
+hatset('Starslayer Railgun','Right Arm',CFrame.new(),reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(-1.+0*math.cos(sine/13),-0+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(90+0*math.cos(sine/13)),RAD(-45+0*math.cos(sine/13)),RAD(90+0*math.cos(sine/13))),1),false)
+reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0 = reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(-1.+0*math.cos(sine/13),-0+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(90+0*math.cos(sine/13)),RAD(-45+0*math.cos(sine/13)),RAD(90+0*math.cos(sine/13))),.3)
+
+hatset('DemonGodSword','Torso',CFrame.new(),reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(-4+0*math.cos(sine/7000),0+9*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+0*math.cos(sine/7000)),RAD(90+0*math.cos(sine/7000)),RAD(0+-90360*math.cos(sine/7000))),1),false)
+reanim['DemonGodSword'].Handle.AccessoryWeld.C0 = reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(-4+0*math.cos(sine/7000),0+9*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+0*math.cos(sine/7000)),RAD(90+0*math.cos(sine/7000)),RAD(0+-90360*math.cos(sine/7000))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(5+0*math.cos(sine/1500),5+0*math.cos(sine/1500),0+0*math.cos(sine/1500))*ANGLES(RAD(-90+0*math.cos(sine/1500)),RAD(45+10360*math.cos(sine/1500)),RAD(90+0*math.cos(sine/1500))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(5+0*math.cos(sine/1500),5+0*math.cos(sine/1500),0+0*math.cos(sine/1500))*ANGLES(RAD(-90+0*math.cos(sine/1500)),RAD(45+10360*math.cos(sine/1500)),RAD(90+0*math.cos(sine/1500))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(5+0*math.cos(sine/1500),5+0*math.cos(sine/1500),0+0*math.cos(sine/1500))*ANGLES(RAD(-90+0*math.cos(sine/1500)),RAD(-135+10360*math.cos(sine/1500)),RAD(90+0*math.cos(sine/1500))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(5+0*math.cos(sine/1500),5+0*math.cos(sine/1500),0+0*math.cos(sine/1500))*ANGLES(RAD(-90+0*math.cos(sine/1500)),RAD(-135+10360*math.cos(sine/1500)),RAD(90+0*math.cos(sine/1500))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(5+0*math.cos(sine/1500),5+0*math.cos(sine/1500),0+0*math.cos(sine/1500))*ANGLES(RAD(90+0*math.cos(sine/1500)),RAD(45+10360*math.cos(sine/1500)),RAD(0+0*math.cos(sine/1500))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(5+0*math.cos(sine/1500),5+0*math.cos(sine/1500),0+0*math.cos(sine/1500))*ANGLES(RAD(90+0*math.cos(sine/1500)),RAD(45+10360*math.cos(sine/1500)),RAD(0+0*math.cos(sine/1500))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(5+0*math.cos(sine/1500),5+0*math.cos(sine/1500),0+0*math.cos(sine/1500))*ANGLES(RAD(90+0*math.cos(sine/1500)),RAD(-135+10360*math.cos(sine/1500)),RAD(0+0*math.cos(sine/1500))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(5+0*math.cos(sine/1500),5+0*math.cos(sine/1500),0+0*math.cos(sine/1500))*ANGLES(RAD(90+0*math.cos(sine/1500)),RAD(-135+10360*math.cos(sine/1500)),RAD(0+0*math.cos(sine/1500))),.3)
+
+hatset('swordhalo','Torso',CFrame.new(),reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/2360),0+0*math.cos(sine/2360),3+0*math.cos(sine/2360))*ANGLES(RAD(90+0*math.cos(sine/2360)),RAD(0+-10360*math.cos(sine/2360)),RAD(0+0*math.cos(sine/2360))),1),false)
+reanim['swordhalo'].Handle.AccessoryWeld.C0 = reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/2360),0+0*math.cos(sine/2360),3+0*math.cos(sine/2360))*ANGLES(RAD(90+0*math.cos(sine/2360)),RAD(0+-10360*math.cos(sine/2360)),RAD(0+0*math.cos(sine/2360))),.3)
+
+hatset('InternationalFedora','Torso',CFrame.new(),reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),1),false)
+reanim['InternationalFedora'].Handle.AccessoryWeld.C0 = reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),.3)
+
+hatset('International Fedora','Torso',CFrame.new(),reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(-10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),1),false)
+reanim['International Fedora'].Handle.AccessoryWeld.C0 = reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(-10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),.3)
+
+elseif Root.Velocity.Magnitude < 20 then -- walk
+--walk clerp here
+elseif Root.Velocity.Magnitude > 20 then -- run
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(-31+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/90),3+0.5*math.cos(sine/90),0+0*math.cos(sine/90))*ANGLES(RAD(0+30*math.cos(sine/90)),RAD(0+20*math.cos(sine/90)),RAD(0+50*math.sin(sine/90))),.3)
+RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(166+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+LS.C0 = LS.C0:Lerp(CF(-1+0*math.cos(sine/13),0.5+0.1*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+50*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/13),-1+0.2*math.sin(sine/13),0+0.5*math.cos(sine/13))*ANGLES(RAD(-30+-30*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/13),-1+0.2*math.sin(sine/13),0+0.5*math.cos(sine/13))*ANGLES(RAD(-30+30*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+
+hatset('Starslayer Railgun','Right Arm',CFrame.new(),reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(-1.+0*math.cos(sine/13),-0+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(90+0*math.cos(sine/13)),RAD(-45+0*math.cos(sine/13)),RAD(90+0*math.cos(sine/13))),1),false)
+reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0 = reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(-1.+0*math.cos(sine/13),-0+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(90+0*math.cos(sine/13)),RAD(-45+0*math.cos(sine/13)),RAD(90+0*math.cos(sine/13))),.3)
+
+hatset('DemonGodSword','Torso',CFrame.new(),reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(-4+0*math.cos(sine/7000),0+9*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+0*math.cos(sine/7000)),RAD(90+0*math.cos(sine/7000)),RAD(0+-90360*math.cos(sine/7000))),1),false)
+reanim['DemonGodSword'].Handle.AccessoryWeld.C0 = reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(-4+0*math.cos(sine/7000),0+9*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+0*math.cos(sine/7000)),RAD(90+0*math.cos(sine/7000)),RAD(0+-90360*math.cos(sine/7000))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(5+0*math.cos(sine/1500),5+0*math.cos(sine/1500),0+0*math.cos(sine/1500))*ANGLES(RAD(-90+0*math.cos(sine/1500)),RAD(45+10360*math.cos(sine/1500)),RAD(90+0*math.cos(sine/1500))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(5+0*math.cos(sine/1500),5+0*math.cos(sine/1500),0+0*math.cos(sine/1500))*ANGLES(RAD(-90+0*math.cos(sine/1500)),RAD(45+10360*math.cos(sine/1500)),RAD(90+0*math.cos(sine/1500))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(5+0*math.cos(sine/1500),5+0*math.cos(sine/1500),0+0*math.cos(sine/1500))*ANGLES(RAD(-90+0*math.cos(sine/1500)),RAD(-135+10360*math.cos(sine/1500)),RAD(90+0*math.cos(sine/1500))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(5+0*math.cos(sine/1500),5+0*math.cos(sine/1500),0+0*math.cos(sine/1500))*ANGLES(RAD(-90+0*math.cos(sine/1500)),RAD(-135+10360*math.cos(sine/1500)),RAD(90+0*math.cos(sine/1500))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(5+0*math.cos(sine/1500),5+0*math.cos(sine/1500),0+0*math.cos(sine/1500))*ANGLES(RAD(90+0*math.cos(sine/1500)),RAD(45+10360*math.cos(sine/1500)),RAD(0+0*math.cos(sine/1500))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(5+0*math.cos(sine/1500),5+0*math.cos(sine/1500),0+0*math.cos(sine/1500))*ANGLES(RAD(90+0*math.cos(sine/1500)),RAD(45+10360*math.cos(sine/1500)),RAD(0+0*math.cos(sine/1500))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(5+0*math.cos(sine/1500),5+0*math.cos(sine/1500),0+0*math.cos(sine/1500))*ANGLES(RAD(90+0*math.cos(sine/1500)),RAD(-135+10360*math.cos(sine/1500)),RAD(0+0*math.cos(sine/1500))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(5+0*math.cos(sine/1500),5+0*math.cos(sine/1500),0+0*math.cos(sine/1500))*ANGLES(RAD(90+0*math.cos(sine/1500)),RAD(-135+10360*math.cos(sine/1500)),RAD(0+0*math.cos(sine/1500))),.3)
+
+hatset('swordhalo','Torso',CFrame.new(),reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/2360),0+0*math.cos(sine/2360),3+0*math.cos(sine/2360))*ANGLES(RAD(90+0*math.cos(sine/2360)),RAD(0+-10360*math.cos(sine/2360)),RAD(0+0*math.cos(sine/2360))),1),false)
+reanim['swordhalo'].Handle.AccessoryWeld.C0 = reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/2360),0+0*math.cos(sine/2360),3+0*math.cos(sine/2360))*ANGLES(RAD(90+0*math.cos(sine/2360)),RAD(0+-10360*math.cos(sine/2360)),RAD(0+0*math.cos(sine/2360))),.3)
+
+hatset('InternationalFedora','Torso',CFrame.new(),reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),1),false)
+reanim['InternationalFedora'].Handle.AccessoryWeld.C0 = reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),.3)
+
+hatset('International Fedora','Torso',CFrame.new(),reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(-10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),1),false)
+reanim['International Fedora'].Handle.AccessoryWeld.C0 = reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(-10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),.3)
+
+end
+elseif Mode == '=' then
+if Root.Velocity.y > 1 then -- jump
+--jump clerp here
+elseif Root.Velocity.y < -1 then -- fall
+--fall clerp here
+elseif Root.Velocity.Magnitude < 2 then -- idle
+--a
+elseif Root.Velocity.Magnitude < 20 then -- walk
+--walk clerp here
+elseif Root.Velocity.Magnitude > 20 then -- run
+--run clerp here
+end
+elseif Mode == 'p' then
+if Root.Velocity.y > 1 then -- jump
+--jump clerp here
+elseif Root.Velocity.y < -1 then -- fall
+--fall clerp here
+elseif Root.Velocity.Magnitude < 2 then -- idle
+--idle clerp here
+elseif Root.Velocity.Magnitude < 20 then -- walk
+--walk clerp here
+elseif Root.Velocity.Magnitude > 20 then -- run
+--run clerp here
+end
+elseif Mode == 'UpStomp' then
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(-15+0*math.cos(sine/13)),RAD(-15+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/13),0+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(20+0*math.cos(sine/13)),RAD(34+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/13),0.4+0*math.cos(sine/13),-0.3+0*math.cos(sine/13))*ANGLES(RAD(41+0*math.cos(sine/13)),RAD(-4+0*math.cos(sine/13)),RAD(32+0*math.cos(sine/13))),.3)
+LS.C0 = LS.C0:Lerp(CF(-1+0*math.cos(sine/13),0.3+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(-4+0*math.cos(sine/13)),RAD(39+0*math.cos(sine/13)),RAD(-28+0*math.cos(sine/13))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/13),-0.2+0*math.cos(sine/13),-0.7+0*math.cos(sine/13))*ANGLES(RAD(-11+0*math.cos(sine/13)),RAD(-2+0*math.cos(sine/13)),RAD(1+0*math.cos(sine/13))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(-15+0*math.cos(sine/13)),RAD(10+0*math.cos(sine/13)),RAD(-2+0*math.cos(sine/13))),.3)
+
+hatset('Starslayer Railgun','Torso',CFrame.new(),reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),-400+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),1),false)
+reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0 = reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),-400+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+
+hatset('DemonGodSword','Torso',CFrame.new(),reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(-4+0*math.cos(sine/1000),0+8*math.cos(sine/1000),-0+0*math.cos(sine/1000))*ANGLES(RAD(130+0*math.cos(sine/1000)),RAD(90+0*math.cos(sine/1000)),RAD(0+10360*math.cos(sine/1000))),1),false)
+reanim['DemonGodSword'].Handle.AccessoryWeld.C0 = reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(-4+0*math.cos(sine/1000),0+8*math.cos(sine/1000),-0+0*math.cos(sine/1000))*ANGLES(RAD(130+0*math.cos(sine/1000)),RAD(90+0*math.cos(sine/1000)),RAD(0+10360*math.cos(sine/1000))),.3)
+
+hatset('swordhalo','Torso',CFrame.new(),reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/900),0+0*math.cos(sine/900),-1.7+0*math.cos(sine/900))*ANGLES(RAD(0+0*math.cos(sine/900)),RAD(0+0*math.cos(sine/900)),RAD(0+10360*math.cos(sine/900))),1),false)
+reanim['swordhalo'].Handle.AccessoryWeld.C0 = reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/900),0+0*math.cos(sine/900),-1.7+0*math.cos(sine/900))*ANGLES(RAD(0+0*math.cos(sine/900)),RAD(0+0*math.cos(sine/900)),RAD(0+10360*math.cos(sine/900))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),-400+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),-400+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),-400+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),-400+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),-400+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),-400+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),-400+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),-400+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+
+hatset('InternationalFedora','Torso',CFrame.new(),reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),1),false)
+reanim['InternationalFedora'].Handle.AccessoryWeld.C0 = reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),.3)
+
+hatset('International Fedora','Torso',CFrame.new(),reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(-10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),1),false)
+reanim['International Fedora'].Handle.AccessoryWeld.C0 = reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(-10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),.3)
+
+elseif Mode == 'DownStomp' then
+
+
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(-17+0*math.cos(sine/13)),RAD(-42+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/13),-0.2+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(-30+0*math.cos(sine/13)),RAD(34+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+RS.C0 = RS.C0:Lerp(CF(1.3+0*math.cos(sine/13),0+0*math.cos(sine/13),-0.+0*math.cos(sine/13))*ANGLES(RAD(7+0*math.cos(sine/13)),RAD(1+0*math.cos(sine/13)),RAD(76+0*math.cos(sine/13))),.3)
+LS.C0 = LS.C0:Lerp(CF(-1+0*math.cos(sine/13),0.3+0*math.cos(sine/13),0.7+0*math.cos(sine/13))*ANGLES(RAD(-48+0*math.cos(sine/13)),RAD(32+0*math.cos(sine/13)),RAD(-31+0*math.cos(sine/13))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/13),-0.6+0*math.cos(sine/13),-0.5+0*math.cos(sine/13))*ANGLES(RAD(14+0*math.cos(sine/13)),RAD(-19+0*math.cos(sine/13)),RAD(5+0*math.cos(sine/13))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(-15+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(-2+0*math.cos(sine/13))),.3)
+
+hatset('Starslayer Railgun','Torso',CFrame.new(),reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),-400+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),1),false)
+reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0 = reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),-400+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+
+hatset('DemonGodSword','Torso',CFrame.new(),reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(-4+0*math.cos(sine/1000),0+8*math.cos(sine/1000),-0+0*math.cos(sine/1000))*ANGLES(RAD(130+0*math.cos(sine/1000)),RAD(90+0*math.cos(sine/1000)),RAD(0+10360*math.cos(sine/1000))),1),false)
+reanim['DemonGodSword'].Handle.AccessoryWeld.C0 = reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(-4+0*math.cos(sine/1000),0+8*math.cos(sine/1000),-0+0*math.cos(sine/1000))*ANGLES(RAD(130+0*math.cos(sine/1000)),RAD(90+0*math.cos(sine/1000)),RAD(0+10360*math.cos(sine/1000))),.3)
+
+hatset('swordhalo','Torso',CFrame.new(),reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/900),0+0*math.cos(sine/900),-1.7+0*math.cos(sine/900))*ANGLES(RAD(0+0*math.cos(sine/900)),RAD(0+0*math.cos(sine/900)),RAD(0+10360*math.cos(sine/900))),1),false)
+reanim['swordhalo'].Handle.AccessoryWeld.C0 = reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/900),0+0*math.cos(sine/900),-1.7+0*math.cos(sine/900))*ANGLES(RAD(0+0*math.cos(sine/900)),RAD(0+0*math.cos(sine/900)),RAD(0+10360*math.cos(sine/900))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),-400+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),-400+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),-400+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),-400+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),-400+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),-400+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),-400+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),-400+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+
+hatset('InternationalFedora','Torso',CFrame.new(),reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),1),false)
+reanim['InternationalFedora'].Handle.AccessoryWeld.C0 = reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),.3)
+
+hatset('International Fedora','Torso',CFrame.new(),reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(-10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),1),false)
+reanim['International Fedora'].Handle.AccessoryWeld.C0 = reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(-10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),.3)
+elseif Mode == 'neckR' then
+
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(30+0*math.cos(sine/13))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/2),0+0.1*math.cos(sine/2),0+0*math.cos(sine/2))*ANGLES(RAD(0+0*math.cos(sine/2)),RAD(0+0*math.cos(sine/2)),RAD(0+0*math.cos(sine/2))),.3)
+RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(108+0*math.cos(sine/13)),RAD(-4+0*math.cos(sine/13)),RAD(-53+0*math.cos(sine/13))),.3)
+LS.C0 = LS.C0:Lerp(CF(-1+0*math.cos(sine/13),0.8+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(45+0*math.cos(sine/13)),RAD(30+0*math.cos(sine/13)),RAD(61+0*math.cos(sine/13))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/2),-1+-0.1*math.cos(sine/2),0+0*math.cos(sine/2))*ANGLES(RAD(0+0*math.cos(sine/2)),RAD(0+0*math.cos(sine/2)),RAD(0+0*math.cos(sine/2))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/2),-1+-0.1*math.cos(sine/2),0+0*math.cos(sine/2))*ANGLES(RAD(0+0*math.cos(sine/2)),RAD(0+0*math.cos(sine/2)),RAD(0+0*math.cos(sine/2))),.3)
+
+hatset('Starslayer Railgun','Torso',CFrame.new(),reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),-400+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),1),false)
+reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0 = reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),-400+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+
+hatset('DemonGodSword','Torso',CFrame.new(),reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(-4+0*math.cos(sine/1000),0+8*math.cos(sine/1000),-0+0*math.cos(sine/1000))*ANGLES(RAD(130+0*math.cos(sine/1000)),RAD(90+0*math.cos(sine/1000)),RAD(0+10360*math.cos(sine/1000))),1),false)
+reanim['DemonGodSword'].Handle.AccessoryWeld.C0 = reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(-4+0*math.cos(sine/1000),0+8*math.cos(sine/1000),-0+0*math.cos(sine/1000))*ANGLES(RAD(130+0*math.cos(sine/1000)),RAD(90+0*math.cos(sine/1000)),RAD(0+10360*math.cos(sine/1000))),.3)
+
+hatset('swordhalo','Torso',CFrame.new(),reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/900),0+0*math.cos(sine/900),-1.7+0*math.cos(sine/900))*ANGLES(RAD(0+0*math.cos(sine/900)),RAD(0+0*math.cos(sine/900)),RAD(0+10360*math.cos(sine/900))),1),false)
+reanim['swordhalo'].Handle.AccessoryWeld.C0 = reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/900),0+0*math.cos(sine/900),-1.7+0*math.cos(sine/900))*ANGLES(RAD(0+0*math.cos(sine/900)),RAD(0+0*math.cos(sine/900)),RAD(0+10360*math.cos(sine/900))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),-400+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),-400+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),-400+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),-400+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),-400+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),-400+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),-400+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),-400+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+
+hatset('InternationalFedora','Torso',CFrame.new(),reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),1),false)
+reanim['InternationalFedora'].Handle.AccessoryWeld.C0 = reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),.3)
+
+hatset('International Fedora','Torso',CFrame.new(),reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(-10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),1),false)
+reanim['International Fedora'].Handle.AccessoryWeld.C0 = reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(-10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),.3)
+
+elseif Mode == 'neckL' then
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(-30+0*math.cos(sine/13))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/2),0+0.1*math.cos(sine/2),0+0*math.cos(sine/2))*ANGLES(RAD(0+0*math.cos(sine/2)),RAD(0+0*math.cos(sine/2)),RAD(0+0*math.cos(sine/2))),.3)
+RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/13),0.4+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(108+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(-90+0*math.cos(sine/13))),.3)
+LS.C0 = LS.C0:Lerp(CF(-1+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(90+0*math.cos(sine/13)),RAD(-4+0*math.cos(sine/13)),RAD(96+0*math.cos(sine/13))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/2),-1+-0.1*math.cos(sine/2),0+0*math.cos(sine/2))*ANGLES(RAD(0+0*math.cos(sine/2)),RAD(0+0*math.cos(sine/2)),RAD(0+0*math.cos(sine/2))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/2),-1+-0.1*math.cos(sine/2),0+0*math.cos(sine/2))*ANGLES(RAD(0+0*math.cos(sine/2)),RAD(0+0*math.cos(sine/2)),RAD(0+0*math.cos(sine/2))),.3)
+
+hatset('Starslayer Railgun','Torso',CFrame.new(),reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),-400+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),1),false)
+reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0 = reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),-400+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+
+hatset('DemonGodSword','Torso',CFrame.new(),reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(-4+0*math.cos(sine/1000),0+8*math.cos(sine/1000),-0+0*math.cos(sine/1000))*ANGLES(RAD(130+0*math.cos(sine/1000)),RAD(90+0*math.cos(sine/1000)),RAD(0+10360*math.cos(sine/1000))),1),false)
+reanim['DemonGodSword'].Handle.AccessoryWeld.C0 = reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(-4+0*math.cos(sine/1000),0+8*math.cos(sine/1000),-0+0*math.cos(sine/1000))*ANGLES(RAD(130+0*math.cos(sine/1000)),RAD(90+0*math.cos(sine/1000)),RAD(0+10360*math.cos(sine/1000))),.3)
+
+hatset('swordhalo','Torso',CFrame.new(),reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/900),0+0*math.cos(sine/900),-1.7+0*math.cos(sine/900))*ANGLES(RAD(0+0*math.cos(sine/900)),RAD(0+0*math.cos(sine/900)),RAD(0+10360*math.cos(sine/900))),1),false)
+reanim['swordhalo'].Handle.AccessoryWeld.C0 = reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/900),0+0*math.cos(sine/900),-1.7+0*math.cos(sine/900))*ANGLES(RAD(0+0*math.cos(sine/900)),RAD(0+0*math.cos(sine/900)),RAD(0+10360*math.cos(sine/900))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),-400+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),-400+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),-400+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),-400+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),-400+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),-400+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),-400+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),-400+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+
+hatset('InternationalFedora','Torso',CFrame.new(),reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),1),false)
+reanim['InternationalFedora'].Handle.AccessoryWeld.C0 = reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),.3)
+
+hatset('International Fedora','Torso',CFrame.new(),reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(-10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),1),false)
+reanim['International Fedora'].Handle.AccessoryWeld.C0 = reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(-10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),.3)
+-------SHOOTING MODE
+elseif Mode == 'Attack0' then
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0.5*math.cos(sine/25),1+-0.5*math.sin(sine/25),0+0*math.cos(sine/25))*ANGLES(RAD(0+0*math.cos(sine/25)),RAD(0+0*math.cos(sine/25)),RAD(0+0*math.cos(sine/25))),.3)
+RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/25),0.5+0*math.cos(sine/25),0+0*math.cos(sine/25))*ANGLES(RAD(150+10*math.cos(sine/25)),RAD(18+0*math.cos(sine/25)),RAD(30+0*math.cos(sine/25))),.3)
+LS.C0 = LS.C0:Lerp(CF(-1+0*math.cos(sine/25),0.2+0*math.cos(sine/25),0+0*math.cos(sine/25))*ANGLES(RAD(23+0*math.cos(sine/25)),RAD(0+0*math.cos(sine/25)),RAD(-6+5*math.cos(sine/25))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/13),-0.5+0*math.cos(sine/13),-0.5+0*math.cos(sine/13))*ANGLES(RAD(-11+0*math.cos(sine/13)),RAD(-17+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(-15+0*math.cos(sine/13)),RAD(18+0*math.cos(sine/13)),RAD(0+3*math.cos(sine/13))),.3)
+
+hatset('Starslayer Railgun','Right Arm',CFrame.new(),reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(-1+0*math.cos(sine/13),0+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(90+0*math.cos(sine/13)),RAD(-45+0*math.cos(sine/13)),RAD(90+0*math.cos(sine/13))),1),false)
+reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0 = reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(-1+0*math.cos(sine/13),0+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(90+0*math.cos(sine/13)),RAD(-45+0*math.cos(sine/13)),RAD(90+0*math.cos(sine/13))),.3)
+
+elseif Mode == 'Attack1' then
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(-8+0*math.cos(sine/13)),RAD(-22+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0.5*math.cos(sine/25),1+-0.5*math.sin(sine/25),0+0*math.cos(sine/25))*ANGLES(RAD(0+0*math.cos(sine/25)),RAD(32+0*math.cos(sine/25)),RAD(0+0*math.cos(sine/25))),.3)
+RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/25),0.5+0*math.cos(sine/25),0+0*math.cos(sine/25))*ANGLES(RAD(90+10*math.cos(sine/25)),RAD(0+0*math.cos(sine/25)),RAD(41+0*math.cos(sine/25))),.3)
+LS.C0 = LS.C0:Lerp(CF(-1+0*math.cos(sine/25),0.2+0*math.cos(sine/25),0+0*math.cos(sine/25))*ANGLES(RAD(-53+0*math.cos(sine/25)),RAD(0+0*math.cos(sine/25)),RAD(27+5*math.cos(sine/25))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/13),-0.5+0*math.cos(sine/13),-0.5+0*math.cos(sine/13))*ANGLES(RAD(-11+0*math.cos(sine/13)),RAD(-17+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(-15+0*math.cos(sine/13)),RAD(18+0*math.cos(sine/13)),RAD(0+3*math.cos(sine/13))),.3)
+
+elseif Mode == 'imorattack' then
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(1+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/40),3+0.5*math.sin(sine/40),0+0*math.cos(sine/40))*ANGLES(RAD(0+0*math.cos(sine/40)),RAD(0+0*math.cos(sine/40)),RAD(0+0*math.cos(sine/40))),.3)
+RS.C0 = RS.C0:Lerp(CF(1.2+0*math.cos(sine/13),0.4+0*math.cos(sine/13),-0.6+0*math.cos(sine/13))*ANGLES(RAD(76+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(54+0*math.cos(sine/13))),.3)
+LS.C0 = LS.C0:Lerp(CF(-1+0*math.cos(sine/40),0.5+0*math.cos(sine/40),0+0*math.cos(sine/40))*ANGLES(RAD(0+-10*math.cos(sine/40)),RAD(0+0*math.cos(sine/40)),RAD(-8+7*math.cos(sine/40))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/40),-1+0*math.cos(sine/40),0+0*math.cos(sine/40))*ANGLES(RAD(-6+-20*math.cos(sine/40)),RAD(-13+0*math.cos(sine/40)),RAD(3+-4*math.cos(sine/40))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/40),-1+0*math.cos(sine/40),0+0*math.cos(sine/40))*ANGLES(RAD(-2+-20*math.cos(sine/40)),RAD(7+0*math.cos(sine/40)),RAD(-2+3*math.cos(sine/40))),.3)
+
+hatset('DemonGodSword','Right Arm',CFrame.new(),reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),3.5+0*math.cos(sine/13),-4+0*math.cos(sine/13))*ANGLES(RAD(-50+0*math.cos(sine/13)),RAD(90+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),1),false)
+reanim['DemonGodSword'].Handle.AccessoryWeld.C0 = reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),3.5+0*math.cos(sine/13),-4+0*math.cos(sine/13))*ANGLES(RAD(-50+0*math.cos(sine/13)),RAD(90+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+--LOLOLOLOLOLOLOLOLOLOLOLOLOLOLLOLOL
+hatset('Starslayer Railgun','Torso',CFrame.new(),reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(0.5+0*math.cos(sine/13),-0+0*math.cos(sine/13),-0.7+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(70+0*math.cos(sine/13))),1),false)
+reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0 = reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(0.5+0*math.cos(sine/13),-0+0*math.cos(sine/13),-0.7+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(70+0*math.cos(sine/13))),.3)
+
+hatset('swordhalo','Torso',CFrame.new(),reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/8000),0+0*math.cos(sine/8000),4+0*math.cos(sine/8000))*ANGLES(RAD(90+0*math.cos(sine/8000)),RAD(0-90360*math.cos(sine/8000)),RAD(0+0*math.cos(sine/8000))),1),false)
+reanim['swordhalo'].Handle.AccessoryWeld.C0 = reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/8000),0+0*math.cos(sine/8000),4+0*math.cos(sine/8000))*ANGLES(RAD(90+0*math.cos(sine/8000)),RAD(0-90360*math.cos(sine/8000)),RAD(0+0*math.cos(sine/8000))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+1*math.cos(sine/1.5),3+1*math.cos(sine/1.5),4.5+0*math.cos(sine/1.5))*ANGLES(RAD(90+0*math.cos(sine/2300)),RAD(135+10360*math.cos(sine/2300)),RAD(0+0*math.cos(sine/2300))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+1*math.cos(sine/1.5),3+1*math.cos(sine/1.5),4.5+0*math.cos(sine/1.5))*ANGLES(RAD(90+0*math.cos(sine/2300)),RAD(135+10360*math.cos(sine/2300)),RAD(0+0*math.cos(sine/2300))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+1*math.cos(sine/1.5),3+1*math.cos(sine/1.5),4.5+0*math.cos(sine/1.5))*ANGLES(RAD(90+0*math.cos(sine/2300)),RAD(45+10360*math.cos(sine/2300)),RAD(0+0*math.cos(sine/2300))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+1*math.cos(sine/1.5),3+1*math.cos(sine/1.5),4.5+0*math.cos(sine/1.5))*ANGLES(RAD(90+0*math.cos(sine/2300)),RAD(45+10360*math.cos(sine/2300)),RAD(0+0*math.cos(sine/2300))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+1*math.cos(sine/1.5),3+1*math.cos(sine/1.5),4.5+0*math.cos(sine/1.5))*ANGLES(RAD(90+0*math.cos(sine/2300)),RAD(-45+10360*math.cos(sine/2300)),RAD(0+0*math.cos(sine/2300))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+1*math.cos(sine/1.5),3+1*math.cos(sine/1.5),4.5+0*math.cos(sine/1.5))*ANGLES(RAD(90+0*math.cos(sine/2300)),RAD(-45+10360*math.cos(sine/2300)),RAD(0+0*math.cos(sine/2300))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+1*math.cos(sine/1.5),3+1*math.cos(sine/1.5),4.5+0*math.cos(sine/1.5))*ANGLES(RAD(90+0*math.cos(sine/2300)),RAD(-135+10360*math.cos(sine/2300)),RAD(0+0*math.cos(sine/2300))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+1*math.cos(sine/1.5),3+1*math.cos(sine/1.5),4.5+0*math.cos(sine/1.5))*ANGLES(RAD(90+0*math.cos(sine/2300)),RAD(-135+10360*math.cos(sine/2300)),RAD(0+0*math.cos(sine/2300))),.3)
+
+hatset('InternationalFedora','Torso',CFrame.new(),reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),1),false)
+reanim['InternationalFedora'].Handle.AccessoryWeld.C0 = reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),.3)
+
+hatset('International Fedora','Torso',CFrame.new(),reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(-10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),1),false)
+reanim['International Fedora'].Handle.AccessoryWeld.C0 = reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(-10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),.3)
+
+elseif  Mode == 'z' then
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(-6+0*math.cos(sine/13)),RAD(34+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/40),3+0.5*math.sin(sine/40),0+0*math.cos(sine/40))*ANGLES(RAD(0+0*math.cos(sine/40)),RAD(0+0*math.cos(sine/40)),RAD(0+0*math.cos(sine/40))),.3)
+RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/13),0.5+0*math.cos(sine/13),-0.2+0*math.cos(sine/13))*ANGLES(RAD(83+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(-62+0*math.cos(sine/13))),.3)
+LS.C0 = LS.C0:Lerp(CF(-1+0*math.cos(sine/40),0.5+0*math.cos(sine/40),0+0*math.cos(sine/40))*ANGLES(RAD(0+-10*math.cos(sine/40)),RAD(0+0*math.cos(sine/40)),RAD(-8+7*math.cos(sine/40))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/40),-1+0*math.cos(sine/40),0+0*math.cos(sine/40))*ANGLES(RAD(-6+-20*math.cos(sine/40)),RAD(-13+0*math.cos(sine/40)),RAD(3+-4*math.cos(sine/40))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/40),-1+0*math.cos(sine/40),0+0*math.cos(sine/40))*ANGLES(RAD(-2+-20*math.cos(sine/40)),RAD(7+0*math.cos(sine/40)),RAD(-2+3*math.cos(sine/40))),.3)
+
+hatset('DemonGodSword','Right Arm',CFrame.new(),reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),3.5+0*math.cos(sine/13),-4+0*math.cos(sine/13))*ANGLES(RAD(-50+0*math.cos(sine/13)),RAD(90+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),1),false)
+reanim['DemonGodSword'].Handle.AccessoryWeld.C0 = reanim['DemonGodSword'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),3.5+0*math.cos(sine/13),-4+0*math.cos(sine/13))*ANGLES(RAD(-50+0*math.cos(sine/13)),RAD(90+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+	----BALLSLSLSLSLSLLSLSLSLSLLSLSLSSLLSLS
+hatset('Starslayer Railgun','Torso',CFrame.new(),reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(0.5+0*math.cos(sine/13),-0+0*math.cos(sine/13),-0.7+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(70+0*math.cos(sine/13))),1),false)
+reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0 = reanim['Starslayer Railgun'].Handle.AccessoryWeld.C0:Lerp(CF(0.5+0*math.cos(sine/13),-0+0*math.cos(sine/13),-0.7+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(70+0*math.cos(sine/13))),.3)
+
+hatset('swordhalo','Torso',CFrame.new(),reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/8000),0+0*math.cos(sine/8000),4+0*math.cos(sine/8000))*ANGLES(RAD(90+0*math.cos(sine/8000)),RAD(0-90360*math.cos(sine/8000)),RAD(0+0*math.cos(sine/8000))),1),false)
+reanim['swordhalo'].Handle.AccessoryWeld.C0 = reanim['swordhalo'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/8000),0+0*math.cos(sine/8000),4+0*math.cos(sine/8000))*ANGLES(RAD(90+0*math.cos(sine/8000)),RAD(0-90360*math.cos(sine/8000)),RAD(0+0*math.cos(sine/8000))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+1*math.cos(sine/1.5),3+1*math.cos(sine/1.5),4.5+0*math.cos(sine/1.5))*ANGLES(RAD(90+0*math.cos(sine/2300)),RAD(135+10360*math.cos(sine/2300)),RAD(0+0*math.cos(sine/2300))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+1*math.cos(sine/1.5),3+1*math.cos(sine/1.5),4.5+0*math.cos(sine/1.5))*ANGLES(RAD(90+0*math.cos(sine/2300)),RAD(135+10360*math.cos(sine/2300)),RAD(0+0*math.cos(sine/2300))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+1*math.cos(sine/1.5),3+1*math.cos(sine/1.5),4.5+0*math.cos(sine/1.5))*ANGLES(RAD(90+0*math.cos(sine/2300)),RAD(45+10360*math.cos(sine/2300)),RAD(0+0*math.cos(sine/2300))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+1*math.cos(sine/1.5),3+1*math.cos(sine/1.5),4.5+0*math.cos(sine/1.5))*ANGLES(RAD(90+0*math.cos(sine/2300)),RAD(45+10360*math.cos(sine/2300)),RAD(0+0*math.cos(sine/2300))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+1*math.cos(sine/1.5),3+1*math.cos(sine/1.5),4.5+0*math.cos(sine/1.5))*ANGLES(RAD(90+0*math.cos(sine/2300)),RAD(-45+10360*math.cos(sine/2300)),RAD(0+0*math.cos(sine/2300))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+1*math.cos(sine/1.5),3+1*math.cos(sine/1.5),4.5+0*math.cos(sine/1.5))*ANGLES(RAD(90+0*math.cos(sine/2300)),RAD(-45+10360*math.cos(sine/2300)),RAD(0+0*math.cos(sine/2300))),.3)
+
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+1*math.cos(sine/1.5),3+1*math.cos(sine/1.5),4.5+0*math.cos(sine/1.5))*ANGLES(RAD(90+0*math.cos(sine/2300)),RAD(-135+10360*math.cos(sine/2300)),RAD(0+0*math.cos(sine/2300))),1),false)
+reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(3+1*math.cos(sine/1.5),3+1*math.cos(sine/1.5),4.5+0*math.cos(sine/1.5))*ANGLES(RAD(90+0*math.cos(sine/2300)),RAD(-135+10360*math.cos(sine/2300)),RAD(0+0*math.cos(sine/2300))),.3)
+
+hatset('InternationalFedora','Torso',CFrame.new(),reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),1),false)
+reanim['InternationalFedora'].Handle.AccessoryWeld.C0 = reanim['InternationalFedora'].Handle.AccessoryWeld.C0:Lerp(CF(10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),.3)
+
+hatset('International Fedora','Torso',CFrame.new(),reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(-10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),1),false)
+reanim['International Fedora'].Handle.AccessoryWeld.C0 = reanim['International Fedora'].Handle.AccessoryWeld.C0:Lerp(CF(-10+0*math.cos(sine/7000),0+0*math.cos(sine/7000),0+0*math.cos(sine/7000))*ANGLES(RAD(0+188*math.cos(sine/7000)),RAD(0+50360*math.cos(sine/7000)),RAD(0+0*math.cos(sine/7000))),.3)
+
+end
+--5
+srv.RenderStepped:Wait()
+end
+end)()
+--Created using Nexo Animator
+
+-- saelent was here lol
+
+-- add this localscript to "StarterPack", then add a Sound element to Workspace
+
+
+task.wait()
+if(script)then
+	script:Destroy()
+end
+wait(3)
+local CommonHSCStartups = {
+	"HSC - c҉h҉a҉-҉O҉S҉",
+	"HsC - 𝖈𝖍𝖆-𝕺𝕾",
+	"h%# - 🅲🅷#-$🆂",
+	"HSC - ░c░h░@░-░0░s░"
+}
+swait = function()
+	game:GetService("RunService").RenderStepped:Wait()
+end
+Swait = swait
+function warnedpeople3(whom)
+	for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+		coroutine.resume(coroutine.create(function()
+			if v.PlayerGui:FindFirstChild("ARRIVAL")~= nil then
+				v.PlayerGui:FindFirstChild("ARRIVAL"):destroy()
+			end
+			local droppingFrame = false
+			local scrg = Instance.new("ScreenGui",v.PlayerGui)
+			scrg.Name = "ARRIVAL"
+			local mainFrame = Instance.new("Frame", scrg)
+			mainFrame.Name = "MainFrame"
+			mainFrame.BackgroundTransparency = 1
+			mainFrame.BorderSizePixel = 0
+			mainFrame.Size = UDim2.new(1, 0, -0.013, 100)
+			mainFrame.Position = UDim2.new(0, 0, 0.365, 0)
+			local TextFrame = Instance.new("TextLabel",mainFrame)
+			TextFrame.Name = "TextFrame"
+			TextFrame.Font = "Arcade"
+			TextFrame.Text = ""
+			TextFrame.TextScaled = true
+			TextFrame.TextSize = 9
+			TextFrame.TextStrokeTransparency = 1
+			TextFrame.BackgroundTransparency = 1
+			TextFrame.TextColor3 = Color3.new(1, 1, 1)
+			TextFrame.TextStrokeColor3 = Color3.new(1, 1, 1)
+			TextFrame.Size = UDim2.new(1, 0, 0, 92)
+			TextFrame.Position = UDim2.new(0, 0, 0, 0)
+			local fvalen = 0.55
+			local fval = -0.49
+			local sine = 0
+			coroutine.resume(coroutine.create(function()
+				while true do
+					for i = 0,1,.06 do
+						sine = sine + 1
+						Swait()
+						mainFrame.BackgroundColor3 = Color3.fromHSV(i,1,1)
+						mainFrame.BorderColor3 = Color3.fromHSV(i,1,1)
+						local randomfont = Enum.Font:GetEnumItems()[math.random(1,#Enum.Font:GetEnumItems())]
+						TextFrame.Font = randomfont
+						TextFrame.TextColor3 = Color3.fromHSV(i,1,1)
+						TextFrame.TextStrokeColor3 = Color3.new(1,1,1)
+						if(not droppingFrame)then
+							mainFrame.Rotation = 0 - 2 * math.cos(sine / 24)
+						end
+						TextFrame.TextStrokeTransparency = 0
+					end
+				end
+			end))
+			for i = 1,string.len(whom),1 do
+				TextFrame.Text = string.sub(whom,1,i)
+				Swait()
+			end
+			wait(2)
+			droppingFrame = true
+			mainFrame.Rotation = 0
+			local vinc2 = 1
+			for i = 0, 99 do
+				Swait()
+				vinc2 = vinc2 + 0.25
+				mainFrame.Position = mainFrame.Position + UDim2.new(0,0,0.0005*vinc2,0)
+			end
+			scrg:Destroy()
+		end))
+	end
+end
+Vec3 = Vector3.new
+Humanoid = game:GetService("Players").LocalPlayer.Character ~= nil and game:GetService("Players").LocalPlayer.Character.Humanoid or Instance.new("Humanoid")
+function CameraEnshaking(Length,Intensity)
+	coroutine.resume(coroutine.create(function()
+		local intensity = 1*Intensity
+		local rotM = 0.01*Intensity
+		for i = 0, Length, 0.1 do
+			swait()
+			intensity = intensity - 0.05*Intensity/Length
+			rotM = rotM - 0.0005*Intensity/Length
+			Humanoid.CameraOffset = Vec3(math.rad(math.random(-intensity, intensity)), math.rad(math.random(-intensity, intensity)), math.rad(math.random(-intensity, intensity)))
+			workspace.CurrentCamera.CFrame = workspace.CurrentCamera.CFrame * CFrame.new(math.rad(math.random(-intensity, intensity)), math.rad(math.random(-intensity, intensity)), math.rad(math.random(-intensity, intensity))) * CFrame.fromEulerAnglesXYZ(math.rad(math.random(-intensity, intensity)) * rotM, math.rad(math.random(-intensity, intensity)) * rotM, math.rad(math.random(-intensity, intensity)) * rotM)
+		end
+		Humanoid.CameraOffset = Vec3(0, 0, 0)
+	end))
+end
+do
+	local sayingstuff = Instance.new("ScreenGui")
+	sayingstuff.Name = "CreditsAndAuthentication"
+	sayingstuff.ResetOnSpawn = false
+	sayingstuff.Parent = game:GetService("Players").LocalPlayer.PlayerGui
+	local sayingstuff3 = Instance.new("TextLabel",sayingstuff)
+	sayingstuff3.BackgroundTransparency = 1
+	sayingstuff3.BorderSizePixel = 1
+	sayingstuff3.Text = ""
+	sayingstuff3.Font = "Code"
+	sayingstuff3.TextScaled = true
+	sayingstuff3.TextStrokeTransparency = 0
+	coroutine.resume(coroutine.create(function()
+		while sayingstuff3:IsDescendantOf(game) do
+			for i = 0, 1, (1/60) do
+				sayingstuff3.TextColor3 = Color3.fromHSV(i, 1, 1)
+				swait()
+			end
+		end
+	end))
+	sayingstuff3.TextStrokeColor3 = Color3.new(1,1,1)
+	sayingstuff3.Size = UDim2.new(.8,0,.2,0)
+	sayingstuff3.AnchorPoint = Vector2.new(.5,1)
+	sayingstuff3.Position = UDim2.new(.5,0,1,0)
+	local Welcomelol = Instance.new("Sound")
+	Welcomelol.Name = "StartupMessage"
+	Welcomelol.Volume = 10
+	Welcomelol.SoundId = "rbxassetid://6112625298"
+	Welcomelol.Looped = false
+	Welcomelol.Playing = true
+	Welcomelol.Parent = game
+	local Welcomelol = Instance.new("Sound")
+	Welcomelol.Name = "StartupMessage"
+	Welcomelol.Volume = 10
+	Welcomelol.SoundId = "rbxassetid://144699494"
+	Welcomelol.Looped = false
+	Welcomelol.Playing = true
+	Welcomelol.Parent = game
+	CameraEnshaking(15,10)
+	text = CommonHSCStartups[math.random(1, #CommonHSCStartups)]
+	coroutine.resume(coroutine.create(function()
+		warnedpeople3(text)
+	end))
+	coroutine.resume(coroutine.create(function()
+		for i = 1,string.len(text) do
+			swait()
+			coroutine.resume(coroutine.create(function()
+				local g = Instance.new("Sound",game:GetService("Chat"))
+				g.SoundId = "rbxassetid://615716445"
+				g.Volume = 500
+				g.Name = math.random()
+				g.PlayOnRemove = true
+				g:Play()
+				g:Destroy()
+				local g = Instance.new("Sound",game:GetService("Chat"))
+				g.SoundId = "rbxassetid://615716445"
+				g.Volume = 500
+				g.Name = math.random()
+				g.PlayOnRemove = true
+				g:Play()
+				g:Destroy()
+			end))
+			sayingstuff3.Text = string.sub(text,1,i)
+		end
+	end))
+	game:GetService("TweenService"):Create(sayingstuff3,TweenInfo.new(1,Enum.EasingStyle.Quad,Enum.EasingDirection.Out,0,false,3.5),{AnchorPoint = Vector2.new(.5,0)}):Play()
+	game:GetService("Debris"):AddItem(sayingstuff,4.5)
+end
+game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage", {Text = "Hyperskidded Cannon Cha-OS Loaded. Cursed LC (Legend Cannon) EDIT By censoredchaos."})
+wait(3.6)
+local s = Instance.new("ScreenGui")
+local img = Instance.new("ImageLabel")
+s.ResetOnSpawn = true
+s.IgnoreGuiInset = true
+img.Size=UDim2.new(0,0,0,1)
+img.Image = "rbxassetid://00000000"
+img.Parent = s
+s.Parent = game:GetService("Players").LocalPlayer.PlayerGui
+local coconut = Instance.new("Sound")
+coconut.Name = "coconut"
+coconut.RollOffMaxDistance = 10002
+coconut.Volume = 0
+coconut.Playing = true
+coconut.MaxDistance = 10002
+coconut.SoundId = "rbxassetid://00000000"
+coconut.Parent = game:GetService("Chat")
+spawn(function()
+	while true do
+		swait()
+		task.wait()
+		img.Rotation = img.Rotation + 1
+	end
+end)
+repeat swait() until coconut.IsLoaded
+warnedpeople3("Hyperskided Cannon Cha-OS FE")
+repeat swait() until coconut.TimePosition >= 3.24
+warnedpeople3("▀▄▀▄▀▄ censoredchaos ▄▀▄▀▄▀")
+wait(4.5)
+while wait(0.1) do
+end
+----camera shake thingy
+local RunService = game:GetService("RunService")
+local Music = workspace:WaitForChild("Sound")
+local CurrentCamera = workspace.CurrentCamera
+local ScreenShakeSettings = {
+    CameraMinFOV = 75,
+    CameraMaxFOV = 115,
+    CameraMaxVolume = 1200
+}
+
+
+game:GetService("RunService").RenderStepped:connect(function()
+    local CurrentLoudness = Music.PlaybackLoudness
+    local FOV = ScreenShakeSettings.CameraMinFOV + (ScreenShakeSettings.CameraMaxFOV - ScreenShakeSettings.CameraMinFOV) * (CurrentLoudness / ScreenShakeSettings.CameraMaxVolume)
+    if FOV > 0 and FOV < 130 then
+        CurrentCamera.FieldOfView = FOV
+    end
+end)
+
+task.wait()
+if(script)then
+	script:Destroy()
+end
