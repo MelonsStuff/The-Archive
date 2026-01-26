@@ -1,0 +1,1236 @@
+wait(1/60)
+ game.TestService.IsSleepAllowed = false
+for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
+	if v:IsA("BasePart") then 
+		game:GetService("RunService").Heartbeat:connect(function()
+			v.Velocity = Vector3.new(-40,0,-10)
+			pcall(function()
+				v.CanCollide = false
+			end)
+			pcall(function()
+				v.CanQuery = false
+			end)
+		end)
+	end
+end
+
+Bypass = "death"
+loadstring(game:GetObjects("rbxassetid://5325226148")[1].Source)()
+for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
+if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
+game:GetService("RunService").Heartbeat:connect(function()
+v.Velocity = Vector3.new(0,30,0)
+wait(0.5)
+end)
+end
+end
+local p = game.Players.LocalPlayer
+local char = p.Character
+local mouse = p:GetMouse()
+local larm = char["Left Arm"]
+local rarm = char["Right Arm"]
+local lleg = char["Left Leg"]
+local rleg = char["Right Leg"]
+local hed = char.Head
+local torso = char.Torso
+local hum = char.Humanoid
+local cam = game.Workspace.CurrentCamera
+local root = char.HumanoidRootPart
+for i,v in pairs (char:GetChildren()) do
+	if v:IsA("Accessory") then
+		v.Handle.Massless = true
+		v.Handle.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+	end
+end
+
+hed.Massless = true
+hed.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+torso.Massless = true
+torso.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+rarm.Massless = true
+rarm.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+larm.Massless = true
+larm.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+lleg.Massless = true
+lleg.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+rleg.Massless = true
+rleg.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+root.Massless = true
+root.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+warn("Netless Activated!")
+Bypass = "Death"
+plr = game.Players.LocalPlayer
+dead = false
+char = plr.Character
+
+
+
+bullet = workspace[plr.Name]["HumanoidRootPart"]
+bullet.Transparency = 0
+bhandle = bullet
+bullet.Massless = true
+
+mouse = plr:GetMouse()
+head = char.Head
+camera = workspace.CurrentCamera
+lt = true
+ltt = false
+
+local function IsFirstPerson()
+     return (head.CFrame.p - camera.CFrame.p).Magnitude < 1
+end
+
+     bbv = Instance.new("BodyPosition",bhandle)
+     bbv.Position = char.Torso.CFrame.p
+   
+     
+     
+     mouse.Button1Down:Connect(function()
+         if dead == false then
+        lt = false
+        ltt = false
+     bbav = Instance.new("BodyAngularVelocity",bhandle)
+     bbav.MaxTorque = Vector3.new(math.huge,math.huge,math.huge)
+     bbav.P = 1000000000000000000000000000
+     bbav.AngularVelocity = Vector3.new(10000000000000000000000000000000,100000000000000000000000000,100000000000000000)
+     game:GetService("Debris"):AddItem(bbav,0.1)
+        if game.Players:GetPlayerFromCharacter(mouse.Target.Parent) then
+            if mouse.Target.Parent.Name == char.Name or mouse.Target.Parent.Name == "non" then return end
+              --repeat 
+            game:GetService("RunService").RenderStepped:Wait()
+            bbv.Position = (CFrame.new(mouse.Target.Parent.HumanoidRootPart.CFrame.p,char.Torso.CFrame.p) * CFrame.new(0,0,0)).p
+            bhandle.Position = (CFrame.new(mouse.Target.Parent.HumanoidRootPart.CFrame.p,char.Torso.CFrame.p) * CFrame.new(0,0,0)).p
+            wait(1)
+            --until char.Humanoid.Health == 100 or char.Humanoid.Health == 0
+        elseif game.Players:GetPlayerFromCharacter(mouse.Target.Parent.Parent) then
+            if mouse.Target.Parent.Name == char.Name or mouse.Target.Parent.Name == "non" then return end
+            --repeat 
+            game:GetService("RunService").RenderStepped:Wait()
+            bbv.Position = (CFrame.new(mouse.Target.Parent.Parent.HumanoidRootPart.CFrame.p,char.Torso.CFrame.p) * CFrame.new(0,0,0)).p
+            bhandle.Position = (CFrame.new(mouse.Target.Parent.Parent.HumanoidRootPart.CFrame.p,char.Torso.CFrame.p) * CFrame.new(0,0,0)).p
+            wait(1)
+            --until char.Humanoid.Health == 100 or char.Humanoid.Health == 0
+            
+            else
+       -- repeat 
+        game:GetService("RunService").RenderStepped:Wait()
+        wait(1)
+        --until char.Humanoid.Health == 100 or char.Humanoid.Health == 0
+        end
+        wait()
+        lt = true
+         end
+         end)
+         
+    spawn(
+        function()
+            while true do
+                game:GetService("RunService").Heartbeat:Wait()
+                bullet.Velocity = Vector3.new(0,26,0)
+         end
+    end)
+
+ plr:GetMouse().Button1Down:Connect(function()
+attackingwithhrp = true	
+end)
+
+ 
+plr:GetMouse().Button1Up:Connect(function()
+attackingwithhrp = false
+end)
+
+plr:GetMouse().Button1Down:Connect(function()
+repeat wait() until attackingwithhrp == true
+repeat
+game:GetService("RunService").Heartbeat:Wait()
+if plr:GetMouse().Target ~= nil then
+bullet.Position = game:GetService("Players").LocalPlayer:GetMouse().Hit.p
+end
+until attackingwithhrp == false
+end)
+
+local script = game:GetObjects("rbxassetid://11760158617")[1]
+
+-- By RealBredbeargotban
+-- Script Name: ITS YA BOY CLEETUS
+-- Original By Lord_Phantasmagoria (CKbackup)
+--[[Credits:
+EthetGoing2400 - Cleetus Music and new wave mesh!
+Lord_Phantasmagoria (CKbackup - Original Cleetus]]
+
+p = game.Players.LocalPlayer
+m = p:GetMouse()
+ch = Workspace.non
+root = ch.HumanoidRootPart
+hum = ch.Humanoid
+userinput = game:GetService("UserInputService")
+debris = game:GetService("Debris")
+trapped = false
+aimtime = false
+mythtime = false
+local landevent = script.LandedTestlol.LandingEvent
+local canland = script.LandedTestlol.CanLand
+anim = "Idle"
+attack = false
+grabbed = false
+canplay = false
+canplaying = false
+sine = 0
+change = 1
+speed = 75
+jpower = 75
+
+Instance.new("ForceField",ch).Visible = false
+
+-- Welds
+
+local neck = Instance.new("Weld",ch.Torso)
+neck.Part0 = ch.Torso
+neck.Part1 = ch.Head
+neck.C0 = CFrame.new(0,1.5,0)
+local torso = Instance.new("Weld",root)
+torso.Part0 = root
+torso.Part1 = ch.Torso
+local rs = Instance.new("Weld",ch.Torso)
+rs.Part0 = ch.Torso
+rs.Part1 = ch["Right Arm"]
+rs.C0 = CFrame.new(1.5,0.5,0)
+rs.C1 = CFrame.new(0,0.5,0)
+local ls = Instance.new("Weld",ch.Torso)
+ls.Part0 = ch.Torso
+ls.Part1 = ch["Left Arm"]
+ls.C0 = CFrame.new(-1.5,0.5,0)
+ls.C1 = CFrame.new(0,0.5,0)
+local rh = Instance.new("Weld",ch.Torso)
+rh.Part0 = ch.Torso
+rh.Part1 = ch["Right Leg"]
+rh.C0 = CFrame.new(0.5,-1,0)
+rh.C1 = CFrame.new(0,1,0)
+local lh = Instance.new("Weld",ch.Torso)
+lh.Part0 = ch.Torso
+lh.Part1 = ch["Left Leg"]
+lh.C0 = CFrame.new(-0.5,-1,0)
+lh.C1 = CFrame.new(0,1,0)
+
+-- Music 
+
+local music = Instance.new("Sound",root)
+music.SoundId = "rbxassetid://2208519872"
+music.Name = "Music"
+music.PlaybackSpeed = 0.9
+music.Volume = 6
+music.Looped = true
+--music:Play()
+local hat = script["Mellow Cowboy"]
+hat.Parent = ch
+ 
+landparthitbox = Instance.new("Part",ch)
+landparthitbox.Anchored = false
+landparthitbox.CanCollide = false
+landparthitbox.Locked = true
+landparthitbox.Transparency = 1
+landparthitbox.Size = Vector3.new(2.8,5.25,2.8)
+local landpartweld = Instance.new("Weld",landparthitbox)
+landpartweld.Part0 = landparthitbox
+landpartweld.Part1 = root
+-- BANJO
+
+local banjo = script.Model
+local banjoweld = Instance.new("Weld",banjo.Banjo)
+banjoweld.Part0 = banjo.Banjo
+banjoweld.Part1 = ch["Left Arm"]
+--banjoweld.C0 = CFrame.new(0,1.2,0)*CFrame.Angles(0,math.rad(-90),0)
+
+-- DA GUN
+local dagun = script.Sniper
+coroutine.wrap(function()
+wait(0.01)
+local gunweld = Instance.new("Weld",dagun.Handle)
+gunweld.Part0 = dagun.Handle
+gunweld.Part1 = ch["Right Arm"]
+gunweld.C0 = CFrame.new(-1.25,-0.1,0)*CFrame.Angles(math.rad(90),0,math.rad(85))
+end)()
+
+-- Special stuff
+
+local damyth = script.Cursed
+damyth.Parent = nil
+hand = damyth.Hand
+hand2 = damyth.Hand2
+hand3 = damyth.Hand3
+hand4 = damyth.Hand4
+hand5 = damyth.Hand5
+
+ghand = damyth.GrabHand
+ghand2 = damyth.GrabHand2
+ghand3 = damyth.GrabHand3
+ghand4 = damyth.GrabHand4
+ghand5 = damyth.GrabHand5
+
+bloodpart = damyth.BloodPart
+
+local fakecleetus = script.mrflimflam
+fakecleetus.flambro.Value = ch
+fakecleetus.Parent = nil
+
+local cleetusfolder = Instance.new("Folder",ch)
+cleetusfolder.Name = "CleetusFolder"
+
+-- Usefull functions
+
+function createsound(id,pitch,volume,parent)
+	coroutine.resume(coroutine.create(function()
+	local sound = Instance.new("Sound",parent)
+	sound.SoundId = "rbxassetid://"..id
+	sound.PlaybackSpeed = pitch
+	sound.Volume = volume
+	sound:Play()
+	repeat
+	game:GetService("RunService").Heartbeat:Wait()	
+	until sound.Playing == false
+	sound:Destroy()	
+	end))
+end
+
+
+function GetDudesTorso(c)
+local torsy = (c:findFirstChild("Torso") or c:findFirstChild("UpperTorso"))
+if torsy ~= nil then
+return torsy
+end
+end
+
+function CamShake(par,magni,env,dur)
+for _, c in pairs(workspace:GetDescendants()) do
+local hum = c:FindFirstChildOfClass("Humanoid")
+if hum ~= nil and c:FindFirstChild("SHAKE")==nil then
+local head = GetDudesTorso(c)
+if head ~= nil then
+local targ = head.Position - par.Position
+local mag = targ.magnitude
+if magni >= mag then
+local sheiku = script:FindFirstChild("SHAKE"):Clone()
+sheiku.Parent = c
+sheiku:FindFirstChild("Env").Value = env
+sheiku:FindFirstChild("Dur").Value = dur
+sheiku.Disabled = false
+end
+end
+end
+end
+end
+
+function fastwave(pos,trans)
+	coroutine.resume(coroutine.create(function()
+	local part = Instance.new("Part",workspace)
+	part.Locked = true
+	part.BrickColor = BrickColor.new("White")
+	part.CanCollide = false
+	part.Anchored = true
+	part.Transparency = trans
+	part.CFrame = pos
+	local wavemesh = Instance.new("SpecialMesh",part)
+	wavemesh.MeshId = "rbxassetid://169412804"
+	local a = 0
+    for i = 0,5,0.3 do
+	game:GetService("RunService").Heartbeat:Wait()
+    a = a + 15
+    part.CFrame = pos*CFrame.Angles(0,a,0)
+    part.Transparency = part.Transparency + 0.07
+	wavemesh.Scale = wavemesh.Scale + Vector3.new(0.6,0.25,0.6)		
+	end	
+	part:Destroy()	
+	end))
+end
+
+function spawnwave(pos,trans)
+	coroutine.resume(coroutine.create(function()
+	local part = Instance.new("Part",workspace)
+	part.Locked = true
+	part.BrickColor = BrickColor.new("White")
+	part.CanCollide = false
+	part.Anchored = true
+	part.Transparency = trans
+	part.CFrame = pos
+	local wavemesh = Instance.new("SpecialMesh",part)
+	wavemesh.MeshId = "rbxassetid://169412804"
+	local a = 0
+    for i = 0,8,0.3 do
+	game:GetService("RunService").Heartbeat:Wait()
+    a = a + 5
+    part.CFrame = pos*CFrame.Angles(0,a,0)
+    part.Transparency = part.Transparency + 0.025
+	wavemesh.Scale = wavemesh.Scale + Vector3.new(0.6,0.25,0.6)		
+	end	
+	part:Destroy()	
+	end))
+end
+
+function spawnbigwave(pos,trans)
+	coroutine.resume(coroutine.create(function()
+	local part = Instance.new("Part",workspace)
+	part.Locked = true
+	part.BrickColor = BrickColor.new("White")
+	part.CanCollide = false
+	part.Anchored = true
+	part.Transparency = trans
+	part.CFrame = pos
+	local wavemesh = Instance.new("SpecialMesh",part)
+	wavemesh.MeshId = "rbxassetid://169412804"
+	local a = 0
+    for i = 0,35,0.1 do
+	game:GetService("RunService").Heartbeat:Wait()
+    a = a + 5
+    part.CFrame = pos*CFrame.Angles(0,a,0)
+    part.Transparency = part.Transparency + 0.025
+	wavemesh.Scale = wavemesh.Scale + Vector3.new(0.95,0.45,0.95)		
+	end	
+	part:Destroy()	
+	end))
+end
+
+function spawnkillingwave(pos,trans)
+	coroutine.resume(coroutine.create(function()
+	local part = Instance.new("Part",workspace)
+	part.Locked = true
+	part.BrickColor = BrickColor.new("White")
+	part.CanCollide = false
+	part.Anchored = true
+	part.Transparency = trans
+	part.CFrame = pos
+	local wavemesh = Instance.new("SpecialMesh",part)
+	wavemesh.MeshId = "rbxassetid://169412804"
+	part.Touched:Connect(function(hit)
+	if hit.Parent ~= ch and hit.Parent:FindFirstChildOfClass("Humanoid") then
+		 
+	end		
+	end)
+	for i = 0,8,0.3 do
+	game:GetService("RunService").Heartbeat:Wait()
+	wavemesh.Scale = wavemesh.Scale + Vector3.new(1.25,1,1.25)		
+	part.Size = part.Size + Vector3.new(1.25,1,1.25)	
+	end	
+	part:Destroy()	
+	end))
+end
+ 
+function handslol()
+	 
+end
+
+function DAEXPLOSION(pos)
+coroutine.resume(coroutine.create(function()
+local expart1 = Instance.new("Part",ch)
+expart1.Material = Enum.Material.Neon
+expart1.Anchored = true
+expart1.CanCollide = false
+expart1.Size = Vector3.new(7,7,7)
+expart1.BrickColor = BrickColor.new("Bright orange")
+local expart2 = Instance.new("Part",ch)
+expart2.Material = Enum.Material.Neon
+expart2.Anchored = true
+expart2.CanCollide = false
+expart2.Size = Vector3.new(7,7,7)
+		expart2.BrickColor = BrickColor.new("CGA brown")
+		createsound(10209236,1,10,expart1)
+expart1.Touched:Connect(function(hit)
+if hit.Parent ~= ch and hit.Parent:FindFirstChildOfClass("Humanoid") and hit.Parent:FindFirstChild("IsRaider") == nil then
+ 
+end
+end)
+expart2.Touched:Connect(function(hit)
+if hit.Parent ~= ch and hit.Parent:FindFirstChildOfClass("Humanoid") and hit.Parent:FindFirstChild("IsRaider") == nil then
+ 
+end
+end)
+repeat
+game:GetService("RunService").Heartbeat:Wait()
+expart1.CFrame = CFrame.new(pos)*CFrame.Angles(math.random(-750,750),math.random(-750,750),math.random(-750,750))
+expart2.CFrame = CFrame.new(pos)*CFrame.Angles(math.random(-750,750),math.random(-750,750),math.random(-750,750))
+expart1.Size = expart1.Size + Vector3.new(0.25,0.25,0.25)
+expart2.Size = expart2.Size + Vector3.new(0.25,0.25,0.25)
+expart1.Transparency = expart1.Transparency + 0.005
+expart2.Transparency = expart2.Transparency + 0.005
+until expart1.Transparency > 1
+expart1:Destroy()
+expart2:Destroy()
+end))
+end
+
+function spawnbeartrap(pos)
+coroutine.resume(coroutine.create(function()
+local beartraplol = Instance.new("Part",workspace)
+beartraplol.Size = Vector3.new(2,0.5,2)
+beartraplol.Anchored = false
+beartraplol.CanCollide = false
+beartraplol.CFrame = pos
+debris:AddItem(beartraplol,4.5)
+local beartrapmesh = Instance.new("SpecialMesh",beartraplol)
+beartrapmesh.MeshId = "rbxassetid://470962113"
+beartrapmesh.TextureId = "rbxassetid://470965980"
+beartrapmesh.Scale = Vector3.new(0.005,0.005,0.005)
+local bv = Instance.new("BodyVelocity",beartraplol)
+bv.MaxForce = Vector3.new(math.huge,math.huge,math.huge)
+bv.Velocity = -pos.UpVector*50
+wait(0.1)
+beartraplol.CanCollide = true
+bv:Destroy()
+		touchyxdd = beartraplol.Touched:Connect(function(hit)
+if hit.Parent ~= ch and hit.Parent:FindFirstChildOfClass("Humanoid") and hit.Parent:FindFirstChild("IsRaider") == nil and hit.Parent:FindFirstChild("LOLRIP") == nil then
+touchyxdd:Disconnect()
+local hitroot = nil 
+if hit.Parent:FindFirstChild("HumanoidRootPart") ~= nil then
+hitroot = hit.Parent.HumanoidRootPart
+elseif hit.Parent:FindFirstChild("Torso") then
+hitroot = hit.Parent.Torso
+end
+local trappedlol = Instance.new("BoolValue",hit.Parent)
+trappedlol.Name = "LOLRIP"
+createsound(2019418800,1,2,hit.Parent)
+hitroot.CFrame = hitroot.CFrame*CFrame.Angles(90,0,0)
+local hithumlol = hit.Parent:FindFirstChildOfClass("Humanoid")
+if hit.Parent:FindFirstChild("Right Leg") then
+local screams = {1025464252,2723006320,2646809257,167285348,205335029,2672793953,1260179732,1093096537,1946318153,149649817,5169624072,5037672265,1929118107,5163677572,3614962759,314568939,5518521023,1549511350,4611276403,527970724,527276541,1080625252,1080363252,5449308964,626777433,1080610583,3483587416,147758746,565424701,535528169}
+local screamlol = screams[math.random(1,#screams)]
+hithumlol.PlatformStand = true
+beartraplol:Destroy()
+local newbeartrap = Instance.new("Part",hit.Parent)
+newbeartrap.Size = Vector3.new(2,0.5,2)
+newbeartrap.Anchored = false
+newbeartrap.CanCollide = true
+local newbeartrapmesh = Instance.new("SpecialMesh",newbeartrap)
+newbeartrapmesh.MeshId = "rbxassetid://59711981"
+newbeartrapmesh.TextureId = "rbxassetid://470965980"
+newbeartrapmesh.Scale = Vector3.new(2,1.2,1.2)
+
+local trapweldlol = Instance.new("Weld",newbeartrap)
+trapweldlol.Part0 = newbeartrap
+trapweldlol.Part1 = hit.Parent["Right Leg"]
+trapweldlol.C0 = CFrame.new(0,0,0.9)*CFrame.Angles(math.rad(90),0,0)
+wait(1)
+local screamlmao = Instance.new("Sound",hit.Parent)
+screamlmao.SoundId = "rbxassetid://"..screamlol
+screamlmao.Volume = 2
+if screamlmao.SoundId == "rbxassetid://626777433" then
+screamlmao.TimePosition = 1.5
+screamlmao.Volume = 0.5
+end
+screamlmao:Play()
+wait(5)
+screamlmao:Destroy()
+ 
+elseif  hit.Parent:FindFirstChild("UpperTorso") then
+local screams = {147758618,626777433,1080610583,3483587416,565424701,1679435417}
+local screamlol = screams[math.random(1,#screams)]
+hithumlol.PlatformStand = true
+beartraplol:Destroy()
+local newbeartrap = Instance.new("Part",hit.Parent)
+newbeartrap.Size = Vector3.new(2,0.5,2)
+newbeartrap.Anchored = false
+newbeartrap.CanCollide = true
+local newbeartrapmesh = Instance.new("SpecialMesh",newbeartrap)
+newbeartrapmesh.MeshId = "rbxassetid://59711981"
+newbeartrapmesh.TextureId = "rbxassetid://470965980"
+newbeartrapmesh.Scale = Vector3.new(2,1.2,1.2)
+
+local trapweldlol = Instance.new("Weld",newbeartrap)
+trapweldlol.Part0 = newbeartrap
+trapweldlol.Part1 = hit.Parent.RightFoot
+trapweldlol.C0 = CFrame.new(0,0,0.25)*CFrame.Angles(math.rad(90),0,0)
+wait(1)
+local screamlmao = Instance.new("Sound",hit.Parent)
+screamlmao.SoundId = "rbxassetid://"..screamlol
+screamlmao.Volume = 2
+if screamlmao.SoundId == "rbxassetid://626777433" then
+screamlmao.TimePosition = 1.5
+screamlmao.Volume = 0.5
+end
+screamlmao:Play()
+wait(5)
+screamlmao:Destroy()
+ 
+end
+end
+end)
+end))
+end
+
+function spawnlittlewave(pos,trans)
+	coroutine.resume(coroutine.create(function()
+	local part = Instance.new("Part",workspace)
+	part.Locked = true
+	part.BrickColor = BrickColor.new("White")
+	part.CanCollide = false
+	part.Anchored = true
+	part.Transparency = trans
+	part.CFrame = pos
+	local wavemesh = Instance.new("SpecialMesh",part)
+	wavemesh.MeshId = "rbxassetid://169412804"
+	local a = 0
+    for i = 0,5,0.3 do
+	game:GetService("RunService").Heartbeat:Wait()
+    a = a + 5
+    part.CFrame = pos*CFrame.Angles(0,a,0)
+    part.Transparency = part.Transparency + 0.025
+	wavemesh.Scale = wavemesh.Scale + Vector3.new(0.6,0.25,0.6)		
+	end	
+	part:Destroy()	
+	end))
+end
+
+function spawnorb()
+coroutine.resume(coroutine.create(function()
+local neworb = Instance.new("Part",ch)
+neworb.Anchored = true
+neworb.CanCollide = false
+neworb.Shape = Enum.PartType.Ball
+neworb.Material = Enum.Material.Neon
+neworb.BrickColor = BrickColor.new("White")
+neworb.CFrame = root.CFrame*CFrame.new(math.random(-4,4),math.random(-3,3),math.random(-4,4))
+neworb.Size = Vector3.new(2,2,2)
+createsound(5534554155,1.25,7,neworb)
+for i = 0,7,0.1 do
+game:GetService("RunService").Heartbeat:Wait()
+neworb.Transparency = neworb.Transparency + 0.015
+neworb.Size = neworb.Size + Vector3.new(0.05,0.05,0.05)
+end
+neworb:Destroy()
+end))
+end
+
+
+function spawncleetus()
+ 
+end
+
+-- Attacks 
+
+function animtemplate()
+	neck.C0 = neck.C0:Lerp(CFrame.new(0,1.5,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0)),0.3)
+	torso.C0 = torso.C0:Lerp(CFrame.new(0,0,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0)),0.3)
+	rs.C0 = rs.C0:Lerp(CFrame.new(1.5,0.5,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0)),0.3)
+	ls.C0 = ls.C0:Lerp(CFrame.new(-1.5,0.5,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0)),0.3)
+	rh.C0 = rh.C0:Lerp(CFrame.new(0.5,-1,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0)),0.3)
+	lh.C0 = lh.C0:Lerp(CFrame.new(-0.5,-1,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0)),0.3)
+	
+end
+
+function intro()
+	attack = true
+	root.Anchored = true
+	CamShake(root,100,.5,.6)
+	createsound(3154829820,1,2,ch.Head)
+	spawnwave(root.CFrame*CFrame.new(0,-2,0),0.2)
+	for i = 0,5,0.1 do
+	game:GetService("RunService").Heartbeat:Wait()
+	neck.C0 = neck.C0:Lerp(CFrame.new(0,1.5,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0)),0.3)
+	torso.C0 = torso.C0:Lerp(CFrame.new(0,-2.5,0)*CFrame.Angles(math.rad(-90),math.rad(0),math.rad(0)),0.3)
+	rs.C0 = rs.C0:Lerp(CFrame.new(1.1,0.8,0)*CFrame.Angles(math.rad(160),math.rad(90),math.rad(0))*CFrame.Angles(math.rad(-25),0,0),0.3)
+	ls.C0 = ls.C0:Lerp(CFrame.new(-1.1,0.8,0)*CFrame.Angles(math.rad(160),math.rad(-90),math.rad(0))*CFrame.Angles(math.rad(-25),0,0),0.3)
+	rh.C0 = rh.C0:Lerp(CFrame.new(0.5,-1,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(25)),0.3)
+	lh.C0 = lh.C0:Lerp(CFrame.new(-0.5,-1,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(-25)),0.3)
+	end
+	createsound(1093102664,1,2,ch.Head)
+	local lolwhat = Instance.new("Sound",ch.Head)
+	lolwhat.SoundId = "rbxassetid://2254648568"
+	lolwhat.Volume = 1.5
+	lolwhat:Play()
+	 
+	game:GetService("RunService").Heartbeat:Wait()
+	neck.C0 = neck.C0:Lerp(CFrame.new(0,1.2,0.5)*CFrame.Angles(math.rad(60),math.rad(0),math.rad(0)),0.3)
+	torso.C0 = torso.C0:Lerp(CFrame.new(0,-2.5,0)*CFrame.Angles(math.rad(-60),math.rad(0),math.rad(0)),0.3)
+	rs.C0 = rs.C0:Lerp(CFrame.new(1.1,0.8,0)*CFrame.Angles(math.rad(120),math.rad(90),math.rad(0))*CFrame.Angles(math.rad(-25),0,0),0.3)
+	ls.C0 = ls.C0:Lerp(CFrame.new(-1.1,0.8,0)*CFrame.Angles(math.rad(120),math.rad(-90),math.rad(0))*CFrame.Angles(math.rad(-25),0,0),0.3)
+	rh.C0 = rh.C0:Lerp(CFrame.new(0.5,-1,0)*CFrame.Angles(math.rad(-35),math.rad(0),math.rad(25)),0.3)
+	lh.C0 = lh.C0:Lerp(CFrame.new(-0.5,-1,0)*CFrame.Angles(math.rad(-35),math.rad(0),math.rad(-25)),0.3)
+	 
+	lolwhat:Destroy()
+	music:Play()
+	attack = false
+	canplay = true
+	canplaying = true
+	root.Anchored = false
+end
+
+function taunt()
+	attack = true
+	banjo.Banjo.Transparency = 0
+	speed = 0
+	jpower = 0
+	music:Pause()
+		canplay = false
+	local FARMERFIELD = Instance.new("Sound",ch.Head)
+	FARMERFIELD.SoundId = "rbxassetid://2681237436"
+	FARMERFIELD.Volume = 4
+	FARMERFIELD:Play()
+	--banjoweld.C0 = CFrame.new(0,1.2,0)*CFrame.Angles(0,math.rad(90),math.rad(-25))
+	repeat
+	game:GetService("RunService").Heartbeat:Wait()
+	banjoweld.C0 = banjoweld.C0:Lerp(CFrame.new(0,1,-0.35)*CFrame.Angles(0,math.rad(75),math.rad(-45))*CFrame.Angles(math.rad(25),0,0),0.3)
+	neck.C0 = neck.C0:Lerp(CFrame.new(0,1.5,-0.1)*CFrame.Angles(math.rad(-10+10*math.cos(sine/4)),math.rad(0),math.rad(0)),0.3)
+	torso.C0 = torso.C0:Lerp(CFrame.new(0,0-0.1*math.cos(sine/4),0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0)),0.3)
+	rs.C0 = rs.C0:Lerp(CFrame.new(0.85,1.2,-1.1)*CFrame.Angles(math.rad(10),math.rad(95),math.rad(0))*CFrame.Angles(math.rad(0+10*math.cos(sine/2)),0,0),0.3)
+	ls.C0 = ls.C0:Lerp(CFrame.new(-1.3,-0.8,-1.3)*CFrame.Angles(math.rad(160),math.rad(85),math.rad(0)),0.3)
+	rh.C0 = rh.C0:Lerp(CFrame.new(0.5,-1+0.1*math.cos(sine/4),0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0)),0.3)
+	lh.C0 = lh.C0:Lerp(CFrame.new(-0.5,-1+0.3*math.cos(sine/4),-0.6)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0)),0.3)
+	until FARMERFIELD.Playing == false
+	for i = 0,1,0.1 do
+	game:GetService("RunService").Heartbeat:Wait()
+	neck.C0 = neck.C0:Lerp(CFrame.new(0,1.5,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0)),0.3)
+	torso.C0 = torso.C0:Lerp(CFrame.new(0,0,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0)),0.3)
+	rs.C0 = rs.C0:Lerp(CFrame.new(1.5,0.5,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0)),0.3)
+	ls.C0 = ls.C0:Lerp(CFrame.new(-1.5,0.5,0)*CFrame.Angles(math.rad(-25),math.rad(60),math.rad(0)),0.3)
+	rh.C0 = rh.C0:Lerp(CFrame.new(0.5,-1,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0)),0.3)
+	lh.C0 = lh.C0:Lerp(CFrame.new(-0.5,-1,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0)),0.3)
+	end
+	attack = false
+	banjo.Banjo.Transparency = 1
+	music:Resume()
+		canplay = true
+	speed = 75
+	jpower = 75
+end
+
+
+function swing()
+	attack = true
+	banjo.Banjo.Transparency = 0
+	banjo.Banjo.Trail.Enabled = true
+	createsound(10209640,1,8,banjo.Banjo)
+	for i = 0,1,0.1 do
+	game:GetService("RunService").Heartbeat:Wait()
+	banjoweld.C0 = banjoweld.C0:Lerp(CFrame.new(-2.5,1.3,0.3)*CFrame.Angles(math.rad(0),math.rad(180),math.rad(-30)),0.3)
+	neck.C0 = neck.C0:Lerp(CFrame.new(0,1.5,0)*CFrame.Angles(math.rad(15),math.rad(0),math.rad(0)),0.3)
+	torso.C0 = torso.C0:Lerp(CFrame.new(0,0,0)*CFrame.Angles(math.rad(15),math.rad(0),math.rad(0)),0.3)
+	rs.C0 = rs.C0:Lerp(CFrame.new(1.5,0.5,0.5)*CFrame.Angles(math.rad(-120),math.rad(0),math.rad(-45)),0.3)
+	ls.C0 = ls.C0:Lerp(CFrame.new(-1.5,0.5,0.5)*CFrame.Angles(math.rad(-120),math.rad(0),math.rad(45)),0.3)
+	rh.C0 = rh.C0:Lerp(CFrame.new(0.5,-1,-0.7)*CFrame.Angles(math.rad(105),math.rad(0),math.rad(0)),0.3)
+	lh.C0 = lh.C0:Lerp(CFrame.new(-0.5,-1,0)*CFrame.Angles(math.rad(-15),math.rad(0),math.rad(0)),0.3)	
+	end
+	touch = banjo.Hitbox.Touched:Connect(function(hit)
+				if hit.Parent ~= ch and hit.Parent:FindFirstChildOfClass("Humanoid") and hit.Parent:FindFirstChild("IsRaider") == nil then
+			createsound(5521504303,1,100,hit)
+			CamShake(root,100,.5,.6)
+			fastwave(hit.CFrame*CFrame.new(0,-2,0),0.2)
+		 
+			touch:Disconnect()
+		end
+	end)
+	for i = 0,2,0.1 do
+	game:GetService("RunService").Heartbeat:Wait()
+	banjoweld.C0 = banjoweld.C0:Lerp(CFrame.new(-2.5,1.3,0.3)*CFrame.Angles(math.rad(0),math.rad(180),math.rad(-30)),0.3)
+	neck.C0 = neck.C0:Lerp(CFrame.new(0,1.5,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0)),0.3)
+	torso.C0 = torso.C0:Lerp(CFrame.new(0,0,0)*CFrame.Angles(math.rad(-120),math.rad(0),math.rad(0)),0.3)
+	rs.C0 = rs.C0:Lerp(CFrame.new(1.5,0.5,-0.5)*CFrame.Angles(math.rad(120),math.rad(0),math.rad(-45)),0.3)
+	ls.C0 = ls.C0:Lerp(CFrame.new(-1.5,0.5,-0.5)*CFrame.Angles(math.rad(120),math.rad(0),math.rad(45)),0.3)
+	rh.C0 = rh.C0:Lerp(CFrame.new(0.5,-1,0)*CFrame.Angles(math.rad(-120),math.rad(0),math.rad(0)),0.3)
+	lh.C0 = lh.C0:Lerp(CFrame.new(-0.5,-1,0)*CFrame.Angles(math.rad(-120),math.rad(0),math.rad(0)),0.3)	
+	end
+	touch:Disconnect()
+	attack = false
+	banjo.Banjo.Transparency = 1
+	banjo.Banjo.Trail.Enabled = false
+end
+
+
+function datractor()
+	attack = true 
+    canland.Value = false
+	local hitboxthing = Instance.new("Part",workspace)
+	hitboxthing.Size = Vector3.new(45,25,45)
+	hitboxthing.Transparency = 1
+	hitboxthing.Anchored = true
+	hitboxthing.CanCollide = false
+	hitboxthing.CFrame = root.CFrame
+	CamShake(root,100,.5,.6)
+	spawnwave(root.CFrame*CFrame.new(0,2,0),0.2)
+	wait()
+	hum.Jump = true
+	root.Anchored = true
+	for i = 0,7,0.1 do
+	game:GetService("RunService").Heartbeat:Wait()
+	root.CFrame = root.CFrame:Lerp(root.CFrame*CFrame.new(0,25,0),0.3)
+	neck.C0 = neck.C0:Lerp(CFrame.new(0,1.5,0)*CFrame.Angles(math.rad(15),math.rad(0),math.rad(0)),0.3)
+	torso.C0 = torso.C0:Lerp(CFrame.new(0,0,0)*CFrame.Angles(math.rad(5),math.rad(0),math.rad(0)),0.3)
+	rs.C0 = rs.C0:Lerp(CFrame.new(1.5,0.5,0)*CFrame.Angles(math.rad(-5),math.rad(0),math.rad(-25)),0.3)
+	ls.C0 = ls.C0:Lerp(CFrame.new(-1.5,0.5,0)*CFrame.Angles(math.rad(-5),math.rad(0),math.rad(25)),0.3)
+	rh.C0 = rh.C0:Lerp(CFrame.new(0.5,-0.5,-1)*CFrame.Angles(math.rad(-15),math.rad(0),math.rad(0)),0.3)
+	lh.C0 = lh.C0:Lerp(CFrame.new(-0.5,-1,0)*CFrame.Angles(math.rad(-15),math.rad(0),math.rad(0)),0.3)
+	end
+	local tracktor = Instance.new("Part",ch)
+	tracktor.Anchored = false
+	tracktor.CanCollide = false
+	tracktor.Transparency = 1
+	tracktor.Size = Vector3.new(12,12,35)
+	local trackmesh = Instance.new("SpecialMesh",tracktor)
+	trackmesh.MeshId = "rbxassetid://598113704"
+	trackmesh.TextureId = "rbxassetid://598113805"
+	trackmesh.Scale = Vector3.new(5,5,5)
+	local trackweld = Instance.new("Weld",tracktor)
+	trackweld.Part0 = tracktor
+	trackweld.Part1 = ch.Head
+	trackweld.C0 = CFrame.new(0,-6.5,0)
+	local bass = Instance.new("Sound",tracktor)
+	bass.SoundId = "rbxassetid://851693498"
+	bass.Volume = 8
+	bass:Play()
+	coroutine.wrap(function()
+		repeat
+		game:GetService("RunService").Heartbeat:Wait()
+		tracktor.Transparency = tracktor.Transparency - 0.01	
+		until tracktor.Transparency < 0
+	end)()
+	for i = 0,7,0.1 do
+	game:GetService("RunService").Heartbeat:Wait()
+	neck.C0 = neck.C0:Lerp(CFrame.new(0,1.5,0)*CFrame.Angles(math.rad(-15),math.rad(0),math.rad(0)),0.3)
+	torso.C0 = torso.C0:Lerp(CFrame.new(0,0,0)*CFrame.Angles(math.rad(5),math.rad(0),math.rad(0)),0.3)
+	rs.C0 = rs.C0:Lerp(CFrame.new(1.5,0.5,0)*CFrame.Angles(math.rad(180),math.rad(0),math.rad(0)),0.3)
+	ls.C0 = ls.C0:Lerp(CFrame.new(-1.5,0.5,0)*CFrame.Angles(math.rad(180),math.rad(0),math.rad(0)),0.3)
+	rh.C0 = rh.C0:Lerp(CFrame.new(0.5,-0.5,-1)*CFrame.Angles(math.rad(-15),math.rad(0),math.rad(0)),0.3)
+	lh.C0 = lh.C0:Lerp(CFrame.new(-0.5,-1,0)*CFrame.Angles(math.rad(-15),math.rad(0),math.rad(0)),0.3)
+	end
+	local fallinglol = Instance.new("Sound",ch)
+	fallinglol.SoundId = "rbxassetid://153195493"
+	fallinglol.Volume = 4
+	fallinglol.Looped = true
+	fallinglol:Play()
+	local fallinglol2 = Instance.new("Sound",ch)
+	fallinglol2.SoundId = "rbxassetid://138186576"
+	fallinglol2.Volume = 4
+	touch = tracktor.Touched:Connect(function(hit)
+		if hit.Parent ~= ch then
+			touch:Disconnect()
+            tracktor.Anchored = true
+			trackweld:Destroy()
+			tracktor.Parent = workspace
+            hitboxthing.CFrame = CFrame.new(root.Position.X,hit.Position.Y + 22,root.Position.Z)
+		    hitboxthing.Touched:Connect(function(hit)
+						if hit.Parent ~= ch and hit.Parent:FindFirstChildOfClass("Humanoid") and hit.Parent:FindFirstChild("IsRaider") == nil then
+			 
+				end	
+			end)
+			DAEXPLOSION(hitboxthing.Position - Vector3.new(0,5,0))
+            tracktor.Transparency = 1
+			fallinglol:Destroy()
+			fallinglol2:Play()
+			fallinglol2.TimePosition = 4.6
+			--[[local exlol = Instance.new("Explosion",workspace)
+			exlol.Position = hitboxthing.Position
+			exlol.Visible = false]]--
+			root.CFrame = root.CFrame*CFrame.new(0,3,0)
+										spawnbigwave(hitboxthing.CFrame,0.2)
+						CamShake(root,100,.5,.6)
+			local bodypos = Instance.new("BodyPosition",root)
+			bodypos.MaxForce = Vector3.new(math.huge,math.huge,math.huge)
+			bodypos.Position = root.Position + Vector3.new(math.random(-120,120),76,math.random(-120,120))
+			for i = 0,7,0.1 do
+	        game:GetService("RunService").Heartbeat:Wait()
+	        neck.C0 = neck.C0:Lerp(CFrame.new(0,1.5,0)*CFrame.Angles(math.rad(-15),math.rad(0),math.rad(0)),0.3)
+	        torso.C0 = torso.C0:Lerp(CFrame.new(0,0,0)*CFrame.Angles(math.random(-999,99),math.random(-999,999),math.random(-999,999)),1)
+	        rs.C0 = rs.C0:Lerp(CFrame.new(1.5,0.5,0)*CFrame.Angles(math.rad(180),math.rad(0),math.rad(0)),0.3)
+	        ls.C0 = ls.C0:Lerp(CFrame.new(-1.5,0.5,0)*CFrame.Angles(math.rad(180),math.rad(0),math.rad(0)),0.3)
+	        rh.C0 = rh.C0:Lerp(CFrame.new(0.5,-0.5,-1)*CFrame.Angles(math.rad(-15),math.rad(0),math.rad(0)),0.3)
+	        lh.C0 = lh.C0:Lerp(CFrame.new(-0.5,-1,0)*CFrame.Angles(math.rad(-15),math.rad(0),math.rad(0)),0.3)
+			end
+            --root.Orientation = Vector3.new(0,0,0)
+            canland.Value = true
+			--attack = false         
+			bodypos:Destroy()
+			--[[coroutine.wrap(function()
+            wait(0.2)
+            root.Anchored = true
+            for i = 0,2,0.1 do
+            root.CFrame = root.CFrame*CFrame.Angles(0,0,0)
+            end
+            wait(0.25)
+            root.Anchored = false
+            end)()]]
+            for i = 0,4,0.1 do
+	        game:GetService("RunService").Heartbeat:Wait()
+	        neck.C0 = neck.C0:Lerp(CFrame.new(0,1.5,0)*CFrame.Angles(math.rad(-10),math.rad(0),math.rad(0)),0.3)
+	        torso.C0 = torso.C0:Lerp(CFrame.new(0,0,0)*CFrame.Angles(math.rad(-15),math.rad(0),math.rad(0)),0.3)
+	        rs.C0 = rs.C0:Lerp(CFrame.new(1.5,0.5,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(35)),0.3)
+	        ls.C0 = ls.C0:Lerp(CFrame.new(-1.5,0.5,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(-35)),0.3)
+	        rh.C0 = rh.C0:Lerp(CFrame.new(0.5,-1,0)*CFrame.Angles(math.rad(-25),math.rad(0),math.rad(0)),0.3)
+	        lh.C0 = lh.C0:Lerp(CFrame.new(-0.5,-1,0)*CFrame.Angles(math.rad(-5),math.rad(0),math.rad(0)),0.3)
+			end        
+landtouchevent = landparthitbox.Touched:Connect(function()
+            if canland.Value == true then
+            landtouchevent:Disconnect()
+            speed = 0
+            jpower = 0
+            attack = true
+            canland.Value = false
+            coroutine.wrap(function()
+            wait(0.25)
+						            spawnlittlewave(CFrame.new(root.Position.X,1.5,root.Position.Z),0.2)
+						
+					            end)()
+					createsound(3636967384,1,7,ch.Head)
+					CamShake(root,100,.5,.6)
+            for i = 0,7,0.1 do
+	        game:GetService("RunService").Heartbeat:Wait()
+	        neck.C0 = neck.C0:Lerp(CFrame.new(0,1.5,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0)),0.3)
+	        torso.C0 = torso.C0:Lerp(CFrame.new(0,-2.5,0)*CFrame.Angles(math.rad(-90),math.rad(0),math.rad(0)),0.3)
+	        rs.C0 = rs.C0:Lerp(CFrame.new(1.1,0.8,0)*CFrame.Angles(math.rad(160),math.rad(90),math.rad(0))*CFrame.Angles(math.rad(-25),0,0),0.3)
+	        ls.C0 = ls.C0:Lerp(CFrame.new(-1.1,0.8,0)*CFrame.Angles(math.rad(160),math.rad(-90),math.rad(0))*CFrame.Angles(math.rad(-25),0,0),0.3)
+	        rh.C0 = rh.C0:Lerp(CFrame.new(0.5,-1,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(25)),0.3)
+	        lh.C0 = lh.C0:Lerp(CFrame.new(-0.5,-1,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(-25)),0.3)
+	        end
+            attack = false
+            speed = 75
+            jpower = 75
+            else
+            return
+            end
+            end)
+			coroutine.wrap(function()
+            wait(1.5)
+            hitboxthing:Destroy()
+            tracktor:Destroy()
+            end)()
+            wait(3)
+			fallinglol2:Destroy()
+		end
+	end)
+	for i = 0,2,0.1 do
+	game:GetService("RunService").Heartbeat:Wait()
+	neck.C0 = neck.C0:Lerp(CFrame.new(0,1.5,0)*CFrame.Angles(math.rad(-15),math.rad(0),math.rad(0)),0.3)
+	torso.C0 = torso.C0:Lerp(CFrame.new(0,0,0)*CFrame.Angles(math.rad(180),math.rad(0),math.rad(0)),0.3)
+	rs.C0 = rs.C0:Lerp(CFrame.new(1.5,0.5,0)*CFrame.Angles(math.rad(180),math.rad(0),math.rad(0)),0.3)
+	ls.C0 = ls.C0:Lerp(CFrame.new(-1.5,0.5,0)*CFrame.Angles(math.rad(180),math.rad(0),math.rad(0)),0.3)
+	rh.C0 = rh.C0:Lerp(CFrame.new(0.5,-0.5,-1)*CFrame.Angles(math.rad(-15),math.rad(0),math.rad(0)),0.3)
+	lh.C0 = lh.C0:Lerp(CFrame.new(-0.5,-1,0)*CFrame.Angles(math.rad(-15),math.rad(0),math.rad(0)),0.3)
+	end
+	root.Anchored = false
+end
+
+function huntingtime()
+attack = true
+aimtime = true
+speed = 0
+dagun.Snipexd.Transparency = 0
+createsound(2676895472,1,3.5,dagun.Snipexd)
+local rootposlol = root.Position
+local gyro = Instance.new("BodyGyro",root)
+gyro.D = 25
+gyro.P = 2000
+gyro.MaxTorque = Vector3.new(0,math.huge,0)
+gyro.CFrame = CFrame.new(rootposlol,m.Hit.p)
+local targetingpart = Instance.new("Part",ch)
+targetingpart.Size = Vector3.new(0.5,0.5,0.5)
+targetingpart.Anchored = true
+targetingpart.CanCollide = false
+targetingpart.Transparency = 1
+--local attach = Instance.new("Attachment",targetingpart)
+--dagun.ShotPart.Beam.Attachment1 = attach
+repeat
+game:GetService("RunService").Heartbeat:Wait()
+targetingpart.CFrame = m.Hit
+gyro.CFrame = CFrame.new(rootposlol,m.Hit.p)
+neck.C0 = neck.C0:Lerp(CFrame.new(0,1.5,-0.15)*CFrame.Angles(math.rad(0),math.rad(90),math.rad(-15)),0.3)
+torso.C0 = torso.C0:Lerp(CFrame.new(0,0,0)*CFrame.Angles(math.rad(-15),math.rad(-90),math.rad(0)),0.3)
+rs.C0 = rs.C0:Lerp(CFrame.new(1.25,0.35,-1)*CFrame.Angles(math.rad(90),math.rad(0),math.rad(-90)),0.3)
+ls.C0 = ls.C0:Lerp(CFrame.new(-1.5,0.15,0.5)*CFrame.Angles(math.rad(90),math.rad(90),math.rad(25)),0.3)
+rh.C0 = rh.C0:Lerp(CFrame.new(0.5,-1.3,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(15)),0.3)
+lh.C0 = lh.C0:Lerp(CFrame.new(-0.5,-1,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(-25)),0.3)	
+until aimtime == false
+dagun.ShotPart.FlashThing.Enabled = true
+gyro:Destroy()
+	createsound(148358346,1.5,2,dagun.Snipexd)
+	CamShake(root,100,.5,.6)
+local bullethinglol = Instance.new("Part",ch)
+bullethinglol.Size = Vector3.new(0.25,0.25,0.25)
+bullethinglol.Transparency = 1
+bullethinglol.Anchored = true
+bullethinglol.CanCollide = true
+bullethinglol.CFrame = targetingpart.CFrame--CFrame.new(m.Hit.p)
+bullethinglol.Touched:Connect(function(hit)
+local bulletexplode = Instance.new("Part",ch)
+bulletexplode.Size = Vector3.new(0.5,0.5,0.5)
+bulletexplode.Material = Enum.Material.Neon
+bulletexplode.BrickColor = BrickColor.new("Deep orange")
+bulletexplode.Anchored = true
+bulletexplode.CanCollide = false
+bulletexplode.CFrame = targetingpart.CFrame--CFrame.new(m.Hit.p)
+coroutine.wrap(function()
+for i = 0,6,0.1 do
+game:GetService("RunService").Heartbeat:Wait()
+bulletexplode.CFrame = bullethinglol.CFrame*CFrame.Angles(math.random(-655,655),math.random(-655,655),math.random(-655,655))
+bulletexplode.Transparency = bulletexplode.Transparency + 0.05
+bulletexplode.Size = bulletexplode.Size - Vector3.new(0.05,0.05,0.05)
+end
+bulletexplode:Destroy()
+end)()
+if hit.Parent ~= ch and hit.Parent:FindFirstChildOfClass("Humanoid") and hit.Parent:FindFirstChild("IsRaider") == nil then
+ 
+bullethinglol:Destroy()
+end
+	end)
+	coroutine.wrap(function()
+wait(0.1)
+dagun.ShotPart.FlashThing.Enabled = false
+end)()
+for i = 0,6,0.1 do
+game:GetService("RunService").Heartbeat:Wait()
+neck.C0 = neck.C0:Lerp(CFrame.new(0,1.5,-0.15)*CFrame.Angles(math.rad(0),math.rad(90),math.rad(-15)),0.3)
+torso.C0 = torso.C0:Lerp(CFrame.new(0,0,0)*CFrame.Angles(math.rad(35),math.rad(-90),math.rad(0)),0.3)
+rs.C0 = rs.C0:Lerp(CFrame.new(1.25,0.35,-1)*CFrame.Angles(math.rad(90),math.rad(0),math.rad(-90)),0.3)
+ls.C0 = ls.C0:Lerp(CFrame.new(-1.5,0.15,0.5)*CFrame.Angles(math.rad(90),math.rad(90),math.rad(25)),0.3)
+rh.C0 = rh.C0:Lerp(CFrame.new(0.5,-1,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(35)),0.3)
+lh.C0 = lh.C0:Lerp(CFrame.new(-0.5,-1,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(-50)),0.3)	
+end
+attack = false
+speed = 75
+dagun.Snipexd.Transparency = 1
+	anim = "Idle"
+	targetingpart:Destroy()
+bullethinglol:Destroy()
+end
+
+function CONSUME()
+end
+
+function cleetusraid()
+attack = true
+speed = 0
+jpower = 0
+local snapsound = Instance.new("Sound",ch)
+snapsound.Volume = 10
+snapsound.PlaybackSpeed = 1.4
+snapsound.TimePosition = 1.25
+snapsound.SoundId = "rbxassetid://4360917707"
+local rootposlol = root.Position
+local gyro = Instance.new("BodyGyro",root)
+gyro.D = 25
+gyro.P = 2000
+gyro.MaxTorque = Vector3.new(0,math.huge,0)
+gyro.CFrame = CFrame.new(rootposlol,m.Hit.p)
+for i = 0,8,0.1 do
+game:GetService("RunService").Heartbeat:Wait()
+neck.C0 = neck.C0:Lerp(CFrame.new(0,1.5,0)*CFrame.Angles(math.rad(0),math.rad(-90),math.rad(0)),0.3)
+torso.C0 = torso.C0:Lerp(CFrame.new(0,0,0)*CFrame.Angles(math.rad(0),math.rad(90),math.rad(0)),0.3)
+rs.C0 = rs.C0:Lerp(CFrame.new(1.5,0.5,0.5)*CFrame.Angles(math.rad(90),math.rad(0),math.rad(75)),0.3)
+ls.C0 = ls.C0:Lerp(CFrame.new(-1.5,0.5,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(-5)),0.3)
+rh.C0 = rh.C0:Lerp(CFrame.new(0.5,-1,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0)),0.3)
+lh.C0 = lh.C0:Lerp(CFrame.new(-0.5,-1,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0)),0.3)	
+end
+gyro:Destroy()
+spawncleetus()
+wait(1)
+attack = false
+speed = 75
+jpower = 75
+snapsound:Destroy()
+end
+
+function m_y_t_h()
+	attack = true
+    mythtime = true
+	speed = 0
+	jpower = 0
+    for i = 0,3,0.1 do
+	game:GetService("RunService").Heartbeat:Wait()
+	neck.C0 = neck.C0:Lerp(CFrame.new(0,1.5,0.5)*CFrame.Angles(math.rad(90),math.rad(0),math.rad(0)),0.3)
+	torso.C0 = torso.C0:Lerp(CFrame.new(0,-2.5,0)*CFrame.Angles(math.rad(-90),math.rad(0),math.rad(0)),0.3)
+	rs.C0 = rs.C0:Lerp(CFrame.new(1.1,0.8,0)*CFrame.Angles(math.rad(160),math.rad(90),math.rad(0))*CFrame.Angles(math.rad(-25),0,0),0.3)
+	ls.C0 = ls.C0:Lerp(CFrame.new(-1.1,0.8,0)*CFrame.Angles(math.rad(160),math.rad(-90),math.rad(0))*CFrame.Angles(math.rad(-25),0,0),0.3)
+	rh.C0 = rh.C0:Lerp(CFrame.new(0.5,-1,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(25)),0.3)
+	lh.C0 = lh.C0:Lerp(CFrame.new(-0.5,-1,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(-25)),0.3)
+	end
+	for i = 0,3,0.1 do
+	game:GetService("RunService").Heartbeat:Wait()
+	neck.C0 = neck.C0:Lerp(CFrame.new(0,1.5,0.5)*CFrame.Angles(math.rad(90),math.rad(25),math.rad(0)),0.3)
+	torso.C0 = torso.C0:Lerp(CFrame.new(0,-2.5,0)*CFrame.Angles(math.rad(-90),math.rad(0),math.rad(0)),0.3)
+	rs.C0 = rs.C0:Lerp(CFrame.new(1.1,0.8,0)*CFrame.Angles(math.rad(160),math.rad(90),math.rad(0))*CFrame.Angles(math.rad(-25),0,0),0.3)
+	ls.C0 = ls.C0:Lerp(CFrame.new(-1.1,0.8,0)*CFrame.Angles(math.rad(160),math.rad(-90),math.rad(0))*CFrame.Angles(math.rad(-25),0,0),0.3)
+	rh.C0 = rh.C0:Lerp(CFrame.new(0.5,-1,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(25)),0.3)
+	lh.C0 = lh.C0:Lerp(CFrame.new(-0.5,-1,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(-25)),0.3)
+	end
+	for i = 0,3,0.1 do
+	game:GetService("RunService").Heartbeat:Wait()
+	neck.C0 = neck.C0:Lerp(CFrame.new(0,1.5,0.5)*CFrame.Angles(math.rad(90),math.rad(-25),math.rad(0)),0.3)
+	torso.C0 = torso.C0:Lerp(CFrame.new(0,-2.5,0)*CFrame.Angles(math.rad(-90),math.rad(0),math.rad(0)),0.3)
+	rs.C0 = rs.C0:Lerp(CFrame.new(1.1,0.8,0)*CFrame.Angles(math.rad(160),math.rad(90),math.rad(0))*CFrame.Angles(math.rad(-25),0,0),0.3)
+	ls.C0 = ls.C0:Lerp(CFrame.new(-1.1,0.8,0)*CFrame.Angles(math.rad(160),math.rad(-90),math.rad(0))*CFrame.Angles(math.rad(-25),0,0),0.3)
+	rh.C0 = rh.C0:Lerp(CFrame.new(0.5,-1,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(25)),0.3)
+	lh.C0 = lh.C0:Lerp(CFrame.new(-0.5,-1,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(-25)),0.3)
+	end
+	for i = 0,3,0.1 do
+	game:GetService("RunService").Heartbeat:Wait()
+	neck.C0 = neck.C0:Lerp(CFrame.new(0,1.5,0.5)*CFrame.Angles(math.rad(90),math.rad(0),math.rad(0)),0.3)
+	torso.C0 = torso.C0:Lerp(CFrame.new(0,-2.5,0)*CFrame.Angles(math.rad(-90),math.rad(0),math.rad(0)),0.3)
+	rs.C0 = rs.C0:Lerp(CFrame.new(1.1,0.8,0)*CFrame.Angles(math.rad(160),math.rad(90),math.rad(0))*CFrame.Angles(math.rad(-25),0,0),0.3)
+	ls.C0 = ls.C0:Lerp(CFrame.new(-1.1,0.8,0)*CFrame.Angles(math.rad(160),math.rad(-90),math.rad(0))*CFrame.Angles(math.rad(-25),0,0),0.3)
+	rh.C0 = rh.C0:Lerp(CFrame.new(0.5,-1,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(25)),0.3)
+	lh.C0 = lh.C0:Lerp(CFrame.new(-0.5,-1,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(-25)),0.3)
+	end
+	for i = 0,3,0.1 do
+    game:GetService("RunService").Heartbeat:Wait()
+    neck.C0 = neck.C0:Lerp(CFrame.new(0,1.5,0)*CFrame.Angles(math.rad(-10),math.rad(0),math.rad(0)),0.3)
+	torso.C0 = torso.C0:Lerp(CFrame.new(0,-0.15,0)*CFrame.Angles(math.rad(-25),math.rad(0),math.rad(0)),0.3)
+	rs.C0 = rs.C0:Lerp(CFrame.new(1.5,0.5,0)*CFrame.Angles(math.rad(25),math.rad(0),math.rad(0)),0.3)
+	ls.C0 = ls.C0:Lerp(CFrame.new(-1.5,0.5,0)*CFrame.Angles(math.rad(135),math.rad(0),math.rad(45)),0.3)
+	rh.C0 = rh.C0:Lerp(CFrame.new(0.5,-1,0)*CFrame.Angles(math.rad(25),math.rad(0),math.rad(0)),0.3)
+	lh.C0 = lh.C0:Lerp(CFrame.new(-0.5,-1,0)*CFrame.Angles(math.rad(25),math.rad(0),math.rad(0)),0.3)
+    end
+    for i = 0,3,0.1 do
+    game:GetService("RunService").Heartbeat:Wait()
+    neck.C0 = neck.C0:Lerp(CFrame.new(0,1.5,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0)),0.3)
+	torso.C0 = torso.C0:Lerp(CFrame.new(0,-0.15,0)*CFrame.Angles(math.rad(-25),math.rad(0),math.rad(0)),0.3)
+	rs.C0 = rs.C0:Lerp(CFrame.new(1.5,0.5,0)*CFrame.Angles(math.rad(25),math.rad(0),math.rad(0)),0.3)
+	ls.C0 = ls.C0:Lerp(CFrame.new(-1.5,0.5,0)*CFrame.Angles(math.rad(130),math.rad(0),math.rad(15)),0.3)
+	rh.C0 = rh.C0:Lerp(CFrame.new(0.5,-1,0)*CFrame.Angles(math.rad(25),math.rad(0),math.rad(0)),0.3)
+	lh.C0 = lh.C0:Lerp(CFrame.new(-0.5,-1,0)*CFrame.Angles(math.rad(25),math.rad(0),math.rad(0)),0.3)
+    end
+    music.PlaybackSpeed = 0.9
+    music.Volume = 3
+    attack = false
+	speed = 75
+	jpower = 75
+end
+
+function beartrap()
+attack = true
+speed = 0
+for i = 0,3,0.1 do
+game:GetService("RunService").Heartbeat:Wait()
+neck.C0 = neck.C0:Lerp(CFrame.new(0,1.5,0)*CFrame.Angles(math.rad(0),math.rad(-15),math.rad(0)),0.3)
+torso.C0 = torso.C0:Lerp(CFrame.new(0,0,0)*CFrame.Angles(math.rad(0),math.rad(15),math.rad(0)),0.3)
+rs.C0 = rs.C0:Lerp(CFrame.new(1.5,0.5,0)*CFrame.Angles(math.rad(45),math.rad(-60),math.rad(0)),0.3)
+ls.C0 = ls.C0:Lerp(CFrame.new(-1.5,0.5,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(-6)),0.3)
+rh.C0 = rh.C0:Lerp(CFrame.new(0.5,-1,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0)),0.3)
+lh.C0 = lh.C0:Lerp(CFrame.new(-0.5,-1,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0)),0.3)
+end
+spawnbeartrap(ch["Right Arm"].CFrame)
+for i = 0,4,0.1 do
+game:GetService("RunService").Heartbeat:Wait()
+neck.C0 = neck.C0:Lerp(CFrame.new(0,1.5,0)*CFrame.Angles(math.rad(0),math.rad(-15),math.rad(0)),0.3)
+torso.C0 = torso.C0:Lerp(CFrame.new(0,0,0)*CFrame.Angles(math.rad(0),math.rad(15),math.rad(0)),0.3)
+rs.C0 = rs.C0:Lerp(CFrame.new(1.5,0.5,0)*CFrame.Angles(math.rad(85),math.rad(-60),math.rad(0)),0.3)
+ls.C0 = ls.C0:Lerp(CFrame.new(-1.5,0.5,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(-6)),0.3)
+rh.C0 = rh.C0:Lerp(CFrame.new(0.5,-1,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0)),0.3)
+lh.C0 = lh.C0:Lerp(CFrame.new(-0.5,-1,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0)),0.3)
+end
+attack = false
+speed = 75
+end
+
+-- Humanoid Events
+
+hum.Running:Connect(function(spd)
+	if spd > 0.1 then
+		anim = "Walk"
+	elseif spd < 0.1 then
+		anim = "Idle"	
+	end
+end)
+
+hum.StateChanged:Connect(function()
+	if hum:GetState() == Enum.HumanoidStateType.Freefall then
+		anim = "Jump"
+		wait(0.5)
+		anim = "Fall"
+	end
+    if hum:GetState() == Enum.HumanoidStateType.Seated then
+    anim = "Sit"
+    end
+end)
+
+-- UserInput Stuff
+
+userinput.InputBegan:Connect(function(key)
+	local k = key.KeyCode
+	local k2 = key.UserInputType 
+	if k2 == Enum.UserInputType.MouseButton1 and attack == false then
+		swing()
+	end
+	if k ==  Enum.KeyCode.J and attack == false then
+		taunt()
+	end
+	if k == Enum.KeyCode.V and attack == false then
+		datractor()
+	end
+	if k == Enum.KeyCode.N and attack == false then
+		m_y_t_h()
+	end
+	if k == Enum.KeyCode.C and attack == false then
+		CONSUME()
+	end
+	if k == Enum.KeyCode.Z and attack == false then
+        beartrap()
+	    end
+	 if k == Enum.KeyCode.G and attack == false then
+       cleetusraid()
+    end
+    if k == Enum.KeyCode.X and attack == false then
+       huntingtime()
+    end
+    if k == Enum.KeyCode.M and canplay == true and canplaying == true then
+		music:Pause()
+		canplay = false
+	elseif k == Enum.KeyCode.M and canplay == false and canplaying == true then
+		music:Resume()
+		canplay = true
+	end
+end)
+
+userinput.InputEnded:Connect(function(key)
+    local k = key.KeyCode
+    local k2 = key.UserInputType 
+    if k == Enum.KeyCode.X and attack == true and aimtime == true then
+    aimtime = false
+    end
+end)
+
+-- Animation
+
+intro()
+while true do
+	game:GetService("RunService").Heartbeat:Wait()
+	sine = sine + change
+	hum.WalkSpeed = speed
+	hum.JumpPower = jpower
+	hum.MaxHealth = math.huge
+	hum.Health = math.huge
+    if anim == "Sit" and attack == false then
+    neck.C0 = neck.C0:Lerp(CFrame.new(0,1.5,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0)),0.3)
+	torso.C0 = torso.C0:Lerp(CFrame.new(0,0,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0)),0.3)
+	rs.C0 = rs.C0:Lerp(CFrame.new(1.5,0.5,0)*CFrame.Angles(math.rad(45),math.rad(0),math.rad(-25)),0.3)
+	ls.C0 = ls.C0:Lerp(CFrame.new(-1.5,0.5,0)*CFrame.Angles(math.rad(45),math.rad(0),math.rad(25)),0.3)
+	rh.C0 = rh.C0:Lerp(CFrame.new(0.5,-1,0)*CFrame.Angles(math.rad(90),math.rad(0),math.rad(0)),0.3)
+	lh.C0 = lh.C0:Lerp(CFrame.new(-0.5,-1,0)*CFrame.Angles(math.rad(90),math.rad(0),math.rad(0)),0.3)
+    end
+	if anim == "Jump" and attack == false then
+	neck.C0 = neck.C0:Lerp(CFrame.new(0,1.5,0)*CFrame.Angles(math.rad(15),math.rad(0),math.rad(0)),0.3)
+	torso.C0 = torso.C0:Lerp(CFrame.new(0,0,0)*CFrame.Angles(math.rad(5),math.rad(0),math.rad(0)),0.3)
+	rs.C0 = rs.C0:Lerp(CFrame.new(1.5,0.5,0)*CFrame.Angles(math.rad(-5),math.rad(0),math.rad(-25)),0.3)
+	ls.C0 = ls.C0:Lerp(CFrame.new(-1.5,0.5,0)*CFrame.Angles(math.rad(-5),math.rad(0),math.rad(25)),0.3)
+	rh.C0 = rh.C0:Lerp(CFrame.new(0.5,-0.5,-1)*CFrame.Angles(math.rad(-15),math.rad(0),math.rad(0)),0.3)
+	lh.C0 = lh.C0:Lerp(CFrame.new(-0.5,-1,0)*CFrame.Angles(math.rad(-15),math.rad(0),math.rad(0)),0.3)
+	end
+	if anim == "Fall" and attack == false then
+	neck.C0 = neck.C0:Lerp(CFrame.new(0,1.5,0)*CFrame.Angles(math.rad(-10),math.rad(0),math.rad(0)),0.3)
+	torso.C0 = torso.C0:Lerp(CFrame.new(0,0,0)*CFrame.Angles(math.rad(-15),math.rad(0),math.rad(0)),0.3)
+	rs.C0 = rs.C0:Lerp(CFrame.new(1.5,0.5,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(35)),0.3)
+	ls.C0 = ls.C0:Lerp(CFrame.new(-1.5,0.5,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(-35)),0.3)
+	rh.C0 = rh.C0:Lerp(CFrame.new(0.5,-1,0)*CFrame.Angles(math.rad(-25),math.rad(0),math.rad(0)),0.3)
+	lh.C0 = lh.C0:Lerp(CFrame.new(-0.5,-1,0)*CFrame.Angles(math.rad(-5),math.rad(0),math.rad(0)),0.3)
+	end
+	if anim == "Idle" and attack == false then
+	neck.C0 = neck.C0:Lerp(CFrame.new(0,1.5,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0)),0.3)
+	torso.C0 = torso.C0:Lerp(CFrame.new(0,0-0.5*math.cos(sine/4),0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0)),0.3)
+	rs.C0 = rs.C0:Lerp(CFrame.new(1.4,0.7+0.1*math.cos(sine/4),0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(25+45*math.cos(sine/4))),0.3)
+	ls.C0 = ls.C0:Lerp(CFrame.new(-1.4,0.7+0.1*math.cos(sine/4),0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(-25-45*math.cos(sine/4))),0.3)
+	rh.C0 = rh.C0:Lerp(CFrame.new(0.5,-1+0.5*math.cos(sine/4),0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0)),0.3)
+	lh.C0 = lh.C0:Lerp(CFrame.new(-0.5,-1+0.5*math.cos(sine/4),0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0)),0.3)	
+	end
+	if anim == "Walk" and attack == false then
+	neck.C0 = neck.C0:Lerp(CFrame.new(0,1.5,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0)),0.3)
+	torso.C0 = torso.C0:Lerp(CFrame.new(0,0,0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0+65*math.cos(sine/2))),0.3)
+	rs.C0 = rs.C0:Lerp(CFrame.new(2,0.15,-0.8)*CFrame.Angles(math.rad(25),math.rad(0),math.rad(-62)),0.3)
+	ls.C0 = ls.C0:Lerp(CFrame.new(-2,0.15,-0.8)*CFrame.Angles(math.rad(25),math.rad(0),math.rad(62)),0.3)
+	rh.C0 = rh.C0:Lerp(CFrame.new(0.5,-1,0)*CFrame.Angles(math.rad(0+120*math.cos(sine/2)),math.rad(0),math.rad(0)),0.3)
+	lh.C0 = lh.C0:Lerp(CFrame.new(-0.5,-1,0)*CFrame.Angles(math.rad(0-120*math.cos(sine/2)),math.rad(0),math.rad(0)),0.3)	
+	end
+end
