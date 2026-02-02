@@ -1272,7 +1272,7 @@ pcall(function()
 			RunService.RenderStepped:Connect(function()
 				setsimulationradius(1000)
 				Char.Parent = workspace
-				Plr.PlayerScripts:FindFirstChild("BubbleChat").Disabled = true
+				-- Plr.PlayerScripts:FindFirstChild("BubbleChat").Disabled = true
 			end)
 			
 			local ANCHOR_PLAYER = Funcs.Serv("Players").LocalPlayer
@@ -13449,5 +13449,6 @@ end)
 			end
 		end)
 	end
+
 
 -- // Fuck you \\ --
