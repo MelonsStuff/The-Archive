@@ -1596,7 +1596,7 @@ pcall(function()
 			
 			workspace.CurrentCamera:remove()
 			wait(.1)
-			Funcs.Noclip()
+			-- Funcs.Noclip()
 
 			Shared.ReplicatorStarter = "[Hyperskidded Cannon XSE]: Start it up now!"
 			repeat wait() until Shared.ParentControllerStopper == "[Hyperskidded Cannon XSE]: Stop it now!"
@@ -13452,3 +13452,4 @@ end)
 
 
 -- // Fuck you \\ --
+
