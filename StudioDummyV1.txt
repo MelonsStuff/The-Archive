@@ -1,4 +1,11 @@
-game.Players.LocalPlayer.Character["fff_fox"].Handle.SpecialMesh:Destroy()
+game.ReplicatedStorage["01_server"]:FireServer("cmd", "-net")
+task.wait(1)
+game.ReplicatedStorage["01_server"]:FireServer("cmd", "-pd")
+task.wait(1)
+game.ReplicatedStorage["01_server"]:FireServer("cmd", "-gh 191101707")
+task.wait(1)
+
+game.Players.LocalPlayer.Character["FireMohawk"].Handle.Mesh:Destroy()
 game.TestService.IsSleepAllowed = false
 for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
 	if v:IsA("BasePart") then 
@@ -27,12 +34,7 @@ if Bypass == "death" then
 	bullet.Material = "Neon"
 	bullet.Massless = true
 
-	local Sphere = game:GetObjects("rbxassetid://9418986037")[1]
-	Sphere.Parent = nil
-	Sphere.Adornee = nil
-	Sphere.Color3 = Color3.fromRGB(0,0,0)
-	Sphere.Radius = .5
-	if bullet:FindFirstChildOfClass("Attachment") then
+ 	if bullet:FindFirstChildOfClass("Attachment") then
 		for _,v in pairs(bullet:GetChildren()) do
 			if v:IsA("Attachment") then
 				v:Destroy()
@@ -381,7 +383,7 @@ run:BindToRenderStep(plr.Name.."'xddd",600,function()
 end)
 
 pcall(function()
-local Fire = workspace.non["fff_fox"].Handle
+local Fire = workspace.non["FireMohawk"].Handle
 AlignHat(Fire,orb1,false)
 end)
 
